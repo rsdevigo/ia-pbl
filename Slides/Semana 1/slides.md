@@ -116,12 +116,7 @@ O "tiro de aviso" antes do ataque letal existe para dar tempo de reação ao jog
 
 ## O ciclo Sentir → Pensar → Agir
 
-```mermaid
-flowchart LR
-    A[Sentir<br/>Percepção do mundo] --> B[Pensar<br/>Decisão]
-    B --> C[Agir<br/>Execução]
-    C -.-> A
-```
+![diagram](assets/mermaid-1.png)
 
 Modelo unificador de qualquer agente de IA em jogos.
 
@@ -266,14 +261,7 @@ Um único projeto Unity, composto por **Micro Games independentes**.
 
 ## Os seis módulos do semestre
 
-```mermaid
-flowchart LR
-    M1[M1: Decisão] --> M2[M2: Navegação]
-    M2 --> M3[M3: Tática]
-    M3 --> M4[M4: Adversarial]
-    M4 --> M5[M5: Otimização]
-    M5 --> M6[M6: Aprendizagem]
-```
+![diagram](assets/mermaid-2.png)
 
 Cada módulo responde a uma pergunta e produz um Micro Game.
 
