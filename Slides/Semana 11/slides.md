@@ -174,18 +174,7 @@ Analogia: comparando propostas uma a uma, você descarta uma opção assim que s
 
 ## Retraçando o exemplo A/B/C com poda
 
-```mermaid
-graph TD
-    Raiz((MAX)) --> Jog_A((MIN))
-    Raiz --> Jog_B((MIN))
-    Raiz --> Jog_C((MIN))
-    Jog_A --> F1[3]
-    Jog_A --> F2[5]
-    Jog_B --> F3[6]
-    Jog_B --> F4[2]
-    Jog_C --> F5[1]
-    Jog_C --> F6[8]
-```
+![diagram](assets/mermaid-1.png)
 
 Mesma árvore da Semana 10 — agora com α e β anotados a cada passo.
 

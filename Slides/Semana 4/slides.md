@@ -90,15 +90,7 @@ O fluxo de decisão passa a morar **na estrutura da árvore**, não em transiç�
 
 ## Exemplo: sequência e seletor
 
-```mermaid
-flowchart TB
-    Seletor --> Sobreviver
-    Seletor --> Combater
-    Seletor --> Patrulhar
-    Combater --> Sequencia
-    Sequencia --> Mirar
-    Sequencia --> Atirar
-```
+![diagram](assets/mermaid-1.png)
 
 ---
 

@@ -83,12 +83,7 @@ RL propõe outro caminho: em vez de codificar a regra, o agente **aprende** a po
 
 ## O laço agente–ambiente
 
-```mermaid
-graph LR
-    A[Agente] -->|Ação| E[Ambiente]
-    E -->|Estado| A
-    E -->|Recompensa| A
-```
+![diagram](assets/mermaid-1.png)
 
 O agente observa o estado, escolhe uma ação, recebe uma recompensa e um novo estado — o ciclo se repete a cada passo.
 

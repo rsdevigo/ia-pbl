@@ -93,13 +93,7 @@ A curva da melhor aptidão ao longo das gerações revela o comportamento da bus
 
 ## Curva típica de evolução
 
-```mermaid
-graph LR
-    G1[Geração 1] --> G2[Geração 10]
-    G2 --> G3[Geração 25: platô]
-    G3 --> G4[Geração 26: salto]
-    G4 --> G5[Geração 50: platô final]
-```
+![diagram](assets/mermaid-1.png)
 
 <div class="warning">
 

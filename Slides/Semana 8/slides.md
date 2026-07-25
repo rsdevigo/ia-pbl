@@ -73,13 +73,7 @@ Não há necessidade intrínseca de memória de estado — cada avaliação part
 
 ## Nós, ramos e folhas
 
-```mermaid
-flowchart TD
-    A[Vê o jogador?] -->|sim| B[Distância curta?]
-    A -->|não| C[Patrulhar]
-    B -->|sim| D[Atacar corpo a corpo]
-    B -->|não| E[Atirar]
-```
+![diagram](assets/mermaid-1.png)
 
 A avaliação percorre a raiz até uma folha — sempre a mesma ação para o mesmo conjunto de condições.
 

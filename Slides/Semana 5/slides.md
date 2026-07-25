@@ -83,14 +83,7 @@ Mover em linha reta ao destino falha diante de qualquer obstáculo — por isso 
 
 ## Grafo ponderado e direcionado
 
-```mermaid
-graph LR
-    A((Sala A)) -- 3 --> B((Corredor))
-    B -- 3 --> A
-    B -- 5 --> C((Sala B))
-    C -- 5 --> B
-    C -. 1 .-> D((Queda))
-```
+![diagram](assets/mermaid-1.png)
 
 Aresta pontilhada: conexão de mão única (ex.: queda de plataforma).
 
@@ -135,18 +128,7 @@ Como o espaço navegável do jogo vira um grafo?
 
 ## Grades: conectividade-4 e conectividade-8
 
-```mermaid
-graph LR
-    subgraph "Conectividade-4"
-    A1((•)) --- A2((•))
-    A1 --- A3((•))
-    end
-    subgraph "Conectividade-8"
-    B1((•)) --- B2((•))
-    B1 --- B3((•))
-    B1 -.-> B4((•))
-    end
-```
+![diagram](assets/mermaid-2.png)
 
 Movimento diagonal custa √2 ≈ 1,41, não 1,0.
 

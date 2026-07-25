@@ -144,12 +144,7 @@ Configurando o agente do Adaptive AI.
 
 ## Do vocabulário ao código
 
-```mermaid
-graph LR
-    CO[CollectObservations] --> OA[OnActionReceived]
-    OA --> AR[AddReward]
-    AR --> CO
-```
+![diagram](assets/mermaid-1.png)
 
 Estado → ação → recompensa, o mesmo ciclo da Semana 14, agora em métodos C#.
 

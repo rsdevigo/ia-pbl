@@ -89,18 +89,7 @@ Estados podem conter **submáquinas** — uma hierarquia de superestados e subes
 
 ## Exemplo: dois superestados
 
-```mermaid
-flowchart TB
-    subgraph Pacifico
-    Patrulhar --> Investigar
-    end
-    subgraph Combate
-    Atirar --> Recarregar
-    Recarregar --> Atirar
-    end
-    Pacifico -- viu o jogador --> Combate
-    Combate -- vida < 20% --> Fugir
-```
+![diagram](assets/mermaid-1.png)
 
 ---
 

@@ -89,13 +89,7 @@ Um NPC está sempre em **um único estado**, e só muda de estado por uma transi
 
 ## Exemplo: três estados
 
-```mermaid
-flowchart LR
-    Patrulhar -- vê o jogador --> Perseguir
-    Perseguir -- está perto --> Atacar
-    Perseguir -- perdeu o alvo --> Patrulhar
-    Atacar -- alvo fugiu --> Perseguir
-```
+![diagram](assets/mermaid-1.png)
 
 ---
 

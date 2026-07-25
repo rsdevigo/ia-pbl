@@ -73,11 +73,7 @@ Duas formas de medir distância: **euclidiana** ou pela **grade navegável** (di
 
 ## Decaimento euclidiano × decaimento pela grade
 
-```mermaid
-flowchart LR
-    F[Fonte] -->|euclidiana| A[Atravessa paredes]
-    F -->|grade navegável| B[Respeita obstáculos]
-```
+![diagram](assets/mermaid-1.png)
 
 A distância euclidiana ignora obstáculos; a distância pela grade produz avaliação tática fiel.
 

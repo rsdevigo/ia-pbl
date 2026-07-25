@@ -101,15 +101,7 @@ Jogos por turnos, com informação perfeita (ambos veem o estado completo).
 
 ## Anatomia da árvore de jogo
 
-```mermaid
-graph TD
-    R[Raiz - estado atual] --> A[Ação A]
-    R --> B[Ação B]
-    R --> C[Ação C]
-    A --> A1[Folha: utilidade]
-    B --> B1[Folha: utilidade]
-    C --> C1[Folha: utilidade]
-```
+![diagram](assets/mermaid-1.png)
 
 Raiz, ramos (ações), nós filhos (estados), níveis alternados, folhas (utilidade).
 
@@ -181,18 +173,7 @@ Hoje usamos apenas utilidade — o jogo da velha é pequeno o suficiente para se
 
 ## Propagação MAX/MIN — exemplo numérico
 
-```mermaid
-graph TD
-    Raiz((MAX)) --> Jog_A((MIN))
-    Raiz --> Jog_B((MIN))
-    Raiz --> Jog_C((MIN))
-    Jog_A --> F1[3]
-    Jog_A --> F2[5]
-    Jog_B --> F3[6]
-    Jog_B --> F4[2]
-    Jog_C --> F5[1]
-    Jog_C --> F6[8]
-```
+![diagram](assets/mermaid-2.png)
 
 Jogada A vence (valor 3), mesmo a folha 8 sendo o maior valor da árvore inteira.
 

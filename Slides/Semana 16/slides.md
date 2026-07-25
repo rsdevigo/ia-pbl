@@ -58,11 +58,7 @@ Parte 3 — da política em treino ao modelo executando no jogo.
 
 ## O ciclo do Módulo 6
 
-```mermaid
-graph LR
-S14[Planejar estado/ação/recompensa] --> S15[Treinar com ML-Agents]
-S15 --> S16[Inferir com Sentis]
-```
+![diagram](assets/mermaid-1.png)
 
 Cada semana resolveu uma etapa deste ciclo. Hoje ele se fecha.
 

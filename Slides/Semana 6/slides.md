@@ -92,11 +92,7 @@ Dijkstra é cego em relação ao destino — só enxerga o custo já pago.
 
 ## A busca informada: f(n) = g(n) + h(n)
 
-```mermaid
-graph LR
-    Origem -->|g: custo pago| N((nó n))
-    N -->|h: estimativa| Destino
-```
+![diagram](assets/mermaid-1.png)
 
 `g(n)`: custo acumulado, exato.
 `h(n)`: heurística, estimada.
@@ -150,13 +146,7 @@ Consistência garante que nenhum nó fechado precise ser reprocessado — cada n
 
 ## Listas aberta e fechada
 
-```mermaid
-graph LR
-    Aberta["Lista Aberta (fronteira)"] --> Expande[Expandir menor f]
-    Expande --> Fechada["Lista Fechada (resolvidos)"]
-    Expande --> Vizinhos[Relaxar arestas]
-    Vizinhos --> Aberta
-```
+![diagram](assets/mermaid-2.png)
 
 ---
 

@@ -58,14 +58,7 @@ A pergunta que atravessou todo o semestre.
 
 ## O percurso dos seis módulos
 
-```mermaid
-graph LR
-M1[NPC decide o que fazer] --> M2[Agente encontra seu destino]
-M2 --> M3[NPC escolhe sua melhor acao]
-M3 --> M4[Derrotar um adversario]
-M4 --> M5[Encontrar boas solucoes]
-M5 --> M6[Agente aprende]
-```
+![diagram](assets/mermaid-1.png)
 
 Cada módulo respondeu a uma pergunta de design com uma família de técnicas — não o contrário.
 
@@ -122,14 +115,7 @@ Os seis momentos do semestre, revisitados.
 
 ## Os seis momentos
 
-```mermaid
-graph LR
-E1[M1 - Decisao] --> E2[M2 - Navegacao]
-E2 --> E3[M3 - Tatica]
-E3 --> E4[M4 - Adversarial]
-E4 --> E5[M5 - Otimizacao]
-E5 --> E6[M6 - Aprendizagem]
-```
+![diagram](assets/mermaid-2.png)
 
 Cada momento levantou uma hipótese de arquitetura para um jogo comercial, com o conhecimento disponível até aquela semana.
 

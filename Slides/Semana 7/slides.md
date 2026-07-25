@@ -83,12 +83,7 @@ Um obstáculo **força** uma decisão que não existiria em terreno aberto.
 
 ## Jump point: nó com vizinho forçado
 
-```mermaid
-flowchart LR
-    Origem --> Pulo1[Salto]
-    Pulo1 --> Pulo2[Jump Point]
-    Pulo2 -->|vizinho forçado| Destino
-```
+![diagram](assets/mermaid-1.png)
 
 JPS pula direto até o próximo ponto de decisão, em vez de expandir vizinho por vizinho.
 
@@ -148,12 +143,7 @@ Medir antes de otimizar — otimização é resposta a um problema medido, não 
 
 ## Panorama de outras otimizações
 
-```mermaid
-flowchart TB
-    Problema[Escala e desempenho] --> HPA[Pathfinding hierárquico]
-    Problema --> Flow[Flow fields - multidões]
-    Problema --> Funnel[Suavização de caminho]
-```
+![diagram](assets/mermaid-2.png)
 
 ---
 
