@@ -312,8 +312,8 @@ Cada uma tem uma vantagem e uma limitação — não existe estratégia sempre s
 
 ```mermaid
 graph LR
-    P1[Pai 1: A B C | D E] --> F1[Filho 1: A B C D E]
-    P2[Pai 2: F G H | I J] --> F1
+    P1[Pai 1: A B C / D E] --> F1[Filho 1: A B C D E]
+    P2[Pai 2: F G H / I J] --> F1
     P2 --> F2[Filho 2: F G H D E]
     P1 --> F2
 ```
