@@ -9,7 +9,7 @@ footer: "IFMS • Semana 02"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -154,25 +154,18 @@ O Animator materializa visualmente os conceitos estudados.
 | Transição | Seta entre nós |
 | Guarda | Parâmetro (bool, float, trigger) |
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Mostrar a correspondência direta entre os conceitos de FSM estudados e os elementos visuais do Animator Controller.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/animator-fsm-guarda.webp
-> ```
->
-> **Descrição**
->
-> Captura de tela do Animator Controller da Unity com três estados (Patrulhar, Perseguir, Atacar) conectados por setas rotuladas com os parâmetros de guarda correspondentes.
->
-> **Como produzir**
->
-> Screenshot direto do editor Unity durante a demonstração ao vivo, com anotações simples adicionadas no Krita.
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
+
+Objetivo didático:
+Mostrar a correspondência direta entre os conceitos de FSM estudados e os elementos visuais do Animator Controller.
+Arquivo sugerido:
+assets/animator-fsm-guarda.webp
+Descrição:
+Captura de tela do Animator Controller da Unity com três estados (Patrulhar, Perseguir, Atacar) conectados por setas rotuladas com os parâmetros de guarda correspondentes.
+Como produzir:
+Screenshot direto do editor Unity durante a demonstração ao vivo, com anotações simples adicionadas no Krita.
+-->
 
 ---
 

@@ -9,7 +9,7 @@ footer: "IFMS • Semana 07"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -191,25 +191,18 @@ Entrega final do Módulo 2.
 - capacidade de explicar a navegação em termos de grafo, heurística e `f = g + h`;
 - justificativa técnica: quando JPS+, pathfinding hierárquico ou flow field se aplicariam ao próprio AI Playground.
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Mostrar visualmente a diferença entre a expansão de nós do A* e a poda por jump points do JPS em uma mesma grade aberta.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/astar-vs-jps-grade-aberta.webp
-> ```
->
-> **Descrição**
->
-> Duas grades lado a lado: à esquerda, nós expandidos pelo A* em "leque"; à direita, a mesma busca com poda de simetria do JPS, destacando os jump points.
->
-> **Como produzir**
->
-> Diagrama estático gerado a partir de captura de um script de comparação simplificado, com anotações de cor adicionadas no Krita.
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
+
+Objetivo didático:
+Mostrar visualmente a diferença entre a expansão de nós do A* e a poda por jump points do JPS em uma mesma grade aberta.
+Arquivo sugerido:
+assets/astar-vs-jps-grade-aberta.webp
+Descrição:
+Duas grades lado a lado: à esquerda, nós expandidos pelo A* em "leque"; à direita, a mesma busca com poda de simetria do JPS, destacando os jump points.
+Como produzir:
+Diagrama estático gerado a partir de captura de um script de comparação simplificado, com anotações de cor adicionadas no Krita.
+-->
 
 ---
 
@@ -270,7 +263,7 @@ Toda afirmação exige rótulo de confiança: **[Documentado]**, **[Inferência]
 - JPS é o mesmo A*, com sucessores podados
 - JPS+ pré-calcula uma tabela de saltos; exige mapa estático
 - Não há JPS/JPS+ nativo na Unity; NavMesh Agent já suaviza caminhos
-- Módulo 2 encerrado: Navigation consolidado, com Desafio e Engenharia Reversa
+- Módulo 2 encerrado: quatro entregas — Navigation consolidado, AI Design Log, Desafio e Engenharia Reversa
 
 ---
 
@@ -278,7 +271,7 @@ Toda afirmação exige rótulo de confiança: **[Documentado]**, **[Inferência]
 
 **Tema:** Checkpoint do AI Playground — abertura da Unidade III
 
-- Concluir as três entregas do Módulo 2 (Desafio, AI Design Log, Engenharia Reversa)
+- Concluir as quatro entregas do Módulo 2: Micro Game consolidado (50%), AI Design Log (25%), Desafio (15%), Engenharia Reversa (10%)
 - Preparar a apresentação técnica intermediária do projeto
 
 <div class="tip">

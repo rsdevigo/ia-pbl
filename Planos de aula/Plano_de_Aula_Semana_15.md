@@ -50,7 +50,7 @@ Não é objetivo desta semana aprofundar o Deep Q-Network (DQN), *experience rep
 | Item | Detalhamento |
 |---|---|
 | **Leitura recomendada** | Apostila — Parte VI, Capítulo 12, seção 12.6 (obrigatória) e seção 12.9 completa (obrigatória, foco em ML-Agents) |
-| **Materiais necessários** | Projetor/tela; computadores com Unity Hub, o pacote ML-Agents importado e o ambiente Python do ML-Agents já instalado (conforme recomendação da Semana 14); planejamento escrito de estado/ação/recompensa de cada grupo, produzido na Semana 14; acesso ao TensorBoard (ou visualizador de métricas equivalente) para acompanhar a curva de recompensa |
+| **Materiais necessários** | Projetor/tela; computadores com Unity Hub, o pacote ML-Agents importado e o ambiente Python do ML-Agents já instalado e testado (conforme recomendação da Semana 14 e o ambiente técnico de referência registrado no Manual do Professor, §6.0); planejamento escrito de estado/ação/recompensa **e o esqueleto do script de `Agent`** de cada grupo, produzidos na Semana 14; acesso ao TensorBoard (ou visualizador de métricas equivalente) para acompanhar a curva de recompensa |
 | **Cena Unity utilizada** | Cena do Micro Game Adaptive AI montada na Semana 14 (agente, ambiente, alvo/obstáculos), agora recebendo os componentes de ML-Agents (Behavior Parameters, Decision Requester, script de Agent em C#) |
 | **Assets** | Nenhum asset de arte adicional; reaproveitamento do cenário mínimo já montado |
 | **Exemplos** | O exemplo passo a passo da trilha S1–S5 (seção 12.6) para fixar a equação de Bellman antes de ir ao computador; exemplos oficiais do ML-Agents (Walker/Crawler) como referência de curva de recompensa saudável; o exemplo do *CoastRunners* (retomado da Semana 14) caso surjam sinais de recompensa mal especificada durante o treino |
@@ -126,7 +126,7 @@ Nenhuma ferramenta de terceiros é indicada para esta semana, uma vez que o ML-A
 
 **Etapas:**
 
-1. Adicionar à cena os componentes de ML-Agents (script de Agent em C#, Behavior Parameters, Decision Requester), implementando o estado (observações), o espaço de ações e a função de recompensa já planejados.
+1. Completar o script de `Agent` iniciado na Semana 14 e adicionar à cena os componentes de ML-Agents (Behavior Parameters, Decision Requester), conferindo se observações, espaço de ações e função de recompensa correspondem ao que foi planejado e validado na semana anterior.
 2. Configurar o arquivo YAML de treinamento com os hiperparâmetros básicos (taxa de aprendizagem, tamanho de lote, unidades ocultas, número máximo de passos).
 3. Iniciar o treinamento via linha de comando e acompanhar, no TensorBoard, a curva de recompensa cumulativa ao longo do tempo.
 4. Observar o comportamento do agente durante o treino, identificando se ele está progredindo, estagnado ou apresentando sinais de recompensa mal especificada.
@@ -174,4 +174,4 @@ Para a Semana 16 (Inferência com Sentis e consolidação), o professor deve:
 - confirmar que todos os grupos possuem um modelo treinado (`.onnx`) preservado, resultado do treinamento desta semana;
 - confirmar que todos os grupos registraram sua curva de recompensa e suas observações sobre o comportamento do agente treinado;
 - solicitar a leitura prévia da seção 12.9 (parte do Sentis, se ainda não revisada) e, se pertinente ao fechamento do módulo, da seção 12.10 (Vantagens e Limitações) e da seção 12.11 (Estudos de Caso);
-- lembrar que a Semana 16 encerra o Módulo 6 e é semana de Desafio de Escolha Tecnológica e Engenharia Reversa, conforme indicado no Cronograma — vale revisar com antecedência o formato desse desafio já utilizado em módulos anteriores.
+- lembrar que a Semana 16 encerra o Módulo 6 com **quatro** entregas avaliadas — Micro Game 6 consolidado (50%), AI Design Log (25%), Desafio de Escolha Tecnológica (15%) e Engenharia Reversa (10%) —, conforme indicado no Cronograma; vale revisar com antecedência o formato do desafio já utilizado em módulos anteriores.

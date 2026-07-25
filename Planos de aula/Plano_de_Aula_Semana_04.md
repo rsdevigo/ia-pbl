@@ -46,7 +46,7 @@ Conteúdo previsto no Cronograma para esta semana, correspondente à **Parte II,
 - ferramentas: o pacote oficial **Unity Behavior**, com comparação pontual a **NodeCanvas** e **Behavior Designer** (seção 6.10);
 - metodologia de Engenharia Reversa de IA: por que os estúdios raramente publicam os detalhes de sua IA (seção 14.1); observação sistemática, estímulo e resposta, e sinais de identificação de técnicas (seção 14.2); o roteiro de seis etapas — definição do problema, coleta de evidências, registro das observações, formulação de hipóteses, validação e documentação (seção 14.3); ética e limites da engenharia reversa comportamental, com os rótulos [Documentado], [Inferência] e [Especulação] (seção 14.4).
 
-Não devem ser antecipados os aprofundamentos de GOAP (seção 6.6) e IA de Utilidade (seção 6.7): são conteúdo de aprofundamento, retomados apenas como panorama comparativo no quadro da seção 6.8, sem estudo formal nesta semana. Também não deve ser antecipado o Capítulo 15 (estudos de caso comentados) além do caso pontual utilizado no primeiro momento de Engenharia Reversa desta semana.
+Não devem ser antecipados os aprofundamentos de GOAP (seção 6.6) e IA de Utilidade (seção 6.7). Os dois casos são diferentes e o professor deve deixar isso claro à turma: a **IA de Utilidade será estudada na Semana 9**, ao lado dos mapas de influência, com os quais compartilha a lógica de combinação ponderada; já o **GOAP não é estudado nesta disciplina** — é exclusão deliberada, justificada no Capítulo 6.5 do Manual do Professor, e permanece disponível na seção 6.6 como leitura de aprofundamento voluntário. Ambos aparecem nesta semana apenas no panorama comparativo do quadro da seção 6.8. Também não deve ser antecipado o Capítulo 15 (estudos de caso comentados) além do caso pontual utilizado no primeiro momento de Engenharia Reversa desta semana.
 
 ---
 
@@ -54,7 +54,7 @@ Não devem ser antecipados os aprofundamentos de GOAP (seção 6.6) e IA de Util
 
 | Item | Detalhamento |
 |---|---|
-| **Leitura recomendada** | Apostila — Parte II, Capítulo 6, seções 6.1 a 6.5, 6.8 e 6.10 (essencial); Parte VII, Capítulo 14, completo |
+| **Leitura recomendada** | Apostila — Parte II, Capítulo 6, seções 6.1 a 6.5, 6.8 e 6.10 (essencial); Parte VII, Capítulo 14, completo; **Apêndice A (Glossário)** para consulta do vocabulário de BT e Blackboard. *Observação:* o **Encerramento da Parte II** ainda não deve ser indicado — a Parte só se completa na Semana 8, com o Capítulo 5 |
 | **Materiais necessários** | Projetor/tela; computadores com Unity Hub e o projeto AI Playground de cada grupo, com a HFSM da Semana 3 implementada; pacote **Unity Behavior** instalado nos projetos; acesso a vídeo ou build do jogo escolhido para Engenharia Reversa |
 | **Cena Unity utilizada** | A mesma cena de demonstração das Semanas 2 e 3 (NPC provisório e ponto de referência do jogador), reaproveitada para a migração de HFSM para Árvore de Comportamento |
 | **Assets** | Nenhum asset de arte adicional; segue-se com o modelo provisório do NPC já utilizado nas semanas anteriores |
@@ -93,7 +93,7 @@ Não devem ser antecipados os aprofundamentos de GOAP (seção 6.6) e IA de Util
 | 4. Testes e ajustes | 10 min | Verificar se a BT reproduz o comportamento esperado | Circula entre os grupos, testando a reavaliação de prioridades (por exemplo, interrompendo uma subárvore de menor prioridade ao simular uma ameaça) | Testam a árvore implementada e corrigem prioridades ou chaves de Blackboard mal configuradas |
 | 5. Desafio de Escolha Tecnológica do Módulo 1 | 15 min | Desenvolver a capacidade de justificar tecnicamente uma escolha de solução | Apresenta um cenário de decisão de NPC não idêntico ao Micro Game (por exemplo, um NPC de suporte que deve alternar entre curar, seguir e revidar) e solicita que cada grupo compare ao menos duas soluções possíveis (FSM/HFSM/BT) e justifique a escolhida | Analisam o cenário, comparam alternativas com base em requisitos e limitações, e registram a justificativa por escrito |
 | 6. Primeiro momento de Engenharia Reversa | 12 min | Aplicar o roteiro de seis etapas a um caso real | Apresenta trechos de vídeo do jogo escolhido (por exemplo, *Halo 2*), conduz a definição do problema e a observação orientada, e discute hipóteses de identificação de técnica com a turma, reforçando os rótulos [Documentado]/[Inferência]/[Especulação] | Aplicam as etapas 1 a 4 do roteiro (definição do problema, coleta, registro e hipóteses) ao comportamento observado, registrando evidências e hipóteses com nível de confiança |
-| 7. Encerramento do Módulo 1 | 3 min | Fechar o módulo e indicar o caminho da próxima semana | Recapitula a evolução de FSM a BT ao longo do módulo, confirma as entregas da semana e anuncia que a Semana 5 abre a Unidade II com navegação | Registram pendências das três entregas do módulo para finalização até o prazo definido pelo professor |
+| 7. Encerramento do Módulo 1 | 3 min | Fechar o módulo e indicar o caminho da próxima semana | Recapitula a evolução de FSM a BT ao longo do módulo, confirma as entregas da semana e anuncia que a Semana 5 abre a Unidade II com navegação | Registram pendências das quatro entregas do módulo para finalização até o prazo definido pelo professor |
 
 ---
 
@@ -171,17 +171,21 @@ Ao contrário das Semanas 2 e 3, esta semana **encerra formalmente o Módulo 1**
 
 A nota do Módulo 1 compõe 11,67% da nota final do semestre, conforme os Critérios de Notas. O professor deve registrar e comunicar aos estudantes a nota obtida em cada instrumento e a nota consolidada do módulo, conforme recomendado pela Rubrica.
 
+
+**Instrumentos de verificação disponíveis na Apostila.** Antes de recorrer a questões próprias, o professor deve usar o material já pronto e alinhado: os **Exercícios de fixação** ao final do Capítulo 6, e — nas semanas de encerramento de Parte — as **Questões de Revisão**, os **Exercícios Conceituais** e os **Exercícios de Integração** do Encerramento correspondente. Recomenda-se aplicar duas ou três questões na abertura do Encontro 2, como verificação rápida antes do laboratório, e usar o quadro comparativo da seção 6.8 como apoio à discussão técnica. Esse material é a principal fonte de verificação formativa da disciplina, e não deve ficar sem uso.
+
 ---
 
 ## Entregas
 
-Conforme o Cronograma, esta semana encerra o Módulo 1 com três entregas:
+Conforme o Cronograma e a matriz dos Critérios de Notas (item 4), esta semana encerra o Módulo 1 com **quatro** entregas avaliadas:
 
-- **Desafio de Escolha Tecnológica (Módulo 1)** — justificativa escrita comparando ao menos duas alternativas para o cenário de decisão de NPC apresentado no Encontro 2;
-- **AI Design Log — Micro Game 1** — documento contendo problema, requisitos, alternativas consideradas (FSM, HFSM, BT), solução escolhida, justificativa, ferramentas utilizadas, limitações e melhorias futuras, conforme especificado no CLAUDE.md do projeto;
-- **1º momento de Engenharia Reversa** — registro das etapas 1 a 4 (e, se orientado pelo professor, 5 e 6) do roteiro aplicado a *Halo 2* (ou ao jogo escolhido).
+- **Micro Game 1 — NPC Decision consolidado (50%)** — versão em Árvore de Comportamento com Blackboard, funcional e demonstrável, avaliada pelos critérios de Compreensão Conceitual, Aplicação Prática, Uso da Unity e do Ecossistema e Qualidade Técnica da Solução;
+- **AI Design Log — Micro Game 1 (25%)** — documento contendo problema, requisitos, alternativas consideradas (FSM, HFSM, BT), solução escolhida, justificativa, ferramentas utilizadas, limitações e melhorias futuras, conforme o modelo dos Modelos de Entrega do Aluno (§1);
+- **Desafio de Escolha Tecnológica — Módulo 1 (15%)** — justificativa escrita comparando ao menos duas alternativas para o cenário de decisão de NPC apresentado no Encontro 2;
+- **1º momento de Engenharia Reversa (10%)** — registro das etapas 1 a 4 (e, se orientado pelo professor, 5 e 6) do roteiro aplicado a *Halo 2* (ou ao jogo escolhido).
 
-O Micro Game NPC Decision, na versão BT + Blackboard consolidada nesta semana, permanece no AI Playground de cada grupo como base para os módulos seguintes.
+O Micro Game NPC Decision permanece no AI Playground de cada grupo como base para os módulos seguintes, mas a versão consolidada nesta semana é **entrega formal avaliada**, e não apenas um artefato de trabalho.
 
 ---
 
@@ -202,7 +206,7 @@ O Micro Game NPC Decision, na versão BT + Blackboard consolidada nesta semana, 
 Para a Semana 5 (Grafos e Representação do Espaço — abertura da Unidade II), o professor deve:
 
 - solicitar a leitura prévia do Capítulo 7 da Apostila (Grafos e Representação do Espaço);
-- garantir que as três entregas do Módulo 1 (Desafio de Escolha Tecnológica, AI Design Log, Engenharia Reversa) estejam recebidas e avaliadas antes do início da Semana 5, registrando a nota do módulo conforme os Critérios de Notas;
+- garantir que as quatro entregas do Módulo 1 (Micro Game consolidado, AI Design Log, Desafio de Escolha Tecnológica, Engenharia Reversa) estejam recebidas e avaliadas antes do início da Semana 5, registrando a nota do módulo conforme a matriz dos Critérios de Notas (item 4);
 - confirmar que todos os grupos possuem, ao final da Semana 4, uma Árvore de Comportamento funcional no Micro Game NPC Decision, encerrando o Módulo 1 do AI Playground;
 - providenciar acesso ao pacote **AI Navigation** nos projetos de cada grupo, já que a Semana 5 inicia a configuração da NavMesh no Micro Game Navigation;
 - anunciar a transição de unidade: da pergunta "como um NPC decide o que fazer?" para "como um agente encontra seu destino?", situando a navegação como um novo problema, não uma continuação do Módulo 1.

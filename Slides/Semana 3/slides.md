@@ -9,7 +9,7 @@ footer: "IFMS • Semana 03"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -154,25 +154,18 @@ O Animator materializa a hierarquia diretamente.
 | Subestado | Estado interno da sub-state machine |
 | Transição herdada | Seta que sai da borda da sub-state machine |
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Mostrar a correspondência entre superestado/subestado e a sub-state machine do Animator.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/animator-hfsm-guarda.webp
-> ```
->
-> **Descrição**
->
-> Captura de tela do Animator Controller com uma sub-state machine "Combate" contendo os estados "Atirar" e "Recarregar", e uma transição saindo da borda da sub-state machine para "Fugir".
->
-> **Como produzir**
->
-> Screenshot direto do editor Unity durante a demonstração ao vivo, com anotações simples adicionadas no Krita.
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
+
+Objetivo didático:
+Mostrar a correspondência entre superestado/subestado e a sub-state machine do Animator.
+Arquivo sugerido:
+assets/animator-hfsm-guarda.webp
+Descrição:
+Captura de tela do Animator Controller com uma sub-state machine "Combate" contendo os estados "Atirar" e "Recarregar", e uma transição saindo da borda da sub-state machine para "Fugir".
+Como produzir:
+Screenshot direto do editor Unity durante a demonstração ao vivo, com anotações simples adicionadas no Krita.
+-->
 
 ---
 

@@ -9,7 +9,7 @@ footer: "IFMS • Semana 09"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -217,25 +217,18 @@ A grade de navegação responde "posso ir?" (topológico). O mapa de influência
 - integração com a árvore de decisão já implementada na Semana 8;
 - justificativa dos pesos e/ou da frequência de atualização escolhidos.
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Tornar visível, antes da implementação, como fonte, propagação e decaimento se distribuem sobre uma grade com obstáculo.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/mapa-influencia-grade.webp
-> ```
->
-> **Descrição**
->
-> Grade de células coloridas por intensidade de influência, com uma fonte destacada, um obstáculo interrompendo a propagação e uma legenda de decaimento por cor.
->
-> **Como produzir**
->
-> Captura de tela do próprio Micro Game em modo debug (visualização da grade via Gizmos no Unity), com anotações adicionadas no Krita.
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
+
+Objetivo didático:
+Tornar visível, antes da implementação, como fonte, propagação e decaimento se distribuem sobre uma grade com obstáculo.
+Arquivo sugerido:
+assets/mapa-influencia-grade.webp
+Descrição:
+Grade de células coloridas por intensidade de influência, com uma fonte destacada, um obstáculo interrompendo a propagação e uma legenda de decaimento por cor.
+Como produzir:
+Captura de tela do próprio Micro Game em modo debug (visualização da grade via Gizmos no Unity), com anotações adicionadas no Krita.
+-->
 
 ---
 
@@ -262,7 +255,10 @@ Comparar ao menos **duas soluções** (árvore de decisão, mapa de influência,
 
 # 3º Momento de Engenharia Reversa
 
-Jogo sugerido: **F.E.A.R.** (Monolith Productions, 2005) — posicionamento tático documentado por Jeff Orkin (GDC 2006).
+Dois casos possíveis, ambos analisados na Apostila:
+
+- **Age of Empires / Civilization** (seção 15.7) — mapas de influência, decisão espacial
+- **The Sims** (seção 15.4) — IA de utilidade, decisão entre ações concorrentes
 
 ---
 

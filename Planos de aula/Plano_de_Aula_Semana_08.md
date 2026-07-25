@@ -57,8 +57,9 @@ Não deve ser antecipado o restante do Capítulo 10 (combinação de camadas, se
 
 | Item | Detalhamento |
 |---|---|
-| **Leitura recomendada** | Apostila — Parte II, Capítulo 5, completo (seções 5.1 a 5.8); Parte IV, Capítulo 10, seção 10.1 e início da seção 10.2 (até o conceito de campo escalar, sem aprofundar em 10.2.1 e 10.2.2) |
-| **Materiais necessários** | Projetor/tela; computadores com Unity Hub e o projeto AI Playground de cada grupo, com os Micro Games NPC Decision e Navigation consolidados; roteiro/critérios do checkpoint para orientar as apresentações do Encontro 2; cronômetro para controlar o tempo de cada apresentação |
+| **Leitura recomendada** | Apostila — Parte II, Capítulo 5, completo (seções 5.1 a 5.8); Parte IV, Capítulo 10, seção 10.1 e início da seção 10.2 (até o conceito de campo escalar, sem aprofundar em 10.2.1 e 10.2.2); **Encerramento da Parte II**, que se completa nesta semana com o Capítulo 5 — sua *Tabela Comparativa Consolidada* (FSM × HFSM × árvore de decisão × BT) é o melhor apoio para a distinção trabalhada no Encontro 1 |
+| **Materiais necessários** | Projetor/tela; computadores com Unity Hub e o projeto AI Playground de cada grupo, com os Micro Games NPC Decision e Navigation consolidados; cópias impressas da Ficha 5 dos Formulários de Avaliação, uma por grupo, para o rodízio de checkpoint; cronômetro para controlar os 4 a 5 minutos de cada arguição |
+| **Dimensionamento de turma** | A disciplina é planejada para turmas de **até 40 estudantes**, podendo operar com cerca de 30, organizadas em grupos de **2 a 4** — o que resulta, na prática, em **10 a 14 grupos**. É esse número que torna inviável o formato de apresentações seriadas e justifica o rodízio adotado neste encontro. Com 14 grupos, o rodízio consome cerca de 56 dos 60 minutos de laboratório: o professor deve iniciá-lo imediatamente e manter o cronômetro visível |
 | **Cena Unity utilizada** | Nova cena (ou extensão de cena existente) para o Micro Game Tactical AI, com um NPC e ao menos duas ou três condições observáveis (por exemplo, visão do jogador, distância, nível de vida) que alimentem os testes da árvore de decisão |
 | **Assets** | Nenhum asset adicional obrigatório; reaproveita-se a estrutura de cena e os scripts já existentes dos Micro Games anteriores sempre que aplicável |
 | **Exemplos** | Diagrama de árvore de decisão da seção 5.2 (NPC que decide entre patrulhar, fugir, atacar corpo a corpo ou atirar); quadro comparativo árvore de decisão versus árvore de comportamento da seção 5.2.1; diagrama conceitual "como chegar? versus onde ir?" da seção 10.1 |
@@ -78,23 +79,23 @@ Não deve ser antecipado o restante do Capítulo 10 (combinação de camadas, se
 | 3. Nós, ramos e folhas | 15 min | Explicar a estrutura e a avaliação da árvore de decisão | Apresenta a seção 5.2 com o diagrama do NPC (patrulhar/fugir/atacar/atirar), demonstrando a descida da raiz até a folha | Percorrem, em voz alta, o caminho de avaliação para um conjunto de condições proposto pelo professor |
 | 4. Árvore de decisão versus árvore de comportamento | 20 min | Consolidar a distinção essencial entre as duas arquiteturas | Apresenta o quadro comparativo da seção 5.2.1, retomando os conceitos de estados de retorno e nós de controle de fluxo estudados no Módulo 1 | Preenchem, em grupo, um quadro comparativo próprio, relacionando cada arquitetura a um exemplo do Micro Game NPC Decision já desenvolvido |
 | 5. Ordenação de testes e limitações | 15 min | Explicar o efeito da ordenação de testes e as limitações que motivaram as árvores de comportamento | Apresenta a seção 5.3.1 (ordenação e profundidade) e a seção 5.5 (limitações: ausência de tempo, sequenciamento, reutilização e composição) | Identificam, para a árvore de decisão do exemplo, qual teste deveria ficar mais perto da raiz e por quê |
-| 6. Transição: do "como chegar" ao "onde ir" | 15 min | Introduzir o problema do mapa de influência como nova pergunta espacial | Apresenta a seção 10.1: as três situações (cobertura, avanço de exército, fuga) que o pathfinding, sozinho, não resolve | Relacionam as três situações apresentadas a possíveis cenários do próprio AI Playground |
-| 7. Conceito de campo escalar, fonte, propagação e decaimento | 10 min | Apresentar, em nível introdutório, o conceito central do mapa de influência | Apresenta o início da seção 10.2, definindo campo escalar e anunciando fonte, propagação e decaimento como pilares a aprofundar na Semana 9 | Registram, para retomada na semana seguinte, dúvidas iniciais sobre o conceito de campo escalar |
-| 8. Encerramento e preparação do checkpoint | 5 min | Orientar a preparação da apresentação técnica intermediária | Apresenta os critérios do checkpoint (Comunicação Técnica e Evolução ao Longo do Semestre) e orienta os grupos a prepararem uma apresentação curta do progresso do AI Playground para o Encontro 2 | Organizam, em grupo, o roteiro da apresentação a ser feita no Encontro 2 |
+| 6. Do "como chegar" ao "onde ir": o campo escalar | 15 min | Introduzir o problema do mapa de influência e seu conceito central | Apresenta a seção 10.1 — as três situações (cobertura, avanço de exército, fuga) que o pathfinding, sozinho, não resolve — e emenda no início da seção 10.2, definindo campo escalar e anunciando fonte, propagação e decaimento como pilares a aprofundar na Semana 9 | Relacionam as três situações a cenários do próprio AI Playground e registram dúvidas iniciais sobre campo escalar para a semana seguinte |
+| 7. Encerramento e preparação do checkpoint | 5 min | Orientar a preparação da arguição de checkpoint | Apresenta os critérios do checkpoint (Comunicação Técnica e Evolução ao Longo do Semestre), explica o formato de rodízio adotado no Encontro 2 e orienta os grupos a prepararem uma demonstração curta do progresso do AI Playground | Organizam, em grupo, o roteiro da demonstração e da defesa a serem feitas no Encontro 2 |
 
 ---
 
 ## Encontro 2 (1h30)
 
-**Foco:** Início do Micro Game Tactical AI com árvore de decisão. Apresentação técnica intermediária — checkpoint de progresso do AI Playground.
+**Foco:** Início do Micro Game Tactical AI com árvore de decisão, com o checkpoint do AI Playground conduzido **em rodízio** durante o próprio laboratório.
+
+> **Formato do checkpoint.** Com turmas de 30 a 40 estudantes (10 a 14 grupos), apresentações seriadas para toda a turma são inviáveis: consumiriam o encontro inteiro e reduziriam cada grupo a três minutos. O checkpoint é, portanto, conduzido em **rodízio**: os grupos trabalham no Tactical AI enquanto o professor circula e realiza, com cada um, uma arguição de 4 a 5 minutos na própria bancada, aplicando a Ficha 5 dos Formulários de Avaliação. O formato preserva a defesa técnica individualizada exigida pela Rubrica, devolve ao laboratório o tempo antes gasto em apresentações seriadas e é coerente com a orientação de circulação entre grupos do Manual do Professor (§4.3). Ver a nota de dimensionamento de turma na Preparação do Professor.
 
 | Etapa | Duração | Objetivo | Atividade do Professor | Atividade dos Estudantes |
 |---|---|---|---|---|
-| 1. Revisão rápida | 5 min | Retomar os conceitos-chave antes da prática | Conduz uma discussão breve recuperando a distinção entre árvore de decisão e árvore de comportamento | Respondem perguntas de verificação oral, relacionando os conceitos ao NPC a ser desenvolvido no Micro Game Tactical AI |
-| 2. Início do Micro Game Tactical AI | 30 min | Implementar uma árvore de decisão simples em C# ou Visual Scripting | Orienta os grupos na definição das condições do NPC (por exemplo, visão do jogador, distância, vida) e na implementação guiada da árvore de decisão correspondente | Implementam, em grupo, a árvore de decisão do NPC do Micro Game Tactical AI, testando ao menos dois caminhos de avaliação distintos |
-| 3. Discussão técnica | 10 min | Consolidar a compreensão da árvore implementada | Conduz a discussão sobre a ordenação dos testes escolhida por cada grupo e sua relação com a seção 5.3.1 | Justificam, em voz alta, a ordem dos testes escolhida para a própria árvore de decisão |
-| 4. Apresentação técnica intermediária (checkpoint) | 35 min | Avaliar o progresso do AI Playground nos Módulos 1 e 2 | Conduz as apresentações de cada grupo (tempo controlado), avaliando pelos critérios de Comunicação Técnica e Evolução ao Longo do Semestre, e registra feedback formativo individual | Apresentam o AI Playground consolidado (Micro Games NPC Decision e Navigation), explicando decisões técnicas tomadas e evolução em relação ao feedback recebido anteriormente |
-| 5. Encerramento | 10 min | Fechar a semana e indicar o caminho do Módulo 3 | Recapitula o início do Módulo 3 (árvore de decisão e introdução ao mapa de influência) e anuncia que a Semana 9 aprofunda o mapa de influência e introduz Utility AI | Registram feedback recebido no checkpoint e pendências a resolver antes da Semana 9 |
+| 1. Revisão rápida e organização do rodízio | 10 min | Retomar os conceitos-chave e organizar a dinâmica do encontro | Recupera a distinção entre árvore de decisão e árvore de comportamento e anuncia a ordem do rodízio de checkpoint, para que cada grupo saiba quando será arguido | Respondem perguntas de verificação oral e deixam o AI Playground dos Módulos 1 e 2 pronto para demonstração na própria bancada |
+| 2. Laboratório do Tactical AI com checkpoint em rodízio | 60 min | Implementar a árvore de decisão e avaliar o progresso do AI Playground nos Módulos 1 e 2 | Circula entre os grupos em duas frentes simultâneas: orienta a implementação da árvore de decisão (condições do NPC, ordenação dos testes) e conduz, com cada grupo, uma arguição de 4 a 5 minutos sobre os Micro Games NPC Decision e Navigation, avaliando Comunicação Técnica e Evolução ao Longo do Semestre e registrando feedback na Ficha 5 | Implementam a árvore de decisão do NPC do Tactical AI, testando ao menos dois caminhos de avaliação distintos; quando chega sua vez, demonstram o AI Playground e defendem as decisões técnicas tomadas até aqui |
+| 3. Síntese do checkpoint e discussão técnica | 10 min | Devolver à turma o que foi observado no rodízio e consolidar a árvore implementada | Apresenta os padrões observados no rodízio (acertos recorrentes e fragilidades comuns) e conduz a discussão sobre a ordenação de testes escolhida pelos grupos, relacionando-a à seção 5.3.1 | Justificam, em voz alta, a ordem dos testes escolhida para a própria árvore e comparam com a de outros grupos |
+| 4. Encerramento | 10 min | Fechar a semana e indicar o caminho do Módulo 3 | Recapitula o início do Módulo 3 e anuncia que a Semana 9 aprofunda o mapa de influência e retoma a IA de utilidade da seção 6.7 | Registram o feedback recebido no checkpoint e as pendências a resolver antes da Semana 9 |
 
 ---
 
@@ -142,10 +143,10 @@ Nenhuma ferramenta de mapa de influência é utilizada nesta semana: o conteúdo
 1. Definir, em grupo, de duas a três condições observáveis do NPC (por exemplo, visão do jogador, distância, nível de vida) e as ações resultantes (por exemplo, patrulhar, fugir, atacar, atirar).
 2. Desenhar, em papel ou diagrama simples, a árvore de decisão correspondente antes de implementá-la, aplicando o critério de ordenação de testes da seção 5.3.1.
 3. Implementar a árvore de decisão em C# ou Visual Scripting, testando ao menos dois caminhos de avaliação distintos.
-4. Preparar uma apresentação curta do progresso do AI Playground (Micro Games NPC Decision e Navigation consolidados), destacando decisões técnicas tomadas e evolução em relação a feedback anterior.
-5. Apresentar o checkpoint ao professor e à turma, respondendo a perguntas técnicas sobre as escolhas de arquitetura realizadas até aqui.
+4. Deixar o AI Playground (Micro Games NPC Decision e Navigation consolidados) pronto para demonstração imediata na própria bancada, com o roteiro de defesa preparado a partir do Modelo de Plano de Apresentação (Modelos de Entrega do Aluno, §4).
+5. Demonstrar e defender o checkpoint ao professor, na arguição de 4 a 5 minutos do rodízio, respondendo a perguntas técnicas sobre as escolhas de arquitetura realizadas até aqui.
 
-**Resultado esperado:** ao final do Encontro 2, cada grupo deve ter uma árvore de decisão funcional no Micro Game Tactical AI e deve ter apresentado o checkpoint técnico intermediário do AI Playground, recebendo feedback formativo sobre Comunicação Técnica e Evolução ao Longo do Semestre.
+**Resultado esperado:** ao final do Encontro 2, cada grupo deve ter uma árvore de decisão funcional no Micro Game Tactical AI e deve ter sido arguido no rodízio de checkpoint, recebendo feedback formativo sobre Comunicação Técnica e Evolução ao Longo do Semestre.
 
 ---
 
@@ -160,13 +161,16 @@ O checkpoint da Semana 8 corresponde a 10% da nota final do semestre, conforme o
 
 A implementação inicial da árvore de decisão no Micro Game Tactical AI não gera nota isolada nesta semana: ela é observada formativamente pelo professor, para orientar a consolidação do Micro Game na Semana 9, quando o Módulo 3 é encerrado e avaliado pelos quatro instrumentos previstos (Micro Game, AI Design Log, Desafio de Escolha Tecnológica e Engenharia Reversa).
 
+
+**Instrumentos de verificação disponíveis na Apostila.** Antes de recorrer a questões próprias, o professor deve usar o material já pronto e alinhado: os **Exercícios de fixação** ao final do Capítulo 5, e — nas semanas de encerramento de Parte — as **Questões de Revisão**, os **Exercícios Conceituais** e os **Exercícios de Integração** do Encerramento correspondente. Recomenda-se aplicar duas ou três questões na abertura do Encontro 2, como verificação rápida antes do laboratório, e usar a Tabela Comparativa Consolidada do Encerramento da Parte II como apoio à discussão técnica. Esse material é a principal fonte de verificação formativa da disciplina, e não deve ficar sem uso.
+
 ---
 
 ## Entregas
 
 Conforme o Cronograma, a única entrega formal avaliada da Semana 8 é:
 
-- **Apresentação Técnica Intermediária (Checkpoint do AI Playground)** — apresentação oral do progresso consolidado dos Módulos 1 e 2, avaliada pelos critérios de Comunicação Técnica e Evolução ao Longo do Semestre.
+- **Apresentação Técnica Intermediária (Checkpoint do AI Playground)** — demonstração e defesa oral do progresso consolidado dos Módulos 1 e 2, realizada na arguição de rodízio do Encontro 2 e avaliada pelos critérios de Comunicação Técnica e Evolução ao Longo do Semestre (10% da nota final do semestre).
 
 A árvore de decisão implementada no Micro Game Tactical AI permanece em desenvolvimento e será consolidada, com o restante do Módulo 3, na Semana 9 — não constitui entrega avaliada isoladamente nesta semana.
 
@@ -180,7 +184,8 @@ A árvore de decisão implementada no Micro Game Tactical AI permanece em desenv
 | Tentar expressar, na árvore de decisão do Micro Game, uma sequência de ações com dependência de sucesso ("faça A, depois B") | Retomar o Erro Comum da seção 5.5: a árvore de decisão escolhe uma ação, não orquestra uma sequência; esse é o território das árvores de comportamento, já disponível do Módulo 1 |
 | Ordenar os testes da árvore sem critério, colocando testes caros ou pouco decisivos perto da raiz | Retomar a Boa Prática da seção 5.3.1 e pedir que o grupo justifique, para cada teste, se ele é barato/decisivo o suficiente para ficar próximo da raiz |
 | Confundir o mapa de influência, ainda em nível introdutório, com a grade de navegação já estudada no Módulo 2 | Retomar o quadro de Atenção da seção 10.2, reforçando que a grade de navegação responde "posso ir?" (topológico) e o mapa de influência responde "vale a pena ir?" (avaliativo) |
-| Apresentar o checkpoint de forma excessivamente técnica ou excessivamente genérica, sem equilibrar clareza e profundidade | Orientar previamente, no Encontro 1, que a apresentação deve explicar decisões técnicas de forma acessível à turma, com exemplos concretos do próprio AI Playground |
+| Apresentar o checkpoint de forma excessivamente técnica ou excessivamente genérica, sem equilibrar clareza e profundidade | Orientar previamente, no Encontro 1, que a defesa deve explicar decisões técnicas de forma acessível, com exemplos concretos do próprio AI Playground |
+| Grupo despreparado quando chega sua vez no rodízio, consumindo o tempo de arguição para abrir cena ou recompilar o projeto | Anunciar a ordem do rodízio logo na etapa 1 do Encontro 2 e exigir que o AI Playground esteja aberto e rodando desde o início do encontro; grupos despreparados vão para o fim da fila, sem tempo adicional |
 
 ---
 
@@ -192,4 +197,4 @@ Para a Semana 9 (Mapas de Influência e Utility AI — encerramento do Módulo 3
 - confirmar que todos os grupos possuem, ao final da Semana 8, uma árvore de decisão funcional no Micro Game Tactical AI, servindo de base para a consolidação do Módulo 3;
 - preparar o aprofundamento do Capítulo 10 (seções 10.2.1 em diante — fontes, propagação, decaimento, combinação de camadas, atualização em tempo real, exemplos, vantagens, limitações, jogos e ferramentas, incluindo a comparação com o EQS da Unreal) e a extensão para Utility AI, sem solução oficial equivalente na Unity;
 - reservar, para a Semana 9, o material do terceiro momento de Engenharia Reversa, em jogo com IA tática visível (tiro ou estratégia), conforme o Cronograma;
-- anunciar aos estudantes que a Semana 9 encerra o Módulo 3 e a Unidade III, com três entregas avaliadas: Desafio de Escolha Tecnológica, AI Design Log do Micro Game 3 e o terceiro momento de Engenharia Reversa.
+- anunciar aos estudantes que a Semana 9 encerra o Módulo 3 e a Unidade III, com **quatro** entregas avaliadas: Micro Game 3 consolidado (50%), AI Design Log do Micro Game 3 (25%), Desafio de Escolha Tecnológica (15%) e o terceiro momento de Engenharia Reversa (10%) — reforçando que o Micro Game é a entrega de maior peso do módulo, e não apenas um artefato de trabalho.

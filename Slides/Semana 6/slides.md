@@ -9,7 +9,7 @@ footer: "IFMS • Semana 06"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -195,25 +195,18 @@ A* contornando um obstáculo:
 - exploração eficiente em terreno aberto
 - exploração mais custosa perto de obstáculos
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Mostrar visualmente as listas aberta e fechada se expandindo ao contornar um obstáculo.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/astar-traco-execucao-obstaculo.webp
-> ```
->
-> **Descrição**
->
-> Grade lógica sobreposta à cena de teste, com células da lista fechada em uma cor, células da lista aberta (fronteira) em outra, e o caminho final destacado contornando um obstáculo central.
->
-> **Como produzir**
->
-> Screenshot do script de A* simplificado rodando sobre a grade lógica, com gizmos coloridos para aberta/fechada, capturado durante a demonstração ao vivo no Unity.
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
+
+Objetivo didático:
+Mostrar visualmente as listas aberta e fechada se expandindo ao contornar um obstáculo.
+Arquivo sugerido:
+assets/astar-traco-execucao-obstaculo.webp
+Descrição:
+Grade lógica sobreposta à cena de teste, com células da lista fechada em uma cor, células da lista aberta (fronteira) em outra, e o caminho final destacado contornando um obstáculo central.
+Como produzir:
+Screenshot do script de A* simplificado rodando sobre a grade lógica, com gizmos coloridos para aberta/fechada, capturado durante a demonstração ao vivo no Unity.
+-->
 
 ---
 

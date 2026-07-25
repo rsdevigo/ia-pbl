@@ -9,7 +9,7 @@ footer: "IFMS • Semana 15"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -148,27 +148,18 @@ Configurando o agente do Adaptive AI.
 
 Estado → ação → recompensa, o mesmo ciclo da Semana 14, agora em métodos C#.
 
----
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Mostrar a correspondência entre o planejamento de estado/ação/recompensa da Semana 14 e os componentes reais do ML-Agents na cena do Adaptive AI.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/componentes-mlagents-adaptive-ai.webp
-> ```
->
-> **Descrição**
->
-> Captura do Inspector da Unity mostrando um GameObject com os componentes Agent, Behavior Parameters e Decision Requester configurados, com anotações apontando para cada um.
->
-> **Como produzir**
->
-> Captura de tela direta da cena montada na Semana 14, com anotações adicionadas em Krita.
+Objetivo didático:
+Mostrar a correspondência entre o planejamento de estado/ação/recompensa da Semana 14 e os componentes reais do ML-Agents na cena do Adaptive AI.
+Arquivo sugerido:
+assets/componentes-mlagents-adaptive-ai.webp
+Descrição:
+Captura do Inspector da Unity mostrando um GameObject com os componentes Agent, Behavior Parameters e Decision Requester configurados, com anotações apontando para cada um.
+Como produzir:
+Captura de tela direta da cena montada na Semana 14, com anotações adicionadas em Krita.
+-->
 
 ---
 
@@ -256,6 +247,6 @@ Treinamento é um processo gradual e monitorado — não um resultado instantân
 
 <div class="tip">
 
-Semana 16 encerra o Módulo 6: Desafio de Escolha Tecnológica e Engenharia Reversa.
+Semana 16 encerra o Módulo 6 com quatro entregas: Adaptive AI consolidado (50%), AI Design Log (25%), Desafio de Escolha Tecnológica (15%) e Engenharia Reversa (10%).
 
 </div>

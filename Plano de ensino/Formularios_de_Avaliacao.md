@@ -6,6 +6,8 @@
 
 Este documento reúne os modelos de formulário utilizados para aplicar a Rubrica de Avaliação em cada instrumento avaliativo previsto no Plano de Ensino e no Cronograma. Todos os formulários utilizam os mesmos oito critérios e os mesmos quatro níveis de desempenho definidos na Rubrica (Insuficiente, Básico, Proficiente, Excelente), garantindo consistência entre módulos e entre instrumentos.
 
+Os critérios observados em cada ficha seguem a **Rubrica de Avaliação, seção 5**, e os pesos indicados seguem a matriz dos **Critérios de Notas, item 4**. As duas referências são normativas: nenhum formulário acrescenta, remove ou repondera critérios por conta própria. Cada módulo de conteúdo gera **quatro** instrumentos avaliados — Micro Game (50%), AI Design Log (25%), Desafio de Escolha Tecnológica (15%) e Engenharia Reversa (10%).
+
 Cada formulário deve ser preenchido em uma cópia própria por avaliação (por grupo, por módulo ou por estudante, conforme indicado). Recomenda-se salvar as cópias preenchidas em pasta própria de acompanhamento, fora deste documento-modelo.
 
 ---
@@ -26,7 +28,7 @@ Cada formulário deve ser preenchido em uma cópia própria por avaliação (por
 
 ## 1. Ficha de Avaliação de Micro Game
 
-Aplicável ao final de cada módulo, na consolidação do respectivo Micro Game (Módulos 1 a 6).
+Aplicável ao final de cada módulo, na consolidação do respectivo Micro Game (Módulos 1 a 6). **Peso: 50% da nota do módulo** — é o instrumento de maior peso e constitui entrega formal avaliada.
 
 | Campo | Preenchimento |
 |---|---|
@@ -61,7 +63,7 @@ Aplicável ao final de cada módulo, na consolidação do respectivo Micro Game 
 
 ## 2. Ficha de Avaliação de AI Design Log
 
-Aplicável a cada entrega de AI Design Log, junto com o respectivo Micro Game.
+Aplicável a cada entrega de AI Design Log, junto com o respectivo Micro Game. **Peso: 25% da nota do módulo.**
 
 | Campo | Preenchimento |
 |---|---|
@@ -98,7 +100,7 @@ Aplicável a cada entrega de AI Design Log, junto com o respectivo Micro Game.
 
 ## 3. Ficha de Avaliação do Desafio de Escolha Tecnológica
 
-Aplicável nas Semanas 4, 7, 9, 11, 13 e 16, conforme Cronograma.
+Aplicável nas Semanas 4, 7, 9, 11, 13 e 16, conforme Cronograma. **Peso: 15% da nota do módulo.**
 
 | Campo | Preenchimento |
 |---|---|
@@ -137,7 +139,7 @@ Aplicável nas Semanas 4, 7, 9, 11, 13 e 16, conforme Cronograma.
 
 ## 4. Ficha de Avaliação de Engenharia Reversa
 
-Aplicável nos momentos de Engenharia Reversa associados a cada Desafio de Escolha Tecnológica.
+Aplicável nos momentos de Engenharia Reversa associados a cada Desafio de Escolha Tecnológica. **Peso: 10% da nota do módulo.**
 
 | Campo | Preenchimento |
 |---|---|
@@ -171,6 +173,8 @@ Aplicável nos momentos de Engenharia Reversa associados a cada Desafio de Escol
 
 ## 5. Ficha de Apresentação Técnica Intermediária (Checkpoint — Semana 8)
 
+**Peso: 10% da nota final do semestre.** Aplicada durante o rodízio de arguição do Encontro 2 da Semana 8 (4 a 5 minutos por grupo), com uma cópia por grupo.
+
 | Campo | Preenchimento |
 |---|---|
 | Grupo | |
@@ -200,6 +204,8 @@ Aplicável nos momentos de Engenharia Reversa associados a cada Desafio de Escol
 ---
 
 ## 6. Ficha de Apresentação Final do AI Playground (Semana 17)
+
+**Peso: 20% da nota final do semestre.** Aplicada durante a arguição da Feira do AI Playground, no Encontro 2 da Semana 17 (4 a 5 minutos por grupo). A nota apoia-se na demonstração e defesa da feira, no AI Design Log consolidado e no acompanhamento contínuo registrado ao longo do semestre.
 
 | Campo | Preenchimento |
 |---|---|

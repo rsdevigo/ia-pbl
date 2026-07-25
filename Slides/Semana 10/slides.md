@@ -9,7 +9,7 @@ footer: "IFMS • Semana 10"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -105,27 +105,18 @@ Jogos por turnos, com informação perfeita (ambos veem o estado completo).
 
 Raiz, ramos (ações), nós filhos (estados), níveis alternados, folhas (utilidade).
 
----
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Tornar visível a explosão combinatória da árvore de jogo antes de discutir profundidade e fator de ramificação.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/arvore-jogo-profundidade.webp
-> ```
->
-> **Descrição**
->
-> Árvore de jogo com 3 níveis completos, fator de ramificação igual a 3, raiz destacada, folhas numeradas com valores de utilidade.
->
-> **Como produzir**
->
-> Diagrama vetorial produzido em Krita ou Blender (modo 2D), com camadas por profundidade e cor alternada para os níveis MAX e MIN.
+Objetivo didático:
+Tornar visível a explosão combinatória da árvore de jogo antes de discutir profundidade e fator de ramificação.
+Arquivo sugerido:
+assets/arvore-jogo-profundidade.webp
+Descrição:
+Árvore de jogo com 3 níveis completos, fator de ramificação igual a 3, raiz destacada, folhas numeradas com valores de utilidade.
+Como produzir:
+Diagrama vetorial produzido em Krita ou Blender (modo 2D), com camadas por profundidade e cor alternada para os níveis MAX e MIN.
+-->
 
 ---
 
@@ -273,6 +264,6 @@ Marcar cada camada com o jogador correspondente antes de propagar valores, usand
 
 <div class="tip">
 
-A Semana 11 traz três entregas: Desafio de Escolha Tecnológica, AI Design Log e 4º momento de Engenharia Reversa.
+A Semana 11 traz quatro entregas: Micro Game Board Game AI consolidado (50%), AI Design Log (25%), Desafio de Escolha Tecnológica (15%) e 4º momento de Engenharia Reversa (10%).
 
 </div>

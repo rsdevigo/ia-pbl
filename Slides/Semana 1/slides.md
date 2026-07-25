@@ -9,7 +9,7 @@ footer: "IFMS • Semana 01"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -120,25 +120,18 @@ O "tiro de aviso" antes do ataque letal existe para dar tempo de reação ao jog
 
 Modelo unificador de qualquer agente de IA em jogos.
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Reforçar visualmente o ciclo Sentir-Pensar-Agir como modelo central que será retomado em todos os módulos seguintes.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/ciclo-sentir-pensar-agir.webp
-> ```
->
-> **Descrição**
->
-> Diagrama circular com três blocos (Sentir, Pensar, Agir) conectados por setas em loop contínuo, com um ícone de NPC ao centro. Paleta institucional (índigo `#3b2f68` e verde `#b6d7a8`).
->
-> **Como produzir**
->
-> Ilustração vetorial simples, produzível no Krita ou em qualquer editor de vetores; não requer modelagem 3D.
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
+
+Objetivo didático:
+Reforçar visualmente o ciclo Sentir-Pensar-Agir como modelo central que será retomado em todos os módulos seguintes.
+Arquivo sugerido:
+assets/ciclo-sentir-pensar-agir.webp
+Descrição:
+Diagrama circular com três blocos (Sentir, Pensar, Agir) conectados por setas em loop contínuo, com um ícone de NPC ao centro. Paleta institucional (índigo `#3b2f68` e verde `#b6d7a8`).
+Como produzir:
+Ilustração vetorial simples, produzível no Krita ou em qualquer editor de vetores; não requer modelagem 3D.
+-->
 
 ---
 
@@ -173,25 +166,18 @@ Classificar um NPC exige observar o comportamento, não o código-fonte.
 
 Quatro fantasmas, quatro padrões de perseguição diferentes — e a ilusão de personalidades distintas.
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Ilustrar como padrões reativos simples (sem aprendizado, sem planejamento) já produzem a percepção de "personalidade" em cada fantasma.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/pacman-fantasmas-padroes.webp
-> ```
->
-> **Descrição**
->
-> Grade 2x2 mostrando os quatro fantasmas de *Pac-Man* (Blinky, Pinky, Inky, Clyde), cada um com uma seta esquemática indicando seu alvo de perseguição no labirinto.
->
-> **Como produzir**
->
-> Captura de tela de emulador de domínio público ou ilustração esquemática própria feita no Krita, evitando reprodução de arte protegida sempre que possível.
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
+
+Objetivo didático:
+Ilustrar como padrões reativos simples (sem aprendizado, sem planejamento) já produzem a percepção de "personalidade" em cada fantasma.
+Arquivo sugerido:
+assets/pacman-fantasmas-padroes.webp
+Descrição:
+Grade 2x2 mostrando os quatro fantasmas de *Pac-Man* (Blinky, Pinky, Inky, Clyde), cada um com uma seta esquemática indicando seu alvo de perseguição no labirinto.
+Como produzir:
+Captura de tela de emulador de domínio público ou ilustração esquemática própria feita no Krita, evitando reprodução de arte protegida sempre que possível.
+-->
 
 ---
 
@@ -269,7 +255,7 @@ Cada módulo responde a uma pergunta e produz um Micro Game.
 
 ## Agora: formação de grupos
 
-- Grupos de **2 a 3 estudantes**
+- Grupos de **2 a 4 estudantes** (preferencialmente 3 ou 4)
 - Cada grupo cria um **projeto Unity vazio** (AI Playground)
 - Estrutura de pastas prevendo os próximos Micro Games
 

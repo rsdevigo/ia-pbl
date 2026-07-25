@@ -26,6 +26,14 @@
 
 A indústria de jogos digitais exige profissionais capazes de compreender, selecionar e justificar tecnicamente soluções de Inteligência Artificial, e não apenas operar ferramentas. A disciplina Inteligência Artificial e Ilusão de Inteligência parte da premissa de que a IA aplicada a jogos não busca inteligência ótima, mas sim comportamentos convincentes, controláveis e economicamente viáveis dentro de um produto de entretenimento — a chamada *ilusão de inteligência*. Por isso, cada técnica é apresentada a partir de um problema de design, e não a partir de uma API. A disciplina utiliza a Unity como ferramenta oficial e desenvolve, ao longo do semestre, um único Projeto Integrador — o AI Playground —, composto por Micro Games que demonstram famílias específicas de técnicas de IA.
 
+**Sobre a cobertura da ementa.** Todos os nove itens da ementa são integralmente contemplados no Cronograma. A eles somam-se três conteúdos complementares, incorporados por necessidade técnica e pedagógica, e todos já tratados na Apostila da disciplina:
+
+- **Grafos e representação do espaço** (Semana 5) — pré-requisito formal de A* e JPS+, que são itens da ementa. Sem a noção de grafo ponderado, custo e conectividade, os dois algoritmos só poderiam ser ensinados como receita, e não como solução compreendida.
+- **Árvores de Comportamento e Blackboard** (Semana 4) — a ementa prevê máquinas de estado e árvores de decisão, arquiteturas que a própria indústria substituiu, em boa medida, por árvores de comportamento. Ignorá-las deixaria o egresso sem contato com o padrão de fato do mercado e com a única solução oficial da Unity para o problema de decisão de NPC (o pacote Unity Behavior), contrariando o objetivo de formar profissionais capazes de operar as ferramentas oficiais da engine adotada.
+- **IA de utilidade (Utility AI)** (Semana 9) — extensão natural dos mapas de influência, item da ementa: ambas as técnicas decidem por combinação ponderada de fatores, mudando apenas o objeto da decisão (posições, num caso; ações, no outro). Apresentá-las juntas custa pouco tempo adicional e torna o conceito de decisão por pontuação muito mais sólido do que qualquer uma delas isoladamente.
+
+Nenhum item da ementa foi suprimido ou reduzido para acomodar esses conteúdos. A ampliação ocupa cerca de quatro dos trinta e quatro encontros do semestre.
+
 ---
 
 ## Objetivo Geral
@@ -69,7 +77,7 @@ Capacidade de analisar requisitos e restrições de um problema e justificar, co
 Abordagem estruturada de problemas de IA, partindo da definição do problema antes da escolha de ferramentas ou algoritmos.
 
 **Trabalho em equipe**
-Colaboração na concepção, implementação e revisão de Micro Games, desenvolvidos em grupos de 2 a 3 estudantes ao longo do Projeto Integrador.
+Colaboração na concepção, implementação e revisão de Micro Games, desenvolvidos em grupos de 2 a 4 estudantes ao longo do Projeto Integrador.
 
 **Documentação técnica**
 Produção de registros estruturados (AI Design Log) que tornam explícito o raciocínio técnico por trás de cada solução adotada.
@@ -78,7 +86,7 @@ Produção de registros estruturados (AI Design Log) que tornam explícito o rac
 
 ## Metodologia
 
-A disciplina adota Project-Based Learning (PBL) como metodologia central. Ao longo das 17 semanas, os estudantes, organizados em grupos de 2 a 3 pessoas, desenvolvem um único Projeto Integrador — o AI Playground —, um ambiente Unity composto por Micro Games independentes. Cada Micro Game demonstra, de forma isolada e experimental, uma família específica de técnicas de IA, sem a preocupação de constituir um jogo completo.
+A disciplina adota Project-Based Learning (PBL) como metodologia central. Ao longo das 17 semanas, os estudantes, organizados em grupos de 2 a 4 pessoas, desenvolvem um único Projeto Integrador — o AI Playground —, um ambiente Unity composto por Micro Games independentes. Cada Micro Game demonstra, de forma isolada e experimental, uma família específica de técnicas de IA, sem a preocupação de constituir um jogo completo.
 
 Toda técnica é apresentada seguindo a mesma sequência didática: primeiro o problema que a motiva, em seguida os fundamentos teóricos, depois as aplicações em jogos, então as ferramentas disponíveis — oficiais da Unity e, quando pertinente, do ecossistema de terceiros — e, por fim, a aplicação prática no Micro Game correspondente. Essa sequência evita que ferramentas sejam apresentadas antes dos conceitos e assegura que o objetivo da disciplina seja a compreensão, não a memorização de APIs.
 
@@ -89,6 +97,7 @@ A Unity é utilizada como ferramenta principal ao longo de todo o semestre, prio
 ## Recursos Didáticos
 
 - Unity (versão vigente utilizada pela disciplina) e seus pacotes oficiais de IA;
+- Laboratório com uma estação de trabalho por grupo, dimensionado para turmas de até 40 estudantes organizadas em grupos de 2 a 4 (10 a 14 grupos);
 - Apostila da disciplina — *Inteligência Artificial e Ilusão de Inteligência*, documento central de referência conceitual;
 - Documentação oficial da Unity e Unity Learn;
 - Bibliografia básica e complementar da disciplina;
@@ -109,7 +118,7 @@ A avaliação da disciplina privilegia evidências produzidas ao longo do semest
 - a capacidade de justificar tecnicamente as decisões de solução adotadas, especialmente nos Desafios de Escolha Tecnológica;
 - a qualidade da documentação técnica produzida, em particular o AI Design Log de cada Micro Game.
 
-A definição dos instrumentos avaliativos específicos, pesos e critérios de correção será realizada em documento próprio, posterior a este Plano de Ensino.
+A definição dos instrumentos avaliativos, dos critérios observados em cada um e dos pesos que compõem a nota está nos documentos complementares a este Plano de Ensino: a **Rubrica de Avaliação**, que define os oito critérios qualitativos e quais deles são observados em cada instrumento, e os **Critérios de Notas**, que convertem os níveis da Rubrica em valores numéricos, atribuem peso a cada instrumento e estabelecem a fórmula da nota final do semestre. Os **Formulários de Avaliação** e os **Modelos de Entrega do Aluno** instrumentalizam a aplicação desses dois documentos.
 
 ---
 

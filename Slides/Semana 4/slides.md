@@ -9,7 +9,7 @@ footer: "IFMS • Semana 04"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -155,25 +155,18 @@ Demonstração ao vivo: seletor com dois ou três filhos e uma condição.
 | Decorador | Modifier node |
 | Blackboard | Blackboard asset do pacote |
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Mostrar a correspondência entre seletor-raiz, sequências e Blackboard no editor do Unity Behavior.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/unity-behavior-guarda.webp
-> ```
->
-> **Descrição**
->
-> Captura de tela do editor Unity Behavior com um seletor-raiz contendo as subárvores "Sobreviver", "Combater" e "Patrulhar", e o painel de Blackboard visível ao lado com as chaves do NPC guarda.
->
-> **Como produzir**
->
-> Screenshot direto do editor Unity durante a demonstração ao vivo, com anotações simples adicionadas no Krita.
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
+
+Objetivo didático:
+Mostrar a correspondência entre seletor-raiz, sequências e Blackboard no editor do Unity Behavior.
+Arquivo sugerido:
+assets/unity-behavior-guarda.webp
+Descrição:
+Captura de tela do editor Unity Behavior com um seletor-raiz contendo as subárvores "Sobreviver", "Combater" e "Patrulhar", e o painel de Blackboard visível ao lado com as chaves do NPC guarda.
+Como produzir:
+Screenshot direto do editor Unity durante a demonstração ao vivo, com anotações simples adicionadas no Krita.
+-->
 
 ---
 
@@ -316,7 +309,7 @@ O que a BT ainda não resolve bem? Escolher a melhor ação entre várias possí
 **Tema:** Grafos e Representação do Espaço — abertura da Unidade II
 
 - Ler o Capítulo 7 da Apostila
-- Concluir as três entregas do Módulo 1 (Desafio, AI Design Log, Engenharia Reversa)
+- Concluir as quatro entregas do Módulo 1: Micro Game consolidado (50%), AI Design Log (25%), Desafio (15%), Engenharia Reversa (10%)
 
 <div class="tip">
 

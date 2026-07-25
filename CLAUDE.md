@@ -271,8 +271,8 @@ Exemplos:
 - A* Pathfinding Project
 - Behavior Designer
 - NodeCanvas
-- CrashKonijn GOAP
-- ReGoap
+
+Nota: CrashKonijn GOAP e ReGoap foram removidos desta lista. GOAP (seção 6.6 da Apostila) é conteúdo de aprofundamento deliberadamente fora do escopo do Cronograma de 17 semanas — a decisão e sua justificativa estão registradas no Manual do Professor, capítulo 6.5. Esses assets permanecem indicáveis como aprofundamento voluntário, mas não como ferramentas a apresentar em aula.
 
 Sempre discutir:
 

@@ -9,7 +9,7 @@ footer: "IFMS • Semana 14"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -227,27 +227,18 @@ Nesta semana: apenas contextualização. Nenhum componente de ML-Agents será co
 
 </div>
 
----
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Ilustrar o laço agente–ambiente do ML-Agents dentro de uma cena Unity, conectando o vocabulário teórico (agente, ambiente, observação, ação, recompensa) aos elementos visuais de uma cena real.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/laco-agente-ambiente-mlagents.webp
-> ```
->
-> **Descrição**
->
-> Uma cena Unity simplificada mostrando um agente (cubo ou cápsula) em um ambiente com um alvo e obstáculos, com setas indicando observação → decisão → ação → recompensa em ciclo.
->
-> **Como produzir**
->
-> Captura de tela de uma cena mínima montada no Unity, com anotações (setas e rótulos) adicionadas em Krita.
+Objetivo didático:
+Ilustrar o laço agente–ambiente do ML-Agents dentro de uma cena Unity, conectando o vocabulário teórico (agente, ambiente, observação, ação, recompensa) aos elementos visuais de uma cena real.
+Arquivo sugerido:
+assets/laco-agente-ambiente-mlagents.webp
+Descrição:
+Uma cena Unity simplificada mostrando um agente (cubo ou cápsula) em um ambiente com um alvo e obstáculos, com setas indicando observação → decisão → ação → recompensa em ciclo.
+Como produzir:
+Captura de tela de uma cena mínima montada no Unity, com anotações (setas e rótulos) adicionadas em Krita.
+-->
 
 ---
 

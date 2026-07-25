@@ -13,12 +13,12 @@ A Apostila da disciplina, que é a fonte da verdade de todo o conteúdo teórico
 
 Se você tem apenas 15 minutos antes de preparar a primeira aula, leia, nesta ordem:
 
-1. **[Guia do Professor](Guia%20do%20Professor/Guia_do_Professor_IA.md)** — o manual operacional da disciplina. Explica a filosofia de ensino por problemas de IA (e não por ferramentas), a sequência didática obrigatória de cada módulo, a condução do AI Playground e dos Micro Games, e a forma de avaliação contínua adotada.
+1. **[Manual do Professor](Manual%20do%20Professor/Manual_do_Professor_IA.md)** — o manual operacional da disciplina. Explica a filosofia de ensino por problemas de IA (e não por ferramentas), a sequência didática obrigatória de cada módulo, a condução do AI Playground e dos Micro Games, e a forma de avaliação contínua adotada.
 2. **[Plano de Ensino](Plano%20de%20ensino/Plano_de_Ensino_IA.md)** — ementa, objetivos, carga horária, avaliação e bibliografia oficiais.
 3. **[Cronograma](Cronograma/Cronograma_IA.md)** — visão das 17 semanas, módulos de conteúdo e marcos de avaliação.
 4. **[Plano de Aula da Semana 1](Planos%20de%20aula/Plano_de_Aula_Semana_01.md)** — para preparar o primeiro encontro.
 
-Se você tem mais tempo, vale ler o Guia do Professor por completo antes de tocar em qualquer plano de aula — ele explica o *porquê* por trás de cada estrutura, o que evita decisões equivocadas nas primeiras semanas.
+Se você tem mais tempo, vale ler o Manual do Professor por completo antes de tocar em qualquer plano de aula — ele explica o *porquê* por trás de cada estrutura, o que evita decisões equivocadas nas primeiras semanas.
 
 ---
 
@@ -62,7 +62,7 @@ A avaliação combina quatro documentos complementares, todos em **[Plano de ens
 
 ## Se você está assumindo esta disciplina pela primeira vez
 
-O Guia do Professor foi escrito exatamente para esta situação: ele parte do princípio de que qualquer professor, lendo-o junto com os demais documentos, deve conseguir conduzir o semestre mantendo a mesma filosofia pedagógica, a mesma progressão problema → fundamentos → ferramentas → Micro Game, e os mesmos critérios de avaliação — independentemente de quem esteja à frente da sala. Preste atenção especial à seção sobre por que ferramentas nunca são apresentadas antes dos conceitos, e sobre como conduzir a Engenharia Reversa de jogos comerciais ao longo de todo o semestre, e não apenas ao final.
+O Manual do Professor foi escrito exatamente para esta situação: ele parte do princípio de que qualquer professor, lendo-o junto com os demais documentos, deve conseguir conduzir o semestre mantendo a mesma filosofia pedagógica, a mesma progressão problema → fundamentos → ferramentas → Micro Game, e os mesmos critérios de avaliação — independentemente de quem esteja à frente da sala. Preste atenção especial à seção sobre por que ferramentas nunca são apresentadas antes dos conceitos, e sobre como conduzir a Engenharia Reversa de jogos comerciais ao longo de todo o semestre, e não apenas ao final.
 
 ---
 

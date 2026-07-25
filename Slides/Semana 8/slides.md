@@ -9,7 +9,7 @@ footer: "IFMS • Semana 08"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -203,25 +203,18 @@ Primeira árvore de decisão funcional do NPC tático.
 - teste de ao menos dois caminhos de avaliação distintos;
 - justificativa da ordenação dos testes escolhida.
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Apoiar a implementação guiada, mostrando a árvore de decisão do NPC tático já desenhada antes da codificação.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/arvore-decisao-npc-tatico.webp
-> ```
->
-> **Descrição**
->
-> Diagrama de árvore com raiz "Vê o jogador?", ramificando em "Distância curta?" e folhas de ação (Patrulhar, Atacar corpo a corpo, Atirar), com anotações indicando qual teste é mais barato.
->
-> **Como produzir**
->
-> Diagrama vetorial produzido no Krita a partir do esboço em papel elaborado pelos grupos durante a atividade de laboratório.
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
+
+Objetivo didático:
+Apoiar a implementação guiada, mostrando a árvore de decisão do NPC tático já desenhada antes da codificação.
+Arquivo sugerido:
+assets/arvore-decisao-npc-tatico.webp
+Descrição:
+Diagrama de árvore com raiz "Vê o jogador?", ramificando em "Distância curta?" e folhas de ação (Patrulhar, Atacar corpo a corpo, Atirar), com anotações indicando qual teste é mais barato.
+Como produzir:
+Diagrama vetorial produzido no Krita a partir do esboço em papel elaborado pelos grupos durante a atividade de laboratório.
+-->
 
 ---
 
@@ -240,6 +233,8 @@ Checkpoint do AI Playground — Módulos 1 e 2.
 | **Comunicação Técnica** | Clareza ao explicar problema, solução e decisões dos Micro Games NPC Decision e Navigation |
 | **Evolução ao Longo do Semestre** | Incorporação consistente do feedback recebido nos Módulos 1 e 2 |
 
+**Formato:** rodízio durante o laboratório — 4 a 5 min de arguição por grupo, na própria bancada.
+
 <div class="industry">
 
 O checkpoint corresponde a 10% da nota final do semestre.
@@ -257,7 +252,7 @@ O checkpoint corresponde a 10% da nota final do semestre.
 - Diferente da árvore de comportamento: sem tempo, sem sequenciamento
 - Ordenação de testes afeta custo, não resultado
 - Mapa de influência: nova pergunta ("onde ir?"), introdução apenas
-- Micro Game Tactical AI iniciado; checkpoint do AI Playground realizado
+- Micro Game Tactical AI iniciado; checkpoint do AI Playground arguido em rodízio
 
 ---
 
@@ -270,6 +265,6 @@ O checkpoint corresponde a 10% da nota final do semestre.
 
 <div class="tip">
 
-Três entregas na Semana 9: Desafio de Escolha Tecnológica, AI Design Log e terceiro momento de Engenharia Reversa.
+Quatro entregas na Semana 9: Micro Game Tactical AI consolidado (50%), AI Design Log (25%), Desafio de Escolha Tecnológica (15%) e 3º momento de Engenharia Reversa (10%).
 
 </div>

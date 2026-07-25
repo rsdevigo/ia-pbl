@@ -9,7 +9,7 @@ footer: "IFMS • Semana 16"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -106,27 +106,18 @@ Importando e configurando o modelo no Adaptive AI.
 2. configurar o componente de inferência (worker) na cena;
 3. substituir o vínculo com o Decision Requester pela leitura direta do modelo.
 
----
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Mostrar a substituição do vínculo de treinamento (ML-Agents) pelo componente de inferência do Sentis na mesma cena do Adaptive AI.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/inferencia-sentis-adaptive-ai.webp
-> ```
->
-> **Descrição**
->
-> Captura do Inspector da Unity mostrando o GameObject do agente com o componente de inferência do Sentis configurado, com o asset `.onnx` importado visível no Project.
->
-> **Como produzir**
->
-> Captura de tela direta da cena do Adaptive AI após a configuração do Sentis, com anotações adicionadas em Krita.
+Objetivo didático:
+Mostrar a substituição do vínculo de treinamento (ML-Agents) pelo componente de inferência do Sentis na mesma cena do Adaptive AI.
+Arquivo sugerido:
+assets/inferencia-sentis-adaptive-ai.webp
+Descrição:
+Captura do Inspector da Unity mostrando o GameObject do agente com o componente de inferência do Sentis configurado, com o asset `.onnx` importado visível no Project.
+Como produzir:
+Captura de tela direta da cena do Adaptive AI após a configuração do Sentis, com anotações adicionadas em Krita.
+-->
 
 ---
 
@@ -211,10 +202,8 @@ Aprendizagem real (rede treinada) ou heurística adaptativa simples? Que evidên
 
 - Distinção treinar (ML-Agents) × executar (Sentis)
 - Importação do modelo `.onnx` e configuração da inferência
-- Consolidação do Adaptive AI executando de forma autônoma
 - Vantagens e limitações do RL frente a técnicas determinísticas
-- Desafio de Escolha Tecnológica do Módulo 6
-- 6º momento de Engenharia Reversa
+- Módulo 6 encerrado com quatro entregas: Adaptive AI consolidado (50%), AI Design Log (25%), Desafio de Escolha Tecnológica (15%) e 6º momento de Engenharia Reversa (10%)
 
 ---
 

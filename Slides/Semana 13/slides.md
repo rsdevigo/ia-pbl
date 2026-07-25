@@ -9,7 +9,7 @@ footer: "IFMS • Semana 13"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -113,27 +113,18 @@ Ajustes possíveis:
 - reduzir a pressão seletiva (ex.: torneio menor);
 - reduzir o grau de elitismo.
 
----
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Mostrar visualmente a diferença entre uma população diversa (exploração ativa) e uma população convergida prematuramente (pouca diversidade), lado a lado com suas curvas de aptidão correspondentes.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/convergencia-prematura-vs-diversidade.webp
-> ```
->
-> **Descrição**
->
-> Dois painéis: à esquerda, uma nuvem de pontos dispersa representando indivíduos variados, com uma curva de aptidão em salto; à direita, uma nuvem de pontos concentrada representando indivíduos semelhantes, com uma curva de aptidão em platô longo.
->
-> **Como produzir**
->
-> Diagrama vetorial em Krita, com dispersão de pontos coloridos para representar indivíduos e um pequeno gráfico de linha anexado a cada painel.
+Objetivo didático:
+Mostrar visualmente a diferença entre uma população diversa (exploração ativa) e uma população convergida prematuramente (pouca diversidade), lado a lado com suas curvas de aptidão correspondentes.
+Arquivo sugerido:
+assets/convergencia-prematura-vs-diversidade.webp
+Descrição:
+Dois painéis: à esquerda, uma nuvem de pontos dispersa representando indivíduos variados, com uma curva de aptidão em salto; à direita, uma nuvem de pontos concentrada representando indivíduos semelhantes, com uma curva de aptidão em platô longo.
+Como produzir:
+Diagrama vetorial em Krita, com dispersão de pontos coloridos para representar indivíduos e um pequeno gráfico de linha anexado a cada painel.
+-->
 
 ---
 
@@ -347,7 +338,7 @@ Classificar cada afirmação como [Documentado] ou [Inferência], conforme a se�
 - Vantagens: generalidade, exploração global, robustez a ótimos locais, paralelização
 - Limitações: sem garantia de ótimo, custo computacional, dependência da função de aptidão
 - GA otimiza uma configuração; RL aprende um comportamento — famílias distintas
-- Módulo 5 e Unidade V encerrados: Micro Game, Desafio e Engenharia Reversa entregues
+- Módulo 5 e Unidade V encerrados: quatro entregas — Genetic Lab consolidado, AI Design Log, Desafio e Engenharia Reversa
 
 ---
 

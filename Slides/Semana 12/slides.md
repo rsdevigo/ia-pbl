@@ -9,7 +9,7 @@ footer: "IFMS • Semana 12"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -136,27 +136,18 @@ Seleção natural artificial: soluções mais aptas têm mais chance de gerar de
 
 ![diagram](assets/mermaid-1.png)
 
----
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Fixar visualmente a relação entre população, indivíduo, cromossomo, gene e aptidão antes de avançar para o ciclo completo do algoritmo.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/anatomia-populacao-genetica.webp
-> ```
->
-> **Descrição**
->
-> Diagrama hierárquico: uma população contendo vários indivíduos; um indivíduo em destaque expandido em seu cromossomo (sequência de genes coloridos); ao lado, um rótulo indicando o valor de aptidão daquele indivíduo.
->
-> **Como produzir**
->
-> Diagrama vetorial em Krita, com blocos retangulares para indivíduos e pequenos quadrados coloridos para genes dentro do cromossomo.
+Objetivo didático:
+Fixar visualmente a relação entre população, indivíduo, cromossomo, gene e aptidão antes de avançar para o ciclo completo do algoritmo.
+Arquivo sugerido:
+assets/anatomia-populacao-genetica.webp
+Descrição:
+Diagrama hierárquico: uma população contendo vários indivíduos; um indivíduo em destaque expandido em seu cromossomo (sequência de genes coloridos); ao lado, um rótulo indicando o valor de aptidão daquele indivíduo.
+Como produzir:
+Diagrama vetorial em Krita, com blocos retangulares para indivíduos e pequenos quadrados coloridos para genes dentro do cromossomo.
+-->
 
 ---
 

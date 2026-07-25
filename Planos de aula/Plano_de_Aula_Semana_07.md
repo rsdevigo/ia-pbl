@@ -59,7 +59,7 @@ Não deve ser antecipado o conteúdo da Unidade III (Módulo 3 — Decision Tree
 
 | Item | Detalhamento |
 |---|---|
-| **Leitura recomendada** | Apostila — Parte III, Capítulo 9, completo (seções 9.1 a 9.7); revisão da Parte VII, Capítulo 14, seção 14.3 (roteiro de seis etapas) |
+| **Leitura recomendada** | Apostila — Parte III, Capítulo 9, completo (seções 9.1 a 9.7); revisão da Parte VII, Capítulo 14, seção 14.3 (roteiro de seis etapas); **Encerramento da Parte III**, cujas duas tabelas comparativas (Representações do Espaço; Algoritmos de Busca) consolidam os Capítulos 7 a 9 e servem de base para o Desafio desta semana; **Apêndice C.1** (tabela-decisão "dado este problema, qual técnica usar?") e **C.2** como apoio à comparação de alternativas |
 | **Materiais necessários** | Projetor/tela; computadores com Unity Hub e o projeto AI Playground de cada grupo, com o Micro Game Navigation evoluído desde a Semana 6; acesso a vídeo ou build do jogo escolhido para o segundo momento de Engenharia Reversa |
 | **Cena Unity utilizada** | A mesma cena do Micro Game Navigation (Semanas 5 e 6), agora consolidada como entrega do Módulo 2, sem novos elementos de cenário obrigatórios |
 | **Assets** | Nenhum asset adicional; reaproveita-se integralmente o material das Semanas 5 e 6 |
@@ -97,7 +97,7 @@ Não deve ser antecipado o conteúdo da Unidade III (Módulo 3 — Decision Tree
 | 3. Discussão técnica: quando cada técnica de otimização compensa | 15 min | Consolidar o critério de decisão entre A*, JPS+ e demais otimizações | Conduz a discussão retomando a Boa Prática da seção 9.3 ("medir antes de otimizar") e o Erro Comum da seção 9.5 sobre otimizar sem necessidade real | Argumentam, para o próprio AI Playground, se alguma otimização deste capítulo se justificaria, com base em critérios técnicos e não apenas em sofisticação |
 | 4. Desafio de Escolha Tecnológica do Módulo 2 | 20 min | Desenvolver a capacidade de justificar tecnicamente uma escolha de navegação | Apresenta um cenário não idêntico ao Micro Game (por exemplo, um mapa de estratégia grande, aberto e estático, com centenas de unidades buscando caminho simultaneamente) e solicita que cada grupo compare ao menos duas soluções (NavMesh/A*, JPS+, flow field) e justifique a escolhida | Analisam o cenário, comparam alternativas com base em requisitos (escala, dinamismo do mapa, número de agentes) e limitações, e registram a justificativa por escrito |
 | 5. Segundo momento de Engenharia Reversa | 20 min | Aplicar o roteiro completo de seis etapas a um caso de navegação | Apresenta trechos de vídeo do jogo escolhido (por exemplo, *StarCraft II*), conduz a definição do problema e a observação orientada ao comportamento de navegação, e orienta a formulação, validação e documentação das hipóteses, reforçando os rótulos [Documentado]/[Inferência]/[Especulação] | Aplicam as seis etapas do roteiro (definição do problema, coleta, registro, hipóteses, validação, documentação) ao comportamento de navegação observado, com nível de confiança explícito para cada afirmação |
-| 6. Encerramento do Módulo 2 | 10 min | Fechar o módulo e indicar o caminho da próxima semana | Recapitula a evolução de Grafos (Semana 5) a A* (Semana 6) e JPS+ (Semana 7), confirma as entregas da semana e anuncia que a Semana 8 abre a Unidade III com o checkpoint do AI Playground | Registram pendências das três entregas do módulo para finalização até o prazo definido pelo professor |
+| 6. Encerramento do Módulo 2 | 10 min | Fechar o módulo e indicar o caminho da próxima semana | Recapitula a evolução de Grafos (Semana 5) a A* (Semana 6) e JPS+ (Semana 7), confirma as entregas da semana e anuncia que a Semana 8 abre a Unidade III com o checkpoint do AI Playground | Registram pendências das quatro entregas do módulo para finalização até o prazo definido pelo professor |
 
 ---
 
@@ -157,7 +157,7 @@ Não deve ser antecipado o conteúdo da Unidade III (Módulo 3 — Decision Tree
 2. Em grupo, documentar brevemente por que a solução adotada (NavMesh + A* interno) foi suficiente para o Micro Game, sem necessidade de JPS+, pathfinding hierárquico ou flow field.
 3. Analisar o cenário do Desafio de Escolha Tecnológica (mapa grande, aberto e estático, com centenas de unidades buscando caminho simultaneamente), comparar ao menos duas soluções possíveis e registrar a justificativa por escrito.
 4. Aplicar as seis etapas do roteiro de Engenharia Reversa ao comportamento de navegação observado no jogo escolhido, registrando evidências, hipóteses, validação e documentação com os rótulos de confiança apropriados.
-5. Reunir as três entregas do módulo (Micro Game consolidado, Desafio de Escolha Tecnológica, Engenharia Reversa) junto ao AI Design Log do Módulo 2.
+5. Reunir as quatro entregas do módulo: Micro Game consolidado, AI Design Log, Desafio de Escolha Tecnológica e Engenharia Reversa do Módulo 2.
 
 **Resultado esperado:** ao final do Encontro 2, cada grupo deve ter o Micro Game Navigation consolidado como entrega do Módulo 2, uma justificativa técnica registrada para o cenário do Desafio de Escolha Tecnológica, e o registro completo das seis etapas de Engenharia Reversa aplicadas ao jogo escolhido.
 
@@ -174,17 +174,21 @@ A Semana 7 **encerra formalmente o Módulo 2**, e a verificação da aprendizage
 
 A nota do Módulo 2 compõe 11,67% da nota final do semestre, conforme os Critérios de Notas. O professor deve registrar e comunicar aos estudantes a nota obtida em cada instrumento e a nota consolidada do módulo, conforme recomendado pela Rubrica.
 
+
+**Instrumentos de verificação disponíveis na Apostila.** Antes de recorrer a questões próprias, o professor deve usar o material já pronto e alinhado: os **Exercícios de fixação** ao final do Capítulo 9, e — nas semanas de encerramento de Parte — as **Questões de Revisão**, os **Exercícios Conceituais** e os **Exercícios de Integração** do Encerramento correspondente. Recomenda-se aplicar duas ou três questões na abertura do Encontro 2, como verificação rápida antes do laboratório, e usar as duas tabelas comparativas do Encerramento da Parte III como apoio à discussão técnica. Esse material é a principal fonte de verificação formativa da disciplina, e não deve ficar sem uso.
+
 ---
 
 ## Entregas
 
-Conforme o Cronograma, esta semana encerra o Módulo 2 com três entregas:
+Conforme o Cronograma e a matriz dos Critérios de Notas (item 4), esta semana encerra o Módulo 2 com **quatro** entregas avaliadas:
 
-- **Desafio de Escolha Tecnológica (Módulo 2)** — justificativa escrita comparando ao menos duas alternativas de navegação para o cenário de larga escala apresentado no Encontro 2;
-- **AI Design Log — Micro Game 2** — documento contendo problema, requisitos, alternativas consideradas (grafos e representação do espaço, A*, JPS+ e demais otimizações), solução escolhida, justificativa, ferramentas utilizadas, limitações e melhorias futuras, conforme especificado no CLAUDE.md do projeto;
-- **2º momento de Engenharia Reversa** — registro completo das seis etapas do roteiro aplicado a *StarCraft II* (ou ao jogo escolhido pelo professor).
+- **Micro Game 2 — Navigation consolidado (50%)** — cena com NavMesh, agente e rota funcionais, incorporando o que foi discutido sobre A* e JPS+, avaliado pelos critérios de Compreensão Conceitual, Aplicação Prática, Uso da Unity e do Ecossistema e Qualidade Técnica da Solução;
+- **AI Design Log — Micro Game 2 (25%)** — documento contendo problema, requisitos, alternativas consideradas (grafos e representação do espaço, A*, JPS+ e demais otimizações), solução escolhida, justificativa, ferramentas utilizadas, limitações e melhorias futuras, conforme o modelo dos Modelos de Entrega do Aluno (§1);
+- **Desafio de Escolha Tecnológica — Módulo 2 (15%)** — justificativa escrita comparando ao menos duas alternativas de navegação para o cenário de larga escala apresentado no Encontro 2;
+- **2º momento de Engenharia Reversa (10%)** — registro completo das seis etapas do roteiro aplicado a *StarCraft II* (ou ao jogo escolhido pelo professor).
 
-O Micro Game Navigation, consolidado nesta semana, permanece no AI Playground de cada grupo como base para os módulos seguintes.
+O Micro Game Navigation permanece no AI Playground de cada grupo como base para os módulos seguintes, mas a versão consolidada nesta semana é **entrega formal avaliada**, e não apenas um artefato de trabalho.
 
 ---
 
@@ -204,7 +208,7 @@ O Micro Game Navigation, consolidado nesta semana, permanece no AI Playground de
 
 Para a Semana 8 (Checkpoint do AI Playground — abertura da Unidade III), o professor deve:
 
-- garantir que as três entregas do Módulo 2 (Desafio de Escolha Tecnológica, AI Design Log, Engenharia Reversa) estejam recebidas e avaliadas antes do início da Semana 8, registrando a nota do módulo conforme os Critérios de Notas;
+- garantir que as quatro entregas do Módulo 2 (Micro Game consolidado, AI Design Log, Desafio de Escolha Tecnológica, Engenharia Reversa) estejam recebidas e avaliadas antes do início da Semana 8, registrando a nota do módulo conforme a matriz dos Critérios de Notas (item 4);
 - confirmar que todos os grupos possuem, ao final da Semana 7, o Micro Game Navigation consolidado no AI Playground, encerrando o Módulo 2;
 - preparar os critérios de avaliação do checkpoint da Semana 8, que privilegia os critérios de Comunicação Técnica e Evolução ao Longo do Semestre, conforme a Rubrica e os Critérios de Notas (peso de 10% na nota final);
 - anunciar a transição de unidade: da pergunta "como um agente encontra seu destino?" para "como um NPC escolhe sua melhor ação?", que abre o Módulo 3 (Decision Trees, Influence Maps, Utility AI) após o checkpoint;

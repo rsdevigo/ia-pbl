@@ -49,7 +49,7 @@ Não é objetivo desta semana retomar o treinamento em si (Q-Learning, hiperpar�
 
 | Item | Detalhamento |
 |---|---|
-| **Leitura recomendada** | Apostila — Parte VI, Capítulo 12, seção 12.9 completa (foco na parte de inferência com Sentis), seção 12.10 (Vantagens e Limitações) e seção 12.11 (Estudos de Caso Comentados) |
+| **Leitura recomendada** | Apostila — Parte VI, Capítulo 12, seção 12.9 completa (foco na parte de inferência com Sentis), seção 12.10 (Vantagens e Limitações) e seção 12.11 (Estudos de Caso Comentados); **Encerramento da Parte VI**, que só agora pode ser lido por completo (Capítulos 12 e 13 vistos), com destaque para a *Tabela Comparativa — Q-Learning × Deep RL × Algoritmos Genéticos*, que fecha a comparação "otimizar × aprender a agir" aberta na Semana 13; **Apêndice C.1** e **C.2** como apoio ao Desafio |
 | **Materiais necessários** | Projetor/tela; computadores com Unity Hub e o pacote Sentis importado; modelo `.onnx` e curva de recompensa preservados por cada grupo na Semana 15; formulário ou roteiro do Desafio de Escolha Tecnológica já utilizado nos módulos anteriores |
 | **Cena Unity utilizada** | Cena do Micro Game Adaptive AI já treinada na Semana 15, agora recebendo o componente de inferência do Sentis em substituição ao vínculo com o ML-Agents/Python |
 | **Assets** | Nenhum asset de arte adicional; reaproveitamento do cenário já montado |
@@ -106,7 +106,7 @@ Não é objetivo desta semana retomar o treinamento em si (Q-Learning, hiperpar�
 
 | Campo | Conteúdo |
 |---|---|
-| **Jogo analisado** | Jogo comercial com IA adaptativa ou aprendizado perceptível pelo jogador, a critério do professor (por exemplo, oponente que ajusta dificuldade ou estratégia conforme o desempenho do jogador) |
+| **Jogo analisado** | Dois casos já analisados na Apostila, à escolha do professor: ***Black & White*** (Lionhead, 2001), seção 15.8 — aprendizado efetivo da criatura por reforço e imitação, o caso mais próximo do conteúdo do módulo; ou ***Left 4 Dead*** (Valve, 2008), seção 15.5 — o Diretor de IA e o ritmo adaptativo, útil justamente por **não** ser aprendizagem de máquina, permitindo contrastar adaptação por regras com aprendizado real |
 | **Comportamento observado** | Mudança perceptível na estratégia, dificuldade ou padrão de decisão do agente/oponente ao longo da partida, em resposta ao comportamento do jogador |
 | **Perguntas para discussão** | O comportamento observado é resultado de aprendizagem real (rede neural treinada) ou de uma heurística adaptativa simples (ajuste de parâmetros predefinidos)? Que evidências levariam o jogador a essa conclusão? Como o estúdio provavelmente testou e validou esse comportamento antes do lançamento, dado o custo de depuração de sistemas de RL discutido na seção 12.10? |
 | **Relação com os conceitos da semana** | Retoma a distinção entre treinamento e inferência: mesmo que o jogo utilize Aprendizagem por Reforço, o comportamento em produção é sempre inferência de um modelo já treinado, nunca treinamento ao vivo durante a partida do jogador |
@@ -151,17 +151,21 @@ Conforme a Rubrica de Avaliação e os pesos definidos nos Critérios de Notas, 
 
 A nota do Módulo 6 corresponde a 11,67% da nota final do semestre, conforme os Critérios de Notas.
 
+
+**Instrumentos de verificação disponíveis na Apostila.** Antes de recorrer a questões próprias, o professor deve usar o material já pronto e alinhado: os **Exercícios de fixação** ao final do Capítulo 12, e — nas semanas de encerramento de Parte — as **Questões de Revisão**, os **Exercícios Conceituais** e os **Exercícios de Integração** do Encerramento correspondente. Recomenda-se aplicar duas ou três questões na abertura do Encontro 2, como verificação rápida antes do laboratório, e usar a Tabela Comparativa do Encerramento da Parte VI como apoio à discussão técnica. Esse material é a principal fonte de verificação formativa da disciplina, e não deve ficar sem uso.
+
 ---
 
 ## Entregas
 
-Conforme o Cronograma, a Semana 16 prevê as seguintes entregas:
+Conforme o Cronograma e a matriz dos Critérios de Notas (item 4), a Semana 16 encerra o Módulo 6 com **quatro** entregas avaliadas:
 
-- **Desafio de Escolha Tecnológica (Módulo 6)** — justificativa técnica produzida no Encontro 2;
-- **AI Design Log — Micro Game 6 (Adaptive AI)** — documentando problema, requisitos, alternativas consideradas, solução escolhida, justificativa, ferramentas utilizadas (ML-Agents e Sentis), limitações e melhorias futuras;
-- **6º momento de Engenharia Reversa** — registro da análise do jogo comercial selecionado.
+- **Micro Game 6 — Adaptive AI consolidado (50%)** — agente treinado na Semana 15 executando por inferência via Sentis na cena do Micro Game, avaliado pelos critérios de Compreensão Conceitual, Aplicação Prática, Uso da Unity e do Ecossistema e Qualidade Técnica da Solução;
+- **AI Design Log — Micro Game 6 (25%)** — documentando problema, requisitos, alternativas consideradas, solução escolhida, justificativa, ferramentas utilizadas (ML-Agents e Sentis), limitações e melhorias futuras, conforme o modelo dos Modelos de Entrega do Aluno (§1);
+- **Desafio de Escolha Tecnológica — Módulo 6 (15%)** — justificativa técnica produzida no Encontro 2;
+- **6º momento de Engenharia Reversa (10%)** — registro da análise do jogo comercial selecionado.
 
-Estas entregas encerram o ciclo avaliativo dos seis módulos de conteúdo, conforme os Critérios de Notas.
+Estas entregas encerram o ciclo avaliativo dos seis módulos de conteúdo. Restam, no semestre, apenas a apresentação final e o AI Design Log consolidado da Semana 17.
 
 ---
 

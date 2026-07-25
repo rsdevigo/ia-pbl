@@ -9,7 +9,7 @@ footer: "IFMS • Semana 17"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -131,27 +131,18 @@ As hipóteses levantadas em cada momento anterior ainda parecem corretas à luz 
 
 Revisitem suas anotações: alguma hipótese de FSM se revela, agora, mais próxima de uma Behavior Tree? Alguma decisão "tática" seria hoje melhor explicada por Utility AI?
 
----
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Apoiar a revisão integrada, situando lado a lado os seis jogos comerciais analisados ao longo do semestre e a técnica hipotetizada em cada momento.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/linha-do-tempo-engenharia-reversa.webp
-> ```
->
-> **Descrição**
->
-> Linha do tempo horizontal com seis marcadores (um por módulo), cada um contendo o nome do jogo analisado naquele momento e a técnica hipotetizada, sem capturas de tela dos jogos em si.
->
-> **Como produzir**
->
-> Diagrama simples montado em Krita a partir dos registros de Engenharia Reversa de cada módulo, sem uso de imagens dos jogos originais.
+Objetivo didático:
+Apoiar a revisão integrada, situando lado a lado os seis jogos comerciais analisados ao longo do semestre e a técnica hipotetizada em cada momento.
+Arquivo sugerido:
+assets/linha-do-tempo-engenharia-reversa.webp
+Descrição:
+Linha do tempo horizontal com seis marcadores (um por módulo), cada um contendo o nome do jogo analisado naquele momento e a técnica hipotetizada, sem capturas de tela dos jogos em si.
+Como produzir:
+Diagrama simples montado em Krita a partir dos registros de Engenharia Reversa de cada módulo, sem uso de imagens dos jogos originais.
+-->
 
 ---
 
@@ -199,7 +190,8 @@ O que cada grupo leva para o Encontro 2.
 
 1. Os seis Micro Games reunidos e executáveis no mesmo projeto Unity;
 2. navegação simples entre eles, sem mecânicas que desviem o foco da IA;
-3. AI Design Log consolidado, com síntese — não apenas cópia — dos seis módulos.
+3. AI Design Log consolidado, com síntese — não apenas cópia — dos seis módulos;
+4. **todos os seis** prontos para demonstrar: o professor escolhe na hora quais serão pedidos.
 
 ---
 
@@ -213,7 +205,7 @@ O que cada grupo leva para o Encontro 2.
 
 <div class="error">
 
-**Erro comum:** priorizar, na apresentação, o Micro Game mais recente em detrimento dos demais. Todos os seis integram a nota final.
+**Erro comum:** ensaiar apenas o Micro Game mais recente. Na feira, o professor pede dois Micro Games escolhidos por ele — os seis integram a nota final.
 
 </div>
 
@@ -221,11 +213,13 @@ O que cada grupo leva para o Encontro 2.
 
 ## Como será avaliado
 
-A apresentação final e o AI Design Log consolidado são avaliados pelos oito critérios da Rubrica, de forma integrada — não módulo a módulo.
+**Formato:** Feira do AI Playground — cada grupo monta sua estação; o professor circula e argui cada grupo por 4 a 5 minutos.
+
+Avaliação integrada pelos oito critérios da Rubrica. **Vale 20% da nota final do semestre.**
 
 <div class="tip">
 
-Preparem, para cada Micro Game, uma explicação objetiva: qual problema, qual solução, por quê.
+A nota combina a defesa na feira, o AI Design Log consolidado e o acompanhamento do semestre inteiro.
 
 </div>
 
@@ -239,7 +233,7 @@ Preparem, para cada Micro Game, uma explicação objetiva: qual problema, qual s
 - Revisão integrada dos seis momentos de Engenharia Reversa
 - Síntese entre aprendizagem real e ilusão de inteligência
 - Checklist de integração do AI Playground completo
-- Preparação para a apresentação final e entrega do AI Design Log consolidado
+- Preparação para a Feira do AI Playground e entrega do AI Design Log consolidado
 
 ---
 

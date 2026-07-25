@@ -39,24 +39,38 @@ Cada critério da Rubrica de Avaliação é observado qualitativamente pelo prof
 
 Dentro de cada faixa, o professor atribui o valor específico considerando a proximidade do desempenho observado em relação ao nível seguinte (por exemplo, um desempenho Básico consistente e próximo de Proficiente deve receber nota próxima de 6,9; um desempenho Básico frágil deve receber nota próxima de 4,0).
 
-Quando um instrumento avaliativo envolve mais de um critério da Rubrica (por exemplo, um Micro Game avaliado simultaneamente por Aplicação Prática e Qualidade Técnica da Solução), a nota do instrumento é a média aritmética simples das notas obtidas em cada critério aplicável, arredondada a uma casa decimal.
+Quando um instrumento avaliativo envolve mais de um critério da Rubrica (por exemplo, um Micro Game, avaliado simultaneamente por Compreensão Conceitual, Aplicação Prática, Uso da Unity e do Ecossistema e Qualidade Técnica da Solução), a nota do instrumento é a média aritmética simples das notas obtidas em cada critério observado, arredondada a uma casa decimal. Os critérios observados em cada instrumento são os definidos na matriz do item 4.
 
 ---
 
-## 4. Peso dos Instrumentos dentro de Cada Módulo
+## 4. Matriz Normativa — Instrumentos, Critérios e Pesos
 
-Cada um dos seis módulos de conteúdo (Semanas 4, 7, 9, 11, 13 e 16, conforme o Cronograma) gera quatro instrumentos avaliativos, com os seguintes pesos internos ao módulo:
+Esta seção é a **referência única** da disciplina para saber, em cada instrumento avaliativo, quais critérios da Rubrica são observados e com que peso o instrumento entra na nota. Os Formulários de Avaliação, os Planos de Aula, o Cronograma e os Slides devem seguir esta matriz sem redefini-la.
 
-| Instrumento | Critérios da Rubrica Envolvidos | Peso no Módulo |
+A composição de critérios de cada instrumento é definida pela **Rubrica de Avaliação, seção 5**, que é a fonte normativa deste aspecto. Este documento não altera essa composição: apenas acrescenta a ela o peso de cada instrumento.
+
+Cada um dos seis módulos de conteúdo (encerrados nas Semanas 4, 7, 9, 11, 13 e 16, conforme o Cronograma) gera **quatro** instrumentos avaliativos:
+
+| Instrumento | Critérios da Rubrica Observados | Peso no Módulo |
 |---|---|---|
-| Micro Game (consolidação) | Aplicação Prática; Uso da Unity e do Ecossistema; Qualidade Técnica da Solução | 50% |
-| AI Design Log | AI Design Log | 25% |
-| Desafio de Escolha Tecnológica | Tomada de Decisão; Compreensão Conceitual | 15% |
-| Engenharia Reversa | Compreensão Conceitual; Tomada de Decisão | 10% |
+| **Micro Game (consolidação)** | 1. Compreensão Conceitual; 2. Aplicação Prática; 4. Uso da Unity e do Ecossistema; 5. Qualidade Técnica da Solução | **50%** |
+| **AI Design Log** | 6. AI Design Log *(principal)*; 3. Tomada de Decisão *(registrada no documento)*; 1. Compreensão Conceitual *(demonstrada por escrito)* | **25%** |
+| **Desafio de Escolha Tecnológica** | 3. Tomada de Decisão *(principal)*; 1. Compreensão Conceitual; 4. Uso da Unity e do Ecossistema | **15%** |
+| **Engenharia Reversa** | 1. Compreensão Conceitual; 3. Tomada de Decisão | **10%** |
 
-A nota do módulo é a soma ponderada das notas desses quatro instrumentos, segundo os pesos acima.
+A nota do módulo é a soma ponderada das notas desses quatro instrumentos, segundo os pesos acima. A nota de cada instrumento é a média aritmética simples das notas obtidas em seus critérios observados, conforme o item 3 — a indicação *(principal)* orienta a leitura qualitativa do professor, mas **não** atribui peso maior ao critério dentro da média.
 
-O critério de Comunicação Técnica é avaliado nos instrumentos em que há apresentação oral ou defesa técnica (Desafio de Escolha Tecnológica, checkpoint e apresentação final), sendo incorporado à nota desses instrumentos como um dos critérios considerados na média do item 3. O critério de Evolução ao Longo do Semestre não gera nota própria em nenhum módulo isolado: ele é aplicado horizontalmente, ajustando a nota de um módulo posterior sempre que houver incorporação comprovada de feedback de módulos anteriores (ver item 6).
+Os dois instrumentos restantes do semestre seguem a mesma lógica, com peso definido no item 5:
+
+| Instrumento | Critérios da Rubrica Observados | Peso na Nota Final |
+|---|---|---|
+| **Apresentação técnica intermediária — checkpoint (Semana 8)** | 7. Comunicação Técnica *(principal)*; 8. Evolução ao Longo do Semestre | **10%** |
+| **Apresentação final do AI Playground + AI Design Log consolidado (Semana 17)** | Todos os oito critérios, de forma integrada | **20%** |
+
+Duas observações sobre critérios que não aparecem em todos os instrumentos:
+
+- **Comunicação Técnica** é avaliado nos dois momentos formais de apresentação oral — o checkpoint da Semana 8 e a apresentação final da Semana 17 —, conforme a Rubrica, seção 5. Nas discussões técnicas semanais e na defesa oral do Desafio de Escolha Tecnológica, o critério continua sendo objeto de observação e de feedback formativo, mas **não** compõe a nota desses momentos.
+- **Evolução ao Longo do Semestre** não gera nota própria em nenhum módulo isolado: ele é observado no checkpoint da Semana 8 e na apresentação final da Semana 17, e é aplicado horizontalmente ao longo do semestre, ajustando a nota de um módulo posterior sempre que houver incorporação comprovada de feedback de módulos anteriores (ver item 6).
 
 ---
 
@@ -68,9 +82,7 @@ O critério de Comunicação Técnica é avaliado nos instrumentos em que há ap
 | Apresentação técnica intermediária — checkpoint (Semana 8) | 10% |
 | Apresentação final do AI Playground + AI Design Log consolidado (Semana 17) | 20% |
 
-O checkpoint da Semana 8 é avaliado pelos critérios de Comunicação Técnica e Evolução ao Longo do Semestre, convertidos em nota pela mesma tabela do item 3.
-
-A apresentação final da Semana 17 é avaliada de forma integrada pelos oito critérios da Rubrica, já que reúne todos os Micro Games, o AI Design Log consolidado e a comunicação técnica desenvolvida no semestre; sua nota é a média aritmética simples das notas obtidas em cada um dos oito critérios.
+Os critérios observados no checkpoint da Semana 8 e na apresentação final da Semana 17 são os definidos na matriz do item 4, convertidos em nota pela mesma tabela do item 3. A apresentação final é avaliada de forma integrada pelos oito critérios da Rubrica, já que reúne todos os Micro Games, o AI Design Log consolidado e a comunicação técnica desenvolvida no semestre; sua nota é a média aritmética simples das notas obtidas em cada um dos oito critérios.
 
 ---
 

@@ -1,3 +1,5 @@
+  - [Início](/README.md)
+  - [Apostila da disciplina](https://rsdevigo.github.io/apostila-ia/ ':target=_blank')
   - Cronograma
     - [Cronograma IA](/Cronograma/Cronograma_IA.md)
   - Plano de ensino
@@ -24,8 +26,8 @@
     - [Plano de Aula Semana 15](/Planos%20de%20aula/Plano_de_Aula_Semana_15.md)
     - [Plano de Aula Semana 16](/Planos%20de%20aula/Plano_de_Aula_Semana_16.md)
     - [Plano de Aula Semana 17](/Planos%20de%20aula/Plano_de_Aula_Semana_17.md)
-  - Guia do Professor
-    - [Guia do Professor IA](/Guia%20do%20Professor/Guia_do_Professor_IA.md)
+  - Manual do Professor
+    - [Manual do Professor IA](/Manual%20do%20Professor/Manual_do_Professor_IA.md)
   - Slides
 <!-- SLIDES:START -->
     - [Semana 1](/Slides/Semana%201/slides.md)

@@ -21,7 +21,7 @@ Cada modelo deve ser copiado para um arquivo próprio pelo grupo, um por módulo
 
 ## 1. Modelo de AI Design Log
 
-Entregue ao final de cada módulo, junto com o respectivo Micro Game (Semanas 4, 7, 9, 11, 13 e 17, conforme Cronograma). Deve ser escrito ao longo do desenvolvimento — registrando as decisões no momento em que são tomadas — e não redigido apenas no fechamento do módulo.
+Entregue ao final de cada módulo, junto com o respectivo Micro Game (Semanas 4, 7, 9, 11, 13 e **16**, conforme Cronograma). Na Semana 17 entrega-se um documento distinto: o **AI Design Log consolidado**, que sintetiza os seis anteriores. Deve ser escrito ao longo do desenvolvimento — registrando as decisões no momento em que são tomadas — e não redigido apenas no fechamento do módulo.
 
 ```
 # AI Design Log — [Nome do Micro Game]

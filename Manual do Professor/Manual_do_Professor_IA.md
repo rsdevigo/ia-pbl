@@ -107,7 +107,17 @@ A discussão técnica prevista no segundo encontro de cada semana é um dos mome
 
 Cada encontro deve terminar com uma síntese breve — o que foi resolvido, o que ficou pendente, e qual é o próximo passo. Em encontros de consolidação de módulo, o encerramento deve também apontar explicitamente a conexão com o próximo módulo, reforçando a lógica de progressão descrita no Capítulo 3.
 
-### 4.6 Gestão do Tempo
+### 4.6 Dimensionamento da Turma e dos Grupos
+
+A disciplina é planejada para turmas de **até 40 estudantes**, podendo operar com cerca de 30, organizadas em grupos de **2 a 4** integrantes. Na prática, isso significa **10 a 14 grupos** por turma — número que deve orientar toda decisão de tempo do professor.
+
+Recomenda-se formar grupos de 3 ou 4 estudantes sempre que a turma permitir. Grupos de 2 são aceitáveis em turmas menores, mas aumentam a carga por estudante em um projeto que atravessa seis módulos; grupos de 5 ou mais não são recomendados, porque tornam impraticável a verificação individual da compreensão conceitual prevista no Capítulo 11.
+
+Esse dimensionamento tem uma consequência direta e frequentemente subestimada: **apresentações seriadas para toda a turma não cabem em um encontro de 1h30**. Com 12 grupos, 70 minutos de apresentação dão menos de 6 minutos por grupo, sem espaço para as perguntas técnicas que sustentam a avaliação. Por isso, os dois momentos formais de apresentação da disciplina — o checkpoint da Semana 8 e a apresentação final da Semana 17 — adotam formatos de **rodízio** e de **feira**, nos quais o professor circula entre as bancadas realizando arguições individuais de 4 a 5 minutos enquanto o restante da turma trabalha ou visita as demais estações. Os Planos de Aula das Semanas 8 e 17 detalham cada formato.
+
+O professor que optar por manter apresentações seriadas deve refazer o cálculo de tempo a partir do número real de grupos, e não do plano — e reservar tempo adicional no Cronograma, que hoje não tem folga.
+
+### 4.7 Gestão do Tempo
 
 Como referência geral, recomenda-se reservar cerca de um terço do primeiro encontro para fundamentação teórica, deixando o restante para demonstração e prática guiada; e reservar a maior parte do segundo encontro ao desenvolvimento do Micro Game, com 15 a 20 minutos finais para discussão técnica e encerramento. Em semanas de Desafio de Escolha Tecnológica e Engenharia Reversa (identificadas no Cronograma), o segundo encontro exige tempo adicional para esses dois instrumentos — o professor deve planejar a consolidação do Micro Game de forma que ela não consuma o tempo necessário para ambos.
 
@@ -127,7 +137,22 @@ Após o encontro de fundamentação, a releitura do capítulo funciona como cons
 
 ### 5.3 Capítulos Obrigatórios e Complementares
 
-Os capítulos que correspondem diretamente à pergunta norteadora de cada semana — indicados no Cronograma — são de leitura obrigatória. Capítulos ou seções que aparecem como extensão sem capítulo dedicado (como é o caso de Utility AI na Semana 9) devem ser tratados pelo professor como obrigatórios também, complementados pela bibliografia básica indicada no Plano de Ensino. Já os capítulos de síntese e estudos de caso, concentrados principalmente na Semana 17, têm caráter integrador e devem ser posicionados como complementares às leituras semanais, e não como conteúdo novo isolado.
+Os capítulos que correspondem diretamente à pergunta norteadora de cada semana — indicados no Cronograma — são de leitura obrigatória. Seções marcadas na Apostila como *aprofundamento* mas efetivamente estudadas na disciplina — como a IA de utilidade (seção 6.7), retomada na Semana 9 ao lado dos mapas de influência — devem ser tratadas pelo professor como leitura obrigatória daquela semana, e não como material opcional. A bibliografia básica é complemento, não substituta: o conteúdo está na Apostila. Já os capítulos de síntese e estudos de caso, concentrados principalmente na Semana 17, têm caráter integrador e devem ser posicionados como complementares às leituras semanais, e não como conteúdo novo isolado.
+
+### 5.4 Encerramentos de Parte e Apêndices — o material mais subutilizado da Apostila
+
+A Apostila oferece, além dos capítulos, dois conjuntos de material que o professor deve incorporar deliberadamente à rotina do semestre, porque não aparecem no fluxo de leitura óbvio e por isso tendem a passar em branco.
+
+**Encerramentos de Parte.** Cada Parte (exceto a IV, que tem um único capítulo) encerra com Resumo Geral, Principais Conceitos, **Questões de Revisão**, **Exercícios Conceituais**, **Exercícios de Integração** e, em vários casos, uma **tabela comparativa consolidada** — Representações do Espaço e Algoritmos de Busca na Parte III; Minimax × Alfa-Beta × MCTS na Parte V; Q-Learning × Deep RL × Algoritmos Genéticos na Parte VI; FSM × HFSM × árvore de decisão × BT na Parte II. Esses exercícios são a principal fonte de verificação formativa da disciplina, e as tabelas são o melhor apoio disponível para as discussões técnicas e para os Desafios de Escolha Tecnológica. Os Planos de Aula das semanas de encerramento de módulo já indicam qual Encerramento usar em cada caso; note que o Encerramento de uma Parte só deve ser indicado quando **todos** os seus capítulos já tiverem sido estudados — o que, por causa das inversões de ordem sinalizadas no Cronograma, nem sempre coincide com o fim da Unidade.
+
+**Apêndices.** São quatro, todos de uso prático imediato:
+
+- **Apêndice A — Glossário.** Vale distribuir na Semana 1 e retomar como referência permanente. A disciplina depende fortemente de consistência terminológica, e o Glossário é o árbitro dela.
+- **Apêndice B — Guia Rápido de Ferramentas Unity de IA.** A tabela B.1 mapeia conceito → ferramenta oficial → alternativa de terceiros. É o apoio direto ao Capítulo 6 deste Manual.
+- **Apêndice C — Tabela-Decisão e Tabelas de Consulta.** A tabela **C.1 — "dado este problema de jogo, qual técnica usar?"** é, literalmente, o instrumento de apoio do Desafio de Escolha Tecnológica; a **C.2** consolida arquiteturas e algoritmos para a comparação de alternativas exigida pelo modelo de entrega; a **C.3** traz a linha do tempo da IA em jogos; e a **C.4** é um **checklist para o professor**, que vale percorrer na preparação de cada módulo.
+- **Apêndice D — Referências e Leituras.** A seção D.2 organiza leituras complementares por tema, útil para atender estudantes que pedem aprofundamento sem improvisar indicações.
+
+**Projeto Integrador Final da Apostila.** O Encerramento da Parte VII propõe um projeto culminante — a engenharia reversa de um jogo à escolha do estudante, com roteiro detalhado de seis etapas e entregáveis por etapa. A disciplina **não** o adota como instrumento avaliativo próprio, porque o seu Projeto Integrador é o AI Playground e porque acrescentar um segundo projeto de porte comprometeria o Cronograma. O professor deve, ainda assim, conhecê-lo e usá-lo de duas formas: como fonte de estrutura para o sexto momento de Engenharia Reversa (Semana 16), cujo roteiro pode ser enriquecido com as etapas descritas ali, e como sugestão de aprofundamento voluntário para estudantes com interesse específico no tema.
 
 Quando um mesmo capítulo da Apostila for utilizado em mais de uma semana não consecutiva — como ocorre com o capítulo de heurísticas e algoritmos genéticos —, o professor deve sinalizar isso explicitamente à turma, evitando a impressão de que o capítulo foi "concluído" antes da hora.
 
@@ -136,6 +161,30 @@ Quando um mesmo capítulo da Apostila for utilizado em mais de uma semana não c
 ## 6. Utilização da Unity
 
 A Unity é a ferramenta oficial da disciplina e deve ser utilizada de forma consistente ao longo de todo o semestre, tanto pelo professor quanto pelos grupos.
+
+### 6.0 Ambiente Técnico de Referência
+
+Antes de qualquer decisão pedagógica, o professor deve **fixar e registrar** as versões usadas no semestre. A disciplina não prescreve versões específicas — elas mudam mais rápido do que este Manual —, mas prescreve que sejam **fixadas, registradas e verificadas antes da Semana 1**, porque as Semanas 14 a 16 dependem de uma cadeia versionada e frágil: pacote ML-Agents ↔ ambiente Python ↔ formato `.onnx` ↔ pacote de inferência.
+
+Preencher e manter atualizada a tabela abaixo:
+
+| Item | Versão adotada no semestre | Verificado em |
+|---|---|---|
+| Unity (Editor) | | |
+| AI Navigation (`com.unity.ai.navigation`) | | |
+| Unity Behavior (`com.unity.behavior`) | | |
+| ML-Agents — pacote Unity (`com.unity.ml-agents`) | | |
+| ML-Agents — pacote Python (`mlagents`) | | |
+| Python (ambiente de treinamento) | | |
+| Sentis / Inference Engine (`com.unity.ai.inference`) | | |
+
+Três observações práticas sobre essa tabela:
+
+- **O pacote de inferência mudou de identificador.** O antigo `com.unity.sentis` foi substituído por **`com.unity.ai.inference`**. O nome de exibição oscilou entre "Sentis" e "Inference Engine" ao longo das versões, o que confunde a busca no Package Manager: **procurar pelo identificador**, não pelo nome. A documentação vive em `docs.unity3d.com/Packages/com.unity.ai.inference@latest`.
+- **A documentação web do ML-Agents foi depreciada** em favor da documentação de pacote da Unity. Preferir esta última ao indicar leitura aos estudantes.
+- **O par ML-Agents ↔ Python é o ponto frágil.** Fixe as duas versões juntas, teste a instalação completa antes da Semana 14 e mantenha um ambiente de reserva já configurado em pelo menos uma máquina do laboratório. O Plano de Aula da Semana 14 já recomenda antecipar a instalação; esta tabela é o que torna essa recomendação verificável de um semestre para o outro.
+
+Revisar esta tabela a cada oferta da disciplina é a forma mais barata de detectar que o material quebrou — sem ela, não há como saber o que revisar nem quando.
 
 ### 6.1 Organização dos Projetos
 
@@ -151,9 +200,20 @@ O professor deve reforçar práticas básicas de organização de cena e de scri
 
 ### 6.4 Utilização das Ferramentas Oficiais
 
+O **Apêndice B.1** da Apostila traz a tabela conceito → ferramenta oficial → alternativa de terceiros, e deve ser a primeira consulta do professor ao preparar cada módulo.
+
+
 Sempre que existir uma solução oficial da Unity para a técnica estudada — AI Navigation, Unity Behavior, Blackboard, ML-Agents, Sentis, Animator —, ela deve ser apresentada e utilizada como referência principal, conforme indicado no Cronograma para cada módulo. Nos módulos em que não existe solução oficial equivalente (como Mapas de Influência, Utility AI, Minimax e Algoritmos Genéticos), isso deve ser comunicado explicitamente à turma como uma característica do problema, e não como uma lacuna da disciplina: parte da formação do Game AI Engineer é saber reconhecer quando é necessário implementar uma solução própria.
 
-### 6.5 Integração de Ferramentas de Terceiros
+### 6.5 GOAP — uma exclusão deliberada
+
+O planejamento orientado a objetivos (GOAP) aparece três vezes no material sem nunca ser estudado: nos slides da Semana 1, como a técnica de *F.E.A.R.*; no quadro comparativo da seção 6.8, usado na Semana 4; e na seção 15.2 da Apostila, como estudo de caso. **Isso é deliberado.** A seção 6.6 é marcada na própria Apostila como conteúdo de *aprofundamento*, e o Cronograma de 17 semanas não comporta um sétimo problema de decisão sem sacrificar profundidade nos seis existentes.
+
+A consequência prática é que o professor deve **nomear a exclusão** em vez de deixá-la implícita. Quando GOAP surgir no quadro da seção 6.8 (Semana 4), vale dizer à turma: existe, é a arquitetura de *F.E.A.R.*, resolve o mesmo problema do Módulo 1 por planejamento em vez de enumeração, e está na seção 6.6 para quem quiser ler. Estudantes que perguntarem devem ser encaminhados à seção 6.6 e à 15.2, e — se quiserem experimentar — aos assets de GOAP do ecossistema Unity (CrashKonijn GOAP, ReGoap), sempre como aprofundamento voluntário, fora do escopo avaliado.
+
+A Semana 17 aproveita essa lacuna a favor da disciplina: *F.E.A.R.* é o caso de contraste ideal do fechamento, justamente por ser o exemplo em que a hipótese intuitiva do observador é refutada pela documentação.
+
+### 6.6 Integração de Ferramentas de Terceiros
 
 Ferramentas do ecossistema (A* Pathfinding Project, Behavior Designer, NodeCanvas, entre outras) devem ser apresentadas de forma comparativa, nunca como substitutas obrigatórias das soluções oficiais. O objetivo pedagógico dessas comparações é sempre o mesmo: mostrar vantagens, limitações, cenários de uso e impacto na produção, para que o estudante desenvolva critério de escolha — e não apenas familiaridade com mais um plugin.
 
@@ -223,9 +283,11 @@ O AI Design Log deve ser tratado como parte inseparável da solução técnica, 
 
 O checkpoint intermediário da Semana 8 e a apresentação final da Semana 17 devem ser conduzidos como momentos formais de comunicação técnica, nos quais o estudante explica e defende suas decisões diante de perguntas — do professor e, quando possível, da própria turma. O professor deve preparar perguntas específicas para cada grupo com antecedência, a partir do acompanhamento contínuo do projeto, evitando que a apresentação se resuma a uma demonstração sem defesa técnica.
 
+Ambos adotam formato de arguição individualizada, pelas razões de dimensionamento explicadas no Capítulo 4.6: **rodízio durante o laboratório** na Semana 8 e **feira em estações** na Semana 17, com 4 a 5 minutos por grupo em cada caso. Esse tempo é suficiente para a defesa, mas não para produzir sozinho evidência dos oito critérios da Rubrica na apresentação final — daí a importância do registro contínuo tratado em 9.3, que é o que sustenta os critérios de Aplicação Prática, Uso da Unity, Qualidade Técnica e Evolução na nota do encerramento.
+
 ### 9.6 Desafio de Escolha Tecnológica
 
-O Desafio de Escolha Tecnológica, presente ao final de cada módulo, é o instrumento mais diretamente ligado ao critério de Tomada de Decisão. O professor deve garantir que o problema proposto em cada desafio realmente admita mais de uma solução técnica plausível — caso contrário, o exercício de justificativa perde sentido. A correção deve valorizar a qualidade da comparação entre alternativas tanto quanto a solução final escolhida.
+O Desafio de Escolha Tecnológica, presente ao final de cada módulo, é o instrumento mais diretamente ligado ao critério de Tomada de Decisão. O **Apêndice C.1** da Apostila — a tabela-decisão "dado este problema de jogo, qual técnica usar?" — e o **Apêndice C.2** são o andaime natural deste instrumento: entregá-los aos grupos não entrega a resposta, mas dá o vocabulário de comparação que o descritor "Proficiente" do critério pressupõe. O professor deve garantir que o problema proposto em cada desafio realmente admita mais de uma solução técnica plausível — caso contrário, o exercício de justificativa perde sentido. A correção deve valorizar a qualidade da comparação entre alternativas tanto quanto a solução final escolhida.
 
 ---
 
@@ -239,7 +301,7 @@ Sempre que possível, a recuperação deve ocorrer por meio da evolução efetiv
 
 ### 10.2 Revisão dos Conceitos
 
-Antes de qualquer nova implementação, o professor deve revisar com o estudante os conceitos fundamentais em que houve maior fragilidade, priorizando os critérios de Compreensão Conceitual e Tomada de Decisão — que, segundo os Critérios de Notas, orientam prioritariamente o processo de recuperação.
+Antes de qualquer nova implementação, o professor deve revisar com o estudante os conceitos fundamentais em que houve maior fragilidade, priorizando os critérios de Compreensão Conceitual e Tomada de Decisão — que, segundo a Rubrica de Avaliação (seção 7), orientam prioritariamente o processo de recuperação. A conversão em nota e a substituição da nota do módulo seguem os Critérios de Notas (item 8).
 
 ### 10.3 Melhoria das Implementações e da Documentação
 
@@ -299,23 +361,27 @@ As trilhas oficiais do Unity Learn relacionadas a IA, navegação e ML-Agents s�
 
 Vídeos de análise de IA em jogos comerciais são um recurso útil para preparar os momentos de Engenharia Reversa, especialmente quando o jogo em questão não está disponível para sessão ao vivo em sala. Devem ser selecionados previamente pelo professor, garantindo que o comportamento de IA relevante seja claramente visível.
 
-### 13.4 Livros (Bibliografia Básica e Complementar)
+### 13.4 Apêndices da Apostila (Uso Recorrente)
+
+Glossário (A), guia de ferramentas Unity (B), tabela-decisão e tabelas de consulta (C, incluindo o checklist do professor em C.4) e leituras por tema (D). Ver o Capítulo 5.4 deste Manual para o uso recomendado de cada um ao longo do semestre.
+
+### 13.5 Livros (Bibliografia Básica e Complementar)
 
 A bibliografia básica e complementar da disciplina, detalhada no Plano de Ensino, está disponível para consulta na pasta de referências do projeto. Os títulos de bibliografia básica devem ser tratados como leitura de apoio obrigatória para o professor na preparação de cada módulo; os de bibliografia complementar são indicados aos estudantes com maior interesse em aprofundamento teórico ou matemático.
 
-### 13.5 Artigos Científicos (Complementar)
+### 13.6 Artigos Científicos (Complementar)
 
 Artigos científicos e materiais fornecidos pelo professor ao longo do semestre devem ser utilizados de forma pontual, principalmente para embasar comparações entre abordagens divergentes de diferentes autores — situação que deve ser apresentada à turma de forma explícita, e não simplificada como se houvesse uma única resposta correta.
 
-### 13.6 Documentação de Outras Engines (Comparação, Complementar)
+### 13.7 Documentação de Outras Engines (Comparação, Complementar)
 
 A documentação de sistemas equivalentes em outras engines, como a Unreal Engine (State Tree, Behavior Tree, Environment Query System, Learning Agents), é um recurso complementar útil para fins comparativos, especialmente nos Desafios de Escolha Tecnológica, mas não deve deslocar o foco da disciplina, que permanece centrado na Unity como ferramenta oficial.
 
-### 13.7 Ferramentas de Terceiros do Ecossistema Unity (Comparação, conforme o módulo)
+### 13.8 Ferramentas de Terceiros do Ecossistema Unity (Comparação, conforme o módulo)
 
 Ferramentas como A* Pathfinding Project, Behavior Designer e NodeCanvas devem ser apresentadas nos módulos em que há uma solução oficial correspondente da Unity, sempre em caráter comparativo, conforme indicado no Capítulo 6.5.
 
-### 13.8 Projetos Open Source (Complementar)
+### 13.9 Projetos Open Source (Complementar)
 
 Projetos open source que implementem técnicas estudadas na disciplina podem ser indicados como leitura de código complementar, especialmente para estudantes que desejem observar implementações mais robustas do que as desenvolvidas em sala — sem substituir a implementação própria exigida nos Micro Games.
 

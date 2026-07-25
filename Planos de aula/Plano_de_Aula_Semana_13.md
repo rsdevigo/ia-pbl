@@ -52,7 +52,7 @@ Não deve ser reintroduzido o conteúdo fundamental das seções 13.1 a 13.6 (j�
 
 | Item | Detalhamento |
 |---|---|
-| **Leitura recomendada** | Apostila — Parte VI, Capítulo 13, seções 13.7 a 13.11 |
+| **Leitura recomendada** | Apostila — Parte VI, Capítulo 13, seções 13.7 a 13.11; **Apêndice C.1** e **C.2** como apoio ao Desafio. *Observação:* o **Encerramento da Parte VI** fica reservado para a Semana 16, quando o Capítulo 12 também já tiver sido estudado — sinalizar à turma que a Parte VI ainda não se encerrou |
 | **Materiais necessários** | Projetor/tela; computadores com Unity Hub e o projeto AI Playground de cada grupo, incluindo a implementação inicial do Micro Game Genetic Lab iniciada na Semana 12; formulário ou modelo do Desafio de Escolha Tecnológica do Módulo 5; modelo do AI Design Log |
 | **Cena Unity utilizada** | Continuidade da cena do Micro Game Genetic Lab iniciada na Semana 12, agora adaptada a um problema mais expressivo (por exemplo, evoluir um pequeno conjunto de parâmetros de uma IA de jogo, ou uma sequência/layout simples, em vez do problema tipo "OneMax" da semana anterior) |
 | **Assets** | Nenhum asset de arte adicional necessário; elementos visuais permanecem primitivos simples ou saída em texto/console, com eventual gráfico simples da evolução da aptidão ao longo das gerações |
@@ -113,7 +113,7 @@ Não deve ser reintroduzido o conteúdo fundamental das seções 13.1 a 13.6 (j�
 
 | Campo | Conteúdo |
 |---|---|
-| **Jogo analisado** | A ser selecionado pelo professor entre jogos comerciais com balanceamento perceptível entre unidades, cartas ou builds, ou com geração procedural de fases/mapas evidente (por exemplo, um jogo de estratégia, um card game competitivo, ou um jogo com níveis gerados proceduralmente) |
+| **Jogo analisado** | A ser selecionado pelo professor entre jogos com balanceamento perceptível entre unidades, cartas ou builds, ou com geração procedural evidente. A Apostila não traz estudo de caso de algoritmos genéticos — é o único momento do semestre sem caso correspondente no Capítulo 15, e o professor deve dizer isso à turma: a ausência de fonte torna a análise **inteiramente [Inferência]**, o que é, em si, uma lição metodológica |
 | **Comportamento observado** | Padrões de equilíbrio entre opções de jogo (nenhuma estratégia claramente dominante) ou variedade e jogabilidade consistente de conteúdo gerado (fases, mapas ou itens) |
 | **Perguntas para discussão** | O balanceamento observado é mais compatível com ajuste manual por designers, com otimização automática (possivelmente evolutiva) ou com uma combinação dos dois? Que critérios uma função de aptidão precisaria medir para produzir esse resultado? Que evidências sustentam cada hipótese, e quais permanecem apenas plausíveis? |
 | **Relação com os conceitos da semana** | Conecta diretamente as seções 13.7 (aplicações de balanceamento automático e PCG) e 13.10 (estudos de caso, distinguindo fato documentado de análise técnica fundamentada) ao caso analisado, exercitando a mesma cautela metodológica adotada na Apostila |
@@ -161,16 +161,19 @@ A Semana 13 **encerra o Módulo 5**, e a nota do módulo é lançada ao final de
 
 Os momentos de Engenharia Reversa associados ao Desafio de Escolha Tecnológica são avaliados principalmente pela Compreensão Conceitual e pela Tomada de Decisão, conforme a Rubrica.
 
+
+**Instrumentos de verificação disponíveis na Apostila.** Antes de recorrer a questões próprias, o professor deve usar o material já pronto e alinhado: os **Exercícios de fixação** ao final do Capítulo 13, e — nas semanas de encerramento de Parte — as **Questões de Revisão**, os **Exercícios Conceituais** e os **Exercícios de Integração** do Encerramento correspondente. Recomenda-se aplicar duas ou três questões na abertura do Encontro 2, como verificação rápida antes do laboratório, e usar o Apêndice C.2 como apoio à discussão técnica. Esse material é a principal fonte de verificação formativa da disciplina, e não deve ficar sem uso.
+
 ---
 
 ## Entregas
 
-Conforme o Cronograma, a Semana 13 encerra a Unidade V e o Módulo 5, com as seguintes entregas:
+Conforme o Cronograma e a matriz dos Critérios de Notas (item 4), a Semana 13 encerra a Unidade V e o Módulo 5 com **quatro** entregas avaliadas:
 
-- **Micro Game Genetic Lab** consolidado, com os quatro operadores genéticos aplicados a um problema mais expressivo e evidência de melhoria da aptidão ao longo das gerações;
-- **Desafio de Escolha Tecnológica (Módulo 5)**, com a justificativa técnica da solução de otimização escolhida;
-- **AI Design Log — Micro Game 5**, documentando o raciocínio completo do desenvolvimento do Genetic Lab nas Semanas 12 e 13;
-- **5º momento de Engenharia Reversa**, relacionando otimização automática a balanceamento ou geração procedural em um jogo comercial.
+- **Micro Game 5 — Genetic Lab consolidado (50%)** — os quatro operadores genéticos aplicados a um problema mais expressivo, com evidência de melhoria da aptidão ao longo das gerações, avaliado pelos critérios de Compreensão Conceitual, Aplicação Prática, Uso da Unity e do Ecossistema e Qualidade Técnica da Solução;
+- **AI Design Log — Micro Game 5 (25%)** — documentando o raciocínio completo do desenvolvimento do Genetic Lab nas Semanas 12 e 13, conforme o modelo dos Modelos de Entrega do Aluno (§1);
+- **Desafio de Escolha Tecnológica — Módulo 5 (15%)** — justificativa técnica da solução de otimização escolhida;
+- **5º momento de Engenharia Reversa (10%)** — relacionando otimização automática a balanceamento ou geração procedural em um jogo comercial.
 
 ---
 
@@ -182,7 +185,7 @@ Conforme o Cronograma, a Semana 13 encerra a Unidade V e o Módulo 5, com as seg
 | Não reconhecer sinais de convergência prematura na curva de aptidão, insistindo em parâmetros que já demonstraram estagnação | Retomar o quadro "Na Prática" da seção 13.3 e a Boa Prática da seção 13.6, orientando o grupo a comparar explicitamente a diversidade da população em gerações de platô com gerações de salto |
 | Confundir, no Desafio de Escolha Tecnológica, "otimizar" (GA) com "aprender a agir" (RL), propondo a técnica errada para o problema apresentado | Retomar o quadro de Atenção da seção 13.1 e a comparação da seção 13.9, pedindo que o grupo explicite se o problema exige uma configuração fixa (otimização) ou um comportamento que se ajusta continuamente (aprendizagem) |
 | No 5º momento de Engenharia Reversa, afirmar categoricamente que um jogo comercial específico "usa Algoritmos Genéticos" sem base documentada | Retomar a seção 13.10 e o quadro de Atenção associado, exigindo que o grupo classifique cada afirmação como fato documentado ou hipótese plausível, com a fonte correspondente |
-| Justificar o Desafio de Escolha Tecnológica de forma genérica, sem considerar requisitos, alternativas e limitações específicas do problema proposto | Retomar os critérios do Desafio (seção "Desafio de Escolha Tecnológica" do CLAUDE.md) e da Rubrica (critério Tomada de Decisão), pedindo que o grupo relacione explicitamente cada requisito do problema à escolha feita |
+| Justificar o Desafio de Escolha Tecnológica de forma genérica, sem considerar requisitos, alternativas e limitações específicas do problema proposto | Retomar o modelo do Desafio (Modelos de Entrega do Aluno, §2) e o descritor "Proficiente" da Rubrica no critério Tomada de Decisão, pedindo que o grupo relacione explicitamente cada requisito do problema à escolha feita |
 
 ---
 

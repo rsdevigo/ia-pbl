@@ -28,7 +28,7 @@ Ao final da Semana 1, o estudante deverá ser capaz de:
 3. **Descrever** o ciclo Sentir → Pensar → Agir e classificar um agente como reativo, deliberativo ou híbrido.
 4. **Relacionar** a evolução histórica das técnicas de IA de jogos às restrições de hardware de cada época, reconhecendo exemplos documentados (Pac-Man, Half-Life, Halo 2, F.E.A.R.).
 5. **Reconhecer** a estrutura da disciplina, a metodologia PBL e o papel do AI Playground como Projeto Integrador.
-6. **Organizar-se** em grupo de trabalho (2 a 3 estudantes) e **esboçar** um plano inicial para o Micro Game NPC Decision, sem realizar implementação.
+6. **Organizar-se** em grupo de trabalho (2 a 4 estudantes) e **esboçar** um plano inicial para o Micro Game NPC Decision, sem realizar implementação.
 
 ---
 
@@ -47,7 +47,7 @@ Não devem ser antecipados conteúdos de máquinas de estado (Capítulo 3) ou de
 
 | Item | Detalhamento |
 |---|---|
-| **Leitura recomendada** | Apostila — Parte I completa (Apresentação, Capítulo 1, Capítulo 2, Encerramento); Plano de Ensino; Cronograma; Rubrica de Avaliação (seção 1, "Filosofia da Avaliação") |
+| **Leitura recomendada** | Apostila — Parte I completa (Apresentação, Capítulo 1, Capítulo 2, Encerramento); Plano de Ensino; Cronograma; Rubrica de Avaliação (seção 1, "Filosofia da Avaliação", e seção 5, composição de critérios por instrumento); Critérios de Notas (itens 4 e 5, pesos); Modelos de Entrega do Aluno (a serem distribuídos à turma neste encontro) |
 | **Materiais necessários** | Projetor/tela para apresentação; quadro para registrar a formação dos grupos; computadores com Unity Hub instalado para os estudantes |
 | **Cena Unity utilizada** | Nenhuma cena de IA ainda. Apenas criação de um projeto Unity vazio (template 3D ou 2D, conforme padrão já adotado nas demais disciplinas do curso), que servirá de base para o AI Playground |
 | **Assets** | Nenhum asset de IA necessário nesta semana |
@@ -79,9 +79,9 @@ Não devem ser antecipados conteúdos de máquinas de estado (Capítulo 3) ou de
 | Etapa | Duração | Objetivo | Atividade do Professor | Atividade dos Estudantes |
 |---|---|---|---|---|
 | 1. Revisão rápida | 10 min | Retomar os conceitos do Encontro 1 | Conduz uma discussão breve recuperando ilusão de inteligência e ciclo Sentir-Pensar-Agir | Respondem perguntas de verificação oral |
-| 2. Metodologia PBL | 15 min | Explicar como o semestre é estruturado em torno de um único projeto | Apresenta a lógica PBL, a organização em Unidades/Módulos e o papel do Desafio de Escolha Tecnológica e do AI Design Log | Ouvem e relacionam a metodologia à sequência problema → fundamentos → aplicações → ferramentas → Micro Game |
+| 2. Metodologia PBL | 15 min | Explicar como o semestre é estruturado em torno de um único projeto | Apresenta a lógica PBL, a organização em Unidades/Módulos e o papel do Desafio de Escolha Tecnológica e do AI Design Log; distribui os **Modelos de Entrega do Aluno**, que trazem o formato exigido de cada entrega do semestre, e a **Rubrica de Avaliação**, para que a turma conheça os critérios desde o primeiro encontro | Ouvem e relacionam a metodologia à sequência problema → fundamentos → aplicações → ferramentas → Micro Game |
 | 3. O AI Playground e os Micro Games | 15 min | Apresentar o Projeto Integrador e sua composição em Micro Games independentes | Descreve o AI Playground como conjunto de Micro Games, cada um ligado a um módulo de conteúdo, e situa o Micro Game 1 (NPC Decision) no Módulo 1 | Visualizam o percurso completo do semestre a partir do Cronograma |
-| 4. Formação dos grupos | 15 min | Organizar os estudantes em grupos de 2 a 3 pessoas | Orienta a formação dos grupos e registra a composição de cada um | Formam grupos e definem forma de comunicação/organização interna |
+| 4. Formação dos grupos | 15 min | Organizar os estudantes em grupos de 2 a 4 pessoas | Orienta a formação dos grupos e registra a composição de cada um | Formam grupos e definem forma de comunicação/organização interna |
 | 5. Setup inicial do projeto Unity | 20 min | Criar a base técnica comum do AI Playground | Orienta a criação de um projeto Unity vazio por grupo, com a estrutura de pastas que acomodará os futuros Micro Games | Criam o projeto Unity do AI Playground em seus computadores/repositórios |
 | 6. Esboço do plano do Micro Game 1 | 10 min | Iniciar o planejamento conceitual do NPC Decision, sem implementação | Apresenta a pergunta do Módulo 1 ("como um NPC decide o que fazer?") e orienta o preenchimento de um esboço textual do Micro Game | Esboçam, em grupo, uma ideia inicial de cenário e NPC para o Micro Game 1 |
 | 7. Encerramento | 5 min | Fechar a semana e indicar o caminho da próxima | Recapitula as entregas da semana e anuncia o tema da Semana 2 (Máquinas de Estado Finitas) | Registram pendências e dúvidas |
@@ -128,7 +128,7 @@ Nenhuma ferramenta específica de IA (Animator, Unity Behavior, AI Navigation, M
 
 **Etapas:**
 
-1. Formação dos grupos (2 a 3 estudantes), com registro pelo professor.
+1. Formação dos grupos (2 a 4 estudantes; ver a nota de dimensionamento de turma na Preparação do Professor), com registro pelo professor.
 2. Criação, por grupo, de um projeto Unity vazio nomeado como AI Playground, com estrutura de pastas prevendo a futura adição de cada Micro Game.
 3. Preenchimento de um esboço textual (documento simples, não necessariamente formatado) descrevendo cenário, NPC e comportamentos esperados do Micro Game NPC Decision.
 
@@ -154,7 +154,7 @@ Nenhuma nota é atribuída nesta semana, conforme os Critérios de Notas da disc
 
 | Entrega | Descrição | Caráter |
 |---|---|---|
-| Formação de grupos | Grupos de 2 a 3 estudantes registrados pelo professor | Organizacional, não avaliativa |
+| Formação de grupos | Grupos de 2 a 4 estudantes registrados pelo professor | Organizacional, não avaliativa |
 | Plano inicial do Micro Game 1 | Esboço textual do cenário, NPC e comportamentos esperados do NPC Decision | Formativa, insumo para a consolidação do Micro Game na Semana 4 |
 
 Não há, nesta semana, entrega de Micro Game consolidado, AI Design Log ou Desafio de Escolha Tecnológica — esses instrumentos só surgem ao final do Módulo 1, na Semana 4.

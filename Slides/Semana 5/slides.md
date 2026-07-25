@@ -9,7 +9,7 @@ footer: "IFMS • Semana 05"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -203,25 +203,18 @@ Parâmetros: Agent Radius, Agent Height, Max Slope, Step Height.
 
 Bake e observação do recuo da malha em relação às paredes.
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Mostrar visualmente a malha gerada pelo bake e seu recuo em relação às paredes da cena de teste.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/navmesh-bake-cena-teste.webp
-> ```
->
-> **Descrição**
->
-> Captura de tela do editor Unity com a NavMesh (área azul) sobreposta à cena de teste (salas, corredor, obstáculos), evidenciando o recuo da malha em relação às paredes.
->
-> **Como produzir**
->
-> Screenshot direto do editor Unity durante a demonstração ao vivo, com a malha visível (gizmo do NavMesh Surface ativado).
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
+
+Objetivo didático:
+Mostrar visualmente a malha gerada pelo bake e seu recuo em relação às paredes da cena de teste.
+Arquivo sugerido:
+assets/navmesh-bake-cena-teste.webp
+Descrição:
+Captura de tela do editor Unity com a NavMesh (área azul) sobreposta à cena de teste (salas, corredor, obstáculos), evidenciando o recuo da malha em relação às paredes.
+Como produzir:
+Screenshot direto do editor Unity durante a demonstração ao vivo, com a malha visível (gizmo do NavMesh Surface ativado).
+-->
 
 ---
 

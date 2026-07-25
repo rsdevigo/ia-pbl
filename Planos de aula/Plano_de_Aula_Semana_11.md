@@ -62,7 +62,7 @@ Não deve ser antecipado o conteúdo da Seção 11.5 (Monte Carlo Tree Search), 
 
 | Item | Detalhamento |
 |---|---|
-| **Leitura recomendada** | Apostila — Parte V, Capítulo 11, seções 11.3.4 e 11.4 (incluindo 11.4.1); leitura opcional da seção 13.1 do Capítulo 13, apenas para reforçar a generalização do conceito de heurística (sem entrar em Algoritmos Genéticos); revisão da Parte VII, Capítulo 14, seção 14.3 (roteiro de seis etapas) |
+| **Leitura recomendada** | Apostila — Parte V, Capítulo 11, seções 11.3.4 e 11.4 (incluindo 11.4.1); leitura opcional da seção 13.1 do Capítulo 13, apenas para reforçar a generalização do conceito de heurística (sem entrar em Algoritmos Genéticos); revisão da Parte VII, Capítulo 14, seção 14.3 (roteiro de seis etapas); **Encerramento da Parte V**, cuja *Tabela Comparativa — Minimax × Alfa-Beta × MCTS* consolida o módulo; **Apêndice C.1** e **C.2** como apoio ao Desafio |
 | **Materiais necessários** | Projetor/tela; computadores com Unity Hub e o projeto AI Playground de cada grupo, com a implementação inicial do Minimax da Semana 10; acesso a vídeo ou build do jogo escolhido para o quarto momento de Engenharia Reversa |
 | **Cena Unity utilizada** | A mesma cena mínima do Micro Game Board Game AI iniciada na Semana 10, estendida para um tabuleiro maior que o jogo da velha (por exemplo, uma variante simplificada de damas ou Connect Four/Lig-4 em grade reduzida), no qual a exploração completa da árvore deixe de ser viável |
 | **Assets** | Nenhum asset de arte adicional necessário; elementos visuais permanecem primitivos simples, conforme a Semana 10 |
@@ -98,7 +98,7 @@ Não deve ser antecipado o conteúdo da Seção 11.5 (Monte Carlo Tree Search), 
 | 3. Discussão técnica | 10 min | Consolidar a compreensão da implementação realizada | Conduz a discussão sobre os pesos escolhidos na função de avaliação e sobre quantos nós cada grupo estima ter economizado com a poda, relacionando à ordenação de jogadas adotada (se houver) | Justificam, em voz alta, os pesos da função de avaliação e comparam informalmente o tempo de resposta da IA antes e depois da poda |
 | 4. Desafio de Escolha Tecnológica do Módulo 4 | 15 min | Desenvolver a capacidade de justificar tecnicamente uma escolha de busca adversarial | Apresenta um cenário não idêntico ao Micro Game (por exemplo, um jogo de tabuleiro com fator de ramificação bem maior que o jogo da velha, ou um jogo com elemento de acaso) e solicita que cada grupo avalie se o Minimax com alfa-beta é adequado, considerando alternativas e limitações discutidas na Semana 10 (seção 11.7) | Analisam o cenário, comparam alternativas com base em requisitos e limitações (fator de ramificação, disponibilidade de heurística, tempo real versus turnos, presença de acaso), e registram a justificativa por escrito |
 | 5. Quarto momento de Engenharia Reversa | 15 min | Aplicar o roteiro completo de seis etapas a um caso de busca adversarial | Apresenta trechos de vídeo ou partidas do jogo escolhido (por exemplo, um Reversi/Othello comercial com dificuldade ajustável), conduz a definição do problema e a observação orientada à qualidade de jogo em diferentes níveis de dificuldade, e orienta a formulação, validação e documentação das hipóteses sobre profundidade de busca e função de avaliação, reforçando os rótulos [Documentado]/[Inferência]/[Especulação] | Aplicam as seis etapas do roteiro ao comportamento observado, relacionando mudanças de dificuldade a possíveis variações de profundidade de busca e/ou de heurística, com nível de confiança explícito para cada afirmação |
-| 6. Encerramento do Módulo 4 e da Unidade IV | 5 min | Fechar o módulo e indicar o caminho da próxima semana | Recapitula a evolução do Minimax puro (Semana 10) ao Minimax com heurística e poda alfa-beta (Semana 11), confirma as entregas da semana e anuncia que a Semana 12 abre a Unidade V com Algoritmos Genéticos, retomando o Capítulo 13 desde o início | Registram pendências das três entregas do módulo para finalização até o prazo definido pelo professor |
+| 6. Encerramento do Módulo 4 e da Unidade IV | 5 min | Fechar o módulo e indicar o caminho da próxima semana | Recapitula a evolução do Minimax puro (Semana 10) ao Minimax com heurística e poda alfa-beta (Semana 11), confirma as entregas da semana e anuncia que a Semana 12 abre a Unidade V com Algoritmos Genéticos, retomando o Capítulo 13 desde o início | Registram pendências das quatro entregas do módulo para finalização até o prazo definido pelo professor |
 
 ---
 
@@ -162,7 +162,7 @@ Nenhuma ferramenta oficial da Unity é utilizada para heurísticas de avaliaçã
 5. Jogar manualmente contra a IA em diferentes profundidades de busca, observando a mudança de qualidade das jogadas e relacionando-a ao trade-off entre profundidade e heurística discutido na seção 11.3.4.
 6. Analisar o cenário do Desafio de Escolha Tecnológica (jogo com fator de ramificação maior ou com elemento de acaso), avaliar se o Minimax com alfa-beta permanece adequado e registrar a justificativa por escrito.
 7. Aplicar as seis etapas do roteiro de Engenharia Reversa ao jogo de tabuleiro ou estratégia por turnos escolhido, registrando evidências, hipóteses, validação e documentação com os rótulos de confiança apropriados.
-8. Reunir as três entregas do módulo (Micro Game consolidado, Desafio de Escolha Tecnológica, Engenharia Reversa) junto ao AI Design Log do Módulo 4.
+8. Reunir as quatro entregas do módulo: Micro Game consolidado, AI Design Log, Desafio de Escolha Tecnológica e Engenharia Reversa do Módulo 4.
 
 **Resultado esperado:** ao final do Encontro 2, cada grupo deve ter o Micro Game Board Game AI consolidado como entrega do Módulo 4 — com Minimax, função de avaliação e poda alfa-beta integrados, aplicados a um tabuleiro maior que o jogo da velha —, uma justificativa técnica registrada para o cenário do Desafio de Escolha Tecnológica, e o registro completo das seis etapas de Engenharia Reversa aplicadas ao jogo escolhido.
 
@@ -179,17 +179,21 @@ A Semana 11 **encerra formalmente o Módulo 4 e a Unidade IV** (Busca Adversaria
 
 A nota do Módulo 4 compõe 11,67% da nota final do semestre, conforme os Critérios de Notas. O professor deve registrar e comunicar aos estudantes a nota obtida em cada instrumento e a nota consolidada do módulo, conforme recomendado pela Rubrica, dando atenção especial ao critério de Evolução ao Longo do Semestre em relação aos módulos anteriores.
 
+
+**Instrumentos de verificação disponíveis na Apostila.** Antes de recorrer a questões próprias, o professor deve usar o material já pronto e alinhado: os **Exercícios de fixação** ao final do Capítulo 11, e — nas semanas de encerramento de Parte — as **Questões de Revisão**, os **Exercícios Conceituais** e os **Exercícios de Integração** do Encerramento correspondente. Recomenda-se aplicar duas ou três questões na abertura do Encontro 2, como verificação rápida antes do laboratório, e usar a Tabela Comparativa do Encerramento da Parte V como apoio à discussão técnica. Esse material é a principal fonte de verificação formativa da disciplina, e não deve ficar sem uso.
+
 ---
 
 ## Entregas
 
-Conforme o Cronograma, esta semana encerra o Módulo 4 e a Unidade IV com três entregas:
+Conforme o Cronograma e a matriz dos Critérios de Notas (item 4), esta semana encerra o Módulo 4 e a Unidade IV com **quatro** entregas avaliadas:
 
-- **Desafio de Escolha Tecnológica (Módulo 4)** — justificativa escrita avaliando a adequação do Minimax com poda alfa-beta ao cenário de busca adversarial apresentado no Encontro 2;
-- **AI Design Log — Micro Game 4** — documento contendo problema, requisitos, alternativas consideradas (profundidade de busca, características da função de avaliação, uso de poda), solução escolhida, justificativa, ferramentas utilizadas, limitações e melhorias futuras, conforme especificado no CLAUDE.md do projeto;
-- **4º momento de Engenharia Reversa** — registro completo das seis etapas do roteiro aplicado ao jogo de tabuleiro ou estratégia por turnos escolhido.
+- **Micro Game 4 — Board Game AI consolidado (50%)** — Minimax com função de avaliação e poda alfa-beta funcionando sobre o jogo de tabuleiro escolhido, avaliado pelos critérios de Compreensão Conceitual, Aplicação Prática, Uso da Unity e do Ecossistema e Qualidade Técnica da Solução;
+- **AI Design Log — Micro Game 4 (25%)** — documento contendo problema, requisitos, alternativas consideradas (profundidade de busca, características da função de avaliação, uso de poda), solução escolhida, justificativa, ferramentas utilizadas, limitações e melhorias futuras, conforme o modelo dos Modelos de Entrega do Aluno (§1);
+- **Desafio de Escolha Tecnológica — Módulo 4 (15%)** — justificativa escrita avaliando a adequação do Minimax com poda alfa-beta ao cenário de busca adversarial apresentado no Encontro 2;
+- **4º momento de Engenharia Reversa (10%)** — registro completo das seis etapas do roteiro aplicado ao jogo de tabuleiro ou estratégia por turnos escolhido.
 
-O Micro Game Board Game AI, consolidado nesta semana, permanece no AI Playground de cada grupo como base para os módulos seguintes.
+O Micro Game Board Game AI permanece no AI Playground de cada grupo como base para os módulos seguintes, mas a versão consolidada nesta semana é **entrega formal avaliada**, e não apenas um artefato de trabalho.
 
 ---
 
@@ -209,7 +213,7 @@ O Micro Game Board Game AI, consolidado nesta semana, permanece no AI Playground
 
 Para a Semana 12 (Fundamentos de Algoritmos Genéticos — abertura da Unidade V), o professor deve:
 
-- garantir que as três entregas do Módulo 4 (Desafio de Escolha Tecnológica, AI Design Log, Engenharia Reversa) estejam recebidas e avaliadas antes do início da Semana 12, registrando a nota do módulo conforme os Critérios de Notas;
+- garantir que as quatro entregas do Módulo 4 (Micro Game consolidado, AI Design Log, Desafio de Escolha Tecnológica, Engenharia Reversa) estejam recebidas e avaliadas antes do início da Semana 12, registrando a nota do módulo conforme a matriz dos Critérios de Notas (item 4);
 - confirmar que todos os grupos possuem, ao final da Semana 11, o Micro Game Board Game AI consolidado no AI Playground, encerrando o Módulo 4 e a Unidade IV;
 - solicitar a leitura prévia da Parte VI, Capítulo 13 da Apostila, desde o início (seções 13.1 a 13.3), esclarecendo aos estudantes que o capítulo será retomado do zero, e não continuado a partir da leitura pontual da seção 13.1 já feita nesta semana;
 - anunciar a transição de unidade: da pergunta "como derrotar um adversário inteligente?" para "como encontrar automaticamente boas soluções?", situando os Algoritmos Genéticos como uma nova família de técnicas de otimização, distinta da busca adversarial do Módulo 4;

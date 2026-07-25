@@ -24,7 +24,7 @@ Princípios que orientam esta rubrica:
 - reconhecer e valorizar a evolução do estudante entre módulos, não apenas o resultado final;
 - avaliar arquitetura e organização da solução, não apenas se o código "funciona".
 
-Esta rubrica não define pesos, notas ou fórmulas de cálculo de média. Esses aspectos são de responsabilidade da instituição e serão tratados em documento próprio, quando pertinente.
+Esta rubrica não define pesos, notas ou fórmulas de cálculo de média. Esses aspectos, observadas as normas institucionais do IFMS, estão definidos em documento próprio — os **Critérios de Notas** —, que deve ser aplicado em conjunto com esta rubrica.
 
 ---
 
@@ -100,7 +100,11 @@ Avalia a progressão do estudante entre módulos, valorizando melhorias efetivas
 
 A rubrica é única, mas sua aplicação varia conforme o instrumento avaliado, já que nem todos os critérios se manifestam da mesma forma em cada entrega.
 
-**Micro Games.** Ao final de cada módulo, a consolidação do Micro Game correspondente é avaliada principalmente pelos critérios de Compreensão Conceitual, Aplicação Prática, Uso da Unity e do Ecossistema e Qualidade Técnica da Solução. A observação ocorre tanto na implementação guiada do primeiro encontro quanto na consolidação do segundo encontro de cada módulo.
+Esta seção é a **fonte normativa** da composição de critérios de cada instrumento. Os Formulários de Avaliação, os Critérios de Notas, os Planos de Aula e os Slides derivam desta seção e não devem redefini-la. A tabela consolidada que reúne esta composição aos pesos de cada instrumento está nos **Critérios de Notas, item 4**.
+
+Cada módulo de conteúdo gera **quatro** instrumentos avaliativos — Micro Game, AI Design Log, Desafio de Escolha Tecnológica e Engenharia Reversa —, aos quais se somam, ao longo do semestre, o checkpoint da Semana 8 e a apresentação final da Semana 17.
+
+**Micro Games.** Ao final de cada módulo, a consolidação do Micro Game correspondente é avaliada pelos critérios de Compreensão Conceitual, Aplicação Prática, Uso da Unity e do Ecossistema e Qualidade Técnica da Solução. A observação ocorre tanto na implementação guiada do primeiro encontro quanto na consolidação do segundo encontro de cada módulo. É o instrumento de maior peso do módulo, e constitui entrega formal avaliada — não apenas um artefato que permanece no AI Playground do grupo.
 
 **AI Design Log.** Cada AI Design Log, entregue ao final de cada módulo junto com o respectivo Micro Game, é avaliado principalmente pelo critério de AI Design Log, mas também reflete a Tomada de Decisão registrada e a Compreensão Conceitual demonstrada por escrito.
 
@@ -112,7 +116,7 @@ A rubrica é única, mas sua aplicação varia conforme o instrumento avaliado, 
 
 **Apresentação final do AI Playground.** A apresentação final, na Semana 17, é avaliada de forma integrada por todos os oito critérios da rubrica, uma vez que reúne a totalidade dos Micro Games, do AI Design Log consolidado e da capacidade de comunicação técnica desenvolvida ao longo do semestre.
 
-Esta rubrica não atribui pesos, notas ou fórmulas de cálculo entre os instrumentos listados. A definição desses aspectos permanece a cargo da instituição.
+Esta rubrica define **quais** critérios são observados em cada instrumento, mas não atribui pesos, notas ou fórmulas de cálculo. Esses aspectos, observadas as normas institucionais do IFMS, estão definidos nos **Critérios de Notas**, que operacionalizam esta seção sem alterá-la.
 
 ---
 

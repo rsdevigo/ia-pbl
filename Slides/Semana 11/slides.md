@@ -9,7 +9,7 @@ footer: "IFMS • Semana 11"
 
 <!-- _class: cover -->
 
-![logo](https://dummyimage.com/280x90/ffffff/3b2f68&text=IFMS)
+![logo](../themes/logo-ifms.svg)
 
 # Inteligência Artificial e Ilusão de Inteligência
 
@@ -178,27 +178,18 @@ Analogia: comparando propostas uma a uma, você descarta uma opção assim que s
 
 Mesma árvore da Semana 10 — agora com α e β anotados a cada passo.
 
----
+<!--
+FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
 
-> [!FIGURA]
->
-> **Objetivo didático**
->
-> Mostrar, lado a lado, a árvore completa do Minimax e a mesma árvore com os ramos eliminados pela poda alfa-beta.
->
-> **Arquivo sugerido**
->
-> ```
-> assets/minimax-vs-alfabeta-poda.webp
-> ```
->
-> **Descrição**
->
-> Duas árvores idênticas (jogadas A, B, C; folhas 3/5, 6/2, 1/8): à esquerda, todos os nós visitados; à direita, ramos podados esmaecidos ou tracejados, com valores de α e β anotados nos nós visitados.
->
-> **Como produzir**
->
-> Diagrama vetorial em Krita ou Blender (modo 2D), reaproveitando a estrutura da árvore da Semana 10, adicionando anotações de α/β e um estilo visual diferenciado para ramos podados.
+Objetivo didático:
+Mostrar, lado a lado, a árvore completa do Minimax e a mesma árvore com os ramos eliminados pela poda alfa-beta.
+Arquivo sugerido:
+assets/minimax-vs-alfabeta-poda.webp
+Descrição:
+Duas árvores idênticas (jogadas A, B, C; folhas 3/5, 6/2, 1/8): à esquerda, todos os nós visitados; à direita, ramos podados esmaecidos ou tracejados, com valores de α e β anotados nos nós visitados.
+Como produzir:
+Diagrama vetorial em Krita ou Blender (modo 2D), reaproveitando a estrutura da árvore da Semana 10, adicionando anotações de α/β e um estilo visual diferenciado para ramos podados.
+-->
 
 ---
 
