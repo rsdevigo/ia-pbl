@@ -1,0 +1,32 @@
+  - Cronograma
+    - [Cronograma IA](/Cronograma/Cronograma_IA.md)
+  - Plano de ensino
+    - [Plano de Ensino IA](/Plano%20de%20ensino/Plano_de_Ensino_IA.md)
+    - [Rubrica de Avaliação](/Plano%20de%20ensino/Rubrica_de_Avaliacao.md)
+    - [Critérios de Notas](/Plano%20de%20ensino/Criterios_de_Notas.md)
+    - [Formulários de Avaliação](/Plano%20de%20ensino/Formularios_de_Avaliacao.md)
+    - [Modelos de Entrega do Aluno](/Plano%20de%20ensino/Modelos_de_Entrega_do_Aluno.md)
+  - Planos de aula
+    - [Plano de Aula Semana 01](/Planos%20de%20aula/Plano_de_Aula_Semana_01.md)
+    - [Plano de Aula Semana 02](/Planos%20de%20aula/Plano_de_Aula_Semana_02.md)
+    - [Plano de Aula Semana 03](/Planos%20de%20aula/Plano_de_Aula_Semana_03.md)
+    - [Plano de Aula Semana 04](/Planos%20de%20aula/Plano_de_Aula_Semana_04.md)
+    - [Plano de Aula Semana 05](/Planos%20de%20aula/Plano_de_Aula_Semana_05.md)
+    - [Plano de Aula Semana 06](/Planos%20de%20aula/Plano_de_Aula_Semana_06.md)
+    - [Plano de Aula Semana 07](/Planos%20de%20aula/Plano_de_Aula_Semana_07.md)
+    - [Plano de Aula Semana 08](/Planos%20de%20aula/Plano_de_Aula_Semana_08.md)
+    - [Plano de Aula Semana 09](/Planos%20de%20aula/Plano_de_Aula_Semana_09.md)
+    - [Plano de Aula Semana 10](/Planos%20de%20aula/Plano_de_Aula_Semana_10.md)
+    - [Plano de Aula Semana 11](/Planos%20de%20aula/Plano_de_Aula_Semana_11.md)
+    - [Plano de Aula Semana 12](/Planos%20de%20aula/Plano_de_Aula_Semana_12.md)
+    - [Plano de Aula Semana 13](/Planos%20de%20aula/Plano_de_Aula_Semana_13.md)
+    - [Plano de Aula Semana 14](/Planos%20de%20aula/Plano_de_Aula_Semana_14.md)
+    - [Plano de Aula Semana 15](/Planos%20de%20aula/Plano_de_Aula_Semana_15.md)
+    - [Plano de Aula Semana 16](/Planos%20de%20aula/Plano_de_Aula_Semana_16.md)
+    - [Plano de Aula Semana 17](/Planos%20de%20aula/Plano_de_Aula_Semana_17.md)
+  - Guia do Professor
+    - [Guia do Professor IA](/Guia%20do%20Professor/Guia_do_Professor_IA.md)
+  - Slides
+<!-- SLIDES:START -->
+    - [Semana 1](/Slides/Semana%201/slides.md)
+<!-- SLIDES:END -->
