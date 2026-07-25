@@ -132,6 +132,8 @@ Como o espaço navegável do jogo vira um grafo?
 
 Movimento diagonal custa √2 ≈ 1,41, não 1,0.
 
+*Corner cutting*: diagonal entre dois obstáculos adjacentes (X) deve ser proibida.
+
 <div class="warning">
 
 Atribuir custo igual a passos ortogonais e diagonais distorce o caminho "mais curto" calculado.
@@ -164,7 +166,7 @@ Gerada automaticamente por **baking**, a partir da geometria da cena.
 | **Nó** | Célula | Ponto manual | Polígono |
 | **Obtenção** | Discretização | Autoria manual | Bake automático |
 | **Memória** | Alta (fina) | Baixa | Média |
-| **Atualização dinâmica** | Custosa | Manual | Suportada (NavMesh Obstacle) |
+| **Atualização dinâmica** | Trivial (mudar 1 célula) | Manual | Custosa (rebake; mitigada por NavMesh Obstacle) |
 
 ---
 

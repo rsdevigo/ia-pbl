@@ -36,7 +36,7 @@ Ao final da Semana 1, o estudante deverá ser capaz de:
 
 Conteúdos previstos no Cronograma para esta semana, correspondentes à **Parte I da Apostila**:
 
-- Capítulo 1 — O que é Inteligência Artificial em Jogos (problema da IA de jogos, ilusão de inteligência, ciclo Sentir–Pensar–Agir, agentes reativos/deliberativos/híbridos, critérios de qualidade, mapa das famílias de técnicas);
+- Capítulo 1 — O que é Inteligência Artificial em Jogos (problema da IA de jogos, ilusão de inteligência, ciclo Sentir–Pensar–Agir, agentes reativos/deliberativos/híbridos, critérios de qualidade — com destaque para custo computacional/orçamento de quadro (Seção 1.4.1) e controle do designer (Seção 1.4.2) —, mapa das famílias de técnicas);
 - Capítulo 2 — História e Evolução da IA em Jogos (coevolução entre hardware e técnica, dos padrões de perseguição dos arcades à era dos dados).
 
 Não devem ser antecipados conteúdos de máquinas de estado (Capítulo 3) ou de qualquer outra Parte da Apostila: a Semana 1 é exclusivamente conceitual e organizacional.
@@ -64,7 +64,7 @@ Não devem ser antecipados conteúdos de máquinas de estado (Capítulo 3) ou de
 | Etapa | Duração | Objetivo | Atividade do Professor | Atividade dos Estudantes |
 |---|---|---|---|---|
 | 1. Abertura | 10 min | Situar a disciplina no curso e apresentar a pergunta norteadora do semestre | Apresenta a disciplina, a ementa, a filosofia PBL e a pergunta "o que é IA em jogos, e por que ilusão?" | Ouvem, fazem perguntas iniciais |
-| 2. IA de jogos x IA acadêmica | 20 min | Diferenciar os dois campos a partir de seus critérios de sucesso | Expõe a distinção da Seção 1.1–1.1.2 da Apostila, usando a tabela comparativa (objetivo, critério de sucesso, custo computacional, controle do designer) | Comparam exemplos de jogos e discutem por que uma IA "ótima" pode ser um mau design |
+| 2. IA de jogos x IA acadêmica | 20 min | Diferenciar os dois campos a partir de seus critérios de sucesso | Expõe a distinção da Seção 1.1–1.1.2 da Apostila, usando a tabela comparativa (objetivo, critério de sucesso, custo computacional, controle do designer); fecha a etapa com os dois critérios da Seção 1.4 tratados de forma concreta: o orçamento de quadro (~16,7 ms disponíveis a 60 FPS, dividido entre IA, física, gráficos e áudio) e o controle do designer como conteúdo autoral (cita rapidamente Unity Behavior/Animator como ferramentas que existem para dar esse controle, sem entrar no funcionamento — a ferramenta só será ensinada quando o conceito correspondente chegar) | Comparam exemplos de jogos e discutem por que uma IA "ótima" pode ser um mau design |
 | 3. Ilusão de inteligência | 20 min | Explicar IA forte x IA fraca e a ideia de comportamento convincente | Apresenta a Seção 1.2, incluindo o experimento de Heider e Simmel e o conceito de fluxo (Csíkszentmihályi) | Discutem em duplas exemplos de jogos em que perceberam "inteligência" que, na verdade, era simples |
 | 4. Ciclo Sentir-Pensar-Agir e tipos de agente | 20 min | Apresentar o modelo unificador de agente e a classificação reativo/deliberativo/híbrido | Demonstra o ciclo com exemplos e apresenta a tabela da Seção 1.3.2 | Classificam, em grupo, exemplos de NPCs de jogos conhecidos como reativos, deliberativos ou híbridos |
 | 5. Panorama histórico | 15 min | Relacionar a evolução das técnicas à evolução do hardware | Percorre a linha do tempo do Capítulo 2, com destaque para *Pac-Man*, *Half-Life*, *Halo 2* e *F.E.A.R.* | Observam a demonstração/vídeo e identificam qual técnica cada jogo provavelmente utiliza |

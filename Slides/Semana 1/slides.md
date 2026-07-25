@@ -84,6 +84,33 @@ Uma IA "ótima" pode ser um péssimo design de jogo.
 
 ---
 
+## Dois critérios que a academia costuma ignorar
+
+<div class="columns">
+<div class="col positive">
+
+### ⏱️ Orçamento de quadro
+
+A 60 FPS, o jogo tem **~16,7 ms** por quadro — e a IA divide esse tempo com física, gráficos e áudio.
+
+</div>
+<div class="col positive">
+
+### 🎛️ Controle do designer
+
+O comportamento é **conteúdo autoral**. Por isso a indústria prefere técnicas editáveis (Unity Behavior, Animator) a caixas-pretas.
+
+</div>
+</div>
+
+<div class="tip">
+
+Uma técnica "menos avançada", porém controlável e barata, costuma vencer uma técnica sofisticada e opaca.
+
+</div>
+
+---
+
 ## Ilusão de inteligência
 
 Jogadores atribuem intenção e inteligência a comportamentos simples.

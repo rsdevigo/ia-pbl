@@ -43,10 +43,9 @@ Conteúdo previsto no Cronograma para esta semana, correspondente à **Parte II,
 - estado de histórico — histórico raso versus histórico profundo (seção 4.3.2);
 - exemplo do inimigo com combate em camadas, organizado nos superestados Pacífico e Combate (seção 4.4);
 - vantagens e limitações da HFSM, com destaque para o que ela *não* resolve — acoplamento e rigidez estrutural (seção 4.5);
-- aplicações em jogos, com destaque para sub-state machines e camadas de animação do Animator como materialização documentada (seção 4.6, 4.7);
-- ferramentas de terceiros (NodeCanvas, Behavior Designer) e comparação com o State Tree da Unreal, apenas como panorama (seção 4.8).
+- materialização da HFSM em sub-state machines e camadas de animação do Animator (seção 4.7).
 
-Não devem ser antecipados conteúdos de árvores de decisão (Capítulo 5) nem de árvores de comportamento e Blackboard (Capítulo 6): a limitação da HFSM quanto a comportamento sequenciado e reordenável deve ser apresentada como um problema em aberto, sem apresentar ainda sua solução.
+Não fazem parte do escopo desta semana as aplicações em jogos comerciais (seção 4.6) nem o panorama de ferramentas de terceiros — NodeCanvas, Behavior Designer, State Tree da Unreal (seção 4.8): ambas ficam reservadas para a Semana 4, quando o Cronograma já prevê a comparação pontual com soluções de terceiros. Não devem ser antecipados, tampouco, conteúdos de árvores de decisão (Capítulo 5) nem de árvores de comportamento e Blackboard (Capítulo 6): a limitação da HFSM quanto a comportamento sequenciado e reordenável deve ser apresentada como um problema em aberto, sem apresentar ainda sua solução.
 
 ---
 

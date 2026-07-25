@@ -170,6 +170,39 @@ Screenshot direto do editor Unity durante a demonstração ao vivo, com anotaç�
 
 ---
 
+## Exemplo da Apostila: o guarda completo
+
+Seletor-raiz de prioridades com quatro subárvores (seção 6.4) — **exemplo da Apostila**, distinto dos superestados do Micro Game da turma (Pacífico/Combate, Semana 3):
+
+| Prioridade | Subárvore | Condição de entrada |
+|---|---|---|
+| 1ª (máxima) | Sobreviver | vida < 20%? |
+| 2ª | Combater | vejo o jogador? |
+| 3ª | Investigar | ouvi um ruído? |
+| 4ª (mínima) | Patrulhar | nenhuma das anteriores |
+
+<div class="tip">
+
+Mesmo comportamento, três arquiteturas: na FSM (Cap. 3) a prioridade vivia em transições espalhadas; na HFSM (Cap. 4), em hierarquia; na BT, é simplesmente a **posição** do filho no seletor-raiz.
+
+</div>
+
+---
+
+## Vantagens e limitações da BT
+
+**Vantagens:** modularidade e reutilização de subárvores; legibilidade e prioridade visível na ordem dos filhos; autoria visual, sem programar; reatividade a mudanças; escalabilidade de manutenção.
+
+**Limitações:** prescritiva (não *planeja*, executa o que foi montado); decisão booleana/ordinal, não pondera graus; não generaliza além do previsto pelo autor.
+
+<div class="tip">
+
+As limitações apontam para as fronteiras da BT — não a destronam. GOAP (planejamento) e Utility AI (ponderação) são extensões de aprofundamento, retomadas na Semana 9.
+
+</div>
+
+---
+
 ## Panorama de terceiros
 
 <div class="industry">

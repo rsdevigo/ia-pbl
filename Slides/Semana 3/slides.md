@@ -130,6 +130,11 @@ Ao reentrar em um superestado, retomar o subestado onde parou ou reiniciar pelo 
 
 ## Quando usar histórico?
 
+| Usar histórico | Reiniciar pelo inicial |
+|---|---|
+| Reentrar em "Combate" após "Fugir" — retomar "Recarregando" de onde parou | Reentrar em "Patrulhar" — recomeçar a rota do início, não do meio |
+| Interrupções curtas que não mudam o contexto do subestado | Ciclos com início e fim bem definidos, onde retomar no meio confunde o comportamento |
+
 <div class="tip">
 
 Um guarda interrompido em "Recarregando" deve retomar dali — não reiniciar do zero ao voltar ao combate.
@@ -171,7 +176,7 @@ Screenshot direto do editor Unity durante a demonstração ao vivo, com anotaç�
 
 ## O que a HFSM não resolve
 
-<div class="industry">
+<div class="warning">
 
 A hierarquia organiza a complexidade, mas o acoplamento entre estados e a rigidez estrutural da família FSM permanecem.
 

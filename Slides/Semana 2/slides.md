@@ -70,7 +70,13 @@ O guarda esquece que estava investigando assim que o ruído para — e volta a p
 Um NPC está sempre em **um único estado**, e só muda de estado por uma transição explícita.
 
 - Isso **é** a memória de contexto que faltava
-- Base teórica: **autômatos finitos**
+- Base teórica: **autômatos finitos** — finitos e determinísticos
+
+<div class="tip">
+
+Por ser finita e determinística, a FSM pode ter **todos os seus estados enumerados** e **todas as suas transições revisadas antecipadamente**. É essa propriedade — não acaso — que torna a FSM **previsível e depurável**: dá para responder sempre "por que o NPC está fazendo isso agora?".
+
+</div>
 
 ---
 
@@ -144,6 +150,28 @@ Cada seta é uma transição guardada por uma condição específica.
 
 ---
 
+## Aplicações em jogos comerciais
+
+- **Pac-Man (1980)** — fantasmas com estados *chase*, *scatter*, *frightened*
+- **Half-Life (1998)** — esquadrões de soldados coordenados por FSM
+
+<div class="industry">
+
+A FSM continua presente mesmo em jogos modernos, geralmente como camada de baixo nível dentro de estruturas maiores.
+
+</div>
+
+---
+
+## Por que a FSM é tão usada
+
+- **Simples** — mapeia o modo como já descrevemos comportamento
+- **Barata** — viável para centenas de agentes
+- **Previsível e depurável** — consequência direta de ser finita e determinística
+- **Visualizável** — se presta a editores gráficos, como o Animator a seguir
+
+---
+
 ## FSM no Unity: Animator Controller
 
 O Animator materializa visualmente os conceitos estudados.
@@ -153,6 +181,12 @@ O Animator materializa visualmente os conceitos estudados.
 | Estado | Nó do grafo |
 | Transição | Seta entre nós |
 | Guarda | Parâmetro (bool, float, trigger) |
+
+<div class="tip">
+
+O pacote **Visual Scripting** oferece grafos equivalentes para montar a mesma lógica sem escrever código — mesma ideia, outra ferramenta.
+
+</div>
 
 <!--
 FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
@@ -166,19 +200,6 @@ Captura de tela do Animator Controller da Unity com três estados (Patrulhar, Pe
 Como produzir:
 Screenshot direto do editor Unity durante a demonstração ao vivo, com anotações simples adicionadas no Krita.
 -->
-
----
-
-## Aplicações em jogos comerciais
-
-- **Pac-Man (1980)** — fantasmas com estados *chase*, *scatter*, *frightened*
-- **Half-Life (1998)** — esquadrões de soldados coordenados por FSM
-
-<div class="industry">
-
-A FSM continua presente mesmo em jogos modernos, geralmente como camada de baixo nível dentro de estruturas maiores.
-
-</div>
 
 ---
 
