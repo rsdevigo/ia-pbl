@@ -134,16 +134,7 @@ Seleção natural artificial: soluções mais aptas têm mais chance de gerar de
 
 ## Anatomia de uma população
 
-```mermaid
-graph TD
-    Populacao[População] --> Ind1[Indivíduo 1]
-    Populacao --> Ind2[Indivíduo 2]
-    Populacao --> Ind3[Indivíduo N]
-    Ind1 --> Crom1[Cromossomo]
-    Crom1 --> Gene1[Gene]
-    Crom1 --> Gene2[Gene]
-    Ind1 --> Apt1[Aptidão]
-```
+![diagram](assets/mermaid-1.png)
 
 ---
 
@@ -194,18 +185,7 @@ Oito etapas, sempre na mesma ordem.
 
 ## O ciclo como fluxo
 
-```mermaid
-graph LR
-    Init[Inicialização] --> Aval[Avaliação]
-    Aval --> Sel[Seleção]
-    Sel --> Cross[Cruzamento]
-    Cross --> Mut[Mutação]
-    Mut --> Elit[Elitismo]
-    Elit --> Nova[Nova geração]
-    Nova --> Parada{Critério de parada?}
-    Parada -->|Não| Aval
-    Parada -->|Sim| Fim[Solução final]
-```
+![diagram](assets/mermaid-2.png)
 
 <div class="tip">
 
@@ -310,13 +290,7 @@ Cada uma tem uma vantagem e uma limitação — não existe estratégia sempre s
 
 ## Crossover de um ponto
 
-```mermaid
-graph LR
-    P1[Pai 1: A B C / D E] --> F1[Filho 1: A B C D E]
-    P2[Pai 2: F G H / I J] --> F1
-    P2 --> F2[Filho 2: F G H D E]
-    P1 --> F2
-```
+![diagram](assets/mermaid-3.png)
 
 ---
 
