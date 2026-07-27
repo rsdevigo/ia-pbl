@@ -249,6 +249,50 @@ Nunca adicionar mecânicas complexas que desviem o foco da Inteligência Artific
 
 ---
 
+# Micro Games — Exemplos de Implementação
+
+Os seis Micro Games do semestre foram definidos com temática e escopo fixados. Todo material de demonstração (planos de aula, slides, tutoriais) deve utilizar exatamente estes exemplos, mantendo consistência entre os documentos.
+
+## Módulo 1 — NPC Decision: Criatura de Ambiente
+
+Um animal alterna entre comer, beber, fugir de ameaça e dormir conforme necessidades.
+
+## Módulo 2 — Navigation: Entregador
+
+Um NPC precisa ir de um ponto a outro em um mapa com obstáculos estáticos.
+
+## Módulo 3 — Tactical AI: Seleção de Alvo
+
+Um NPC escolhe entre múltiplos alvos (jogador, aliados) conforme distância, vida e ameaça.
+
+## Módulo 4 — Board Game AI: Conecta 4 Reduzido
+
+Grade menor que o padrão; a IA avalia jogadas futuras.
+
+## Módulo 5 — Genetic Lab: Criaturas Evoluídas
+
+Formas ou parâmetros de uma criatura simples evoluem para se locomover melhor, por exemplo.
+
+## Módulo 6 — Adaptive AI: Coletor de Recompensas
+
+Um agente aprende a coletar itens positivos e evitar itens negativos no ambiente.
+
+Todos são cenas simples, executadas segundo a Filosofia da Disciplina e a Metodologia PBL descritas acima. A implementação será feita em Unity 3D, com apoio do Cursor.
+
+## Estrutura do Projeto Unity
+
+Os 6 Micro Games não são projetos Unity separados. Existe um único projeto Unity (o AI Playground), e cada Micro Game possui sua própria subpasta dentro da pasta Assets desse projeto.
+
+## Fluxo de Implementação
+
+Cada Micro Game é construído de forma incremental, usando o modo Plan do Cursor.
+
+Quando solicitado, Claude deve gerar prompts destinados a serem executados nesse modo Plan, com o objetivo de evoluir a implementação do projeto Unity.
+
+As implementações devem estar alinhadas aos momentos de demonstração previstos nos Planos de Aula (Fundamentação teórica, Demonstração e Implementação guiada no Primeiro Encontro; Desenvolvimento do Micro Game no Segundo Encontro).
+
+---
+
 # Unity
 
 A Unity é a ferramenta oficial da disciplina.

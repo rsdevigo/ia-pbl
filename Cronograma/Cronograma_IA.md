@@ -12,7 +12,7 @@ Project-Based Learning | 17 Semanas | 51 horas (2 encontros de 1h30/semana)
 
 > **Nota de ordem de leitura:** três capítulos são estudados fora da sequência linear da Apostila, sempre porque a disciplina se organiza por problema, e não pela ordem do sumário. O professor deve sinalizar cada caso à turma:
 > - **Cap. 5 (Árvores de Decisão, Parte II)** é estudado na **Semana 8**, depois do Cap. 6 (Semana 4): ele pertence ao problema "qual ação agora?" (Módulo 3), e não ao problema "em que modo estou?" (Módulo 1). Por isso o **Encerramento da Parte II** só é indicado como leitura na Semana 8, quando a Parte se completa.
-> - **Cap. 13 (Heurísticas e Algoritmos Genéticos, Parte VI)** é utilizado em duas passagens não consecutivas: heurísticas de avaliação na **Semana 11** e algoritmos genéticos nas **Semanas 12–13**.
+> - **Cap. 13 (Heurísticas e Algoritmos Genéticos, Parte VI)** é utilizado em duas passagens não consecutivas: apenas a abertura conceitual sobre heurística (seção 13.1), como reforço terminológico à Semana 11 — cujo conteúdo principal de heurísticas de avaliação pertence ao Cap. 11 (seção 11.3.4) —, e os Algoritmos Genéticos (seções 13.2 em diante) nas **Semanas 12–13**, quando o capítulo é retomado desde o início.
 > - **Cap. 13 precede o Cap. 12** dentro da Parte VI: otimização automática (Semanas 12–13) é pré-requisito conceitual mais leve do que aprendizagem por reforço (Semanas 14–16), e a comparação "otimizar × aprender a agir" fica mais clara nessa ordem. O **Encerramento da Parte VI** é indicado na Semana 16, quando ambos os capítulos já foram vistos.
 
 ---
@@ -153,8 +153,8 @@ Como cada módulo depende do anterior — o Micro Game evolui em cadeia — e tr
 |---|---|
 | **Pergunta Norteadora** | Como calcular o melhor caminho entre dois pontos? |
 | **Apostila** | Parte III, Cap. 8 — Busca de Caminhos com A* |
-| **Encontro 1** | Fundamentação do algoritmo A* (função heurística, lista aberta/fechada). Demonstração de uma implementação própria simplificada, para tornar visível o que a NavMesh resolve internamente. |
-| **Encontro 2** | Evolução do Micro Game Navigation com A*. Discussão técnica comparando a implementação própria com a solução interna da NavMesh. |
+| **Encontro 1** | Fundamentação do algoritmo A* (função heurística, lista aberta/fechada). |
+| **Encontro 2** | Demonstração de uma implementação própria simplificada, para tornar visível o que a NavMesh resolve internamente. Evolução do Micro Game Navigation com A*. Discussão técnica comparando a implementação própria com a solução interna da NavMesh. |
 | **Ferramentas** | AI Navigation; implementação própria de A* (comparação conceitual) |
 | **Entrega** | — |
 
@@ -236,7 +236,7 @@ Como cada módulo depende do anterior — o Micro Game evolui em cadeia — e tr
 | Campo | Conteúdo |
 |---|---|
 | **Pergunta Norteadora** | Como derrotar um adversário inteligente? (parte 2) |
-| **Apostila** | Parte VI, Cap. 13 — Heurísticas e Algoritmos Genéticos (parte de heurísticas de avaliação) |
+| **Apostila** | Parte V, Cap. 11 — Minimax e Busca Adversarial (seções 11.3.4 e 11.4, com 11.4.1), complementado pela abertura conceitual da Parte VI, Cap. 13 (seção 13.1 — heurística e otimização heurística, sem antecipar Algoritmos Genéticos) |
 | **Encontro 1** | Fundamentação de heurísticas de avaliação para tornar o Minimax viável em profundidade maior. Introdução da poda alfa-beta. |
 | **Encontro 2** | Consolidação do Micro Game Board Game AI. Desafio de Escolha Tecnológica do Módulo 4. Quarto momento de Engenharia Reversa, em jogo de tabuleiro ou estratégia por turnos. |
 | **Ferramentas** | Implementação própria em C# |

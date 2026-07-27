@@ -49,9 +49,9 @@ Não é objetivo desta semana aprofundar o Deep Q-Network (DQN), *experience rep
 
 | Item | Detalhamento |
 |---|---|
-| **Leitura recomendada** | Apostila — Parte VI, Capítulo 12, seção 12.6 (obrigatória) e seção 12.9 completa (obrigatória, foco em ML-Agents) |
+| **Leitura recomendada** | Apostila — Parte VI, Capítulo 12, seção 12.6 (obrigatória), introdução da seção 12.7 (obrigatória, apenas o trecho sobre a limitação da tabela Q — necessária para a etapa 3 do Encontro 1) e seção 12.9 completa (obrigatória, foco em ML-Agents) |
 | **Materiais necessários** | Projetor/tela; computadores com Unity Hub, o pacote ML-Agents importado e o ambiente Python do ML-Agents já instalado e testado (conforme recomendação da Semana 14 e o ambiente técnico de referência registrado no Manual do Professor, §6.0); planejamento escrito de estado/ação/recompensa **e o esqueleto do script de `Agent`** de cada grupo, produzidos na Semana 14; acesso ao TensorBoard (ou visualizador de métricas equivalente) para acompanhar a curva de recompensa |
-| **Cena Unity utilizada** | Cena do Micro Game Adaptive AI montada na Semana 14 (agente, ambiente, alvo/obstáculos), agora recebendo os componentes de ML-Agents (Behavior Parameters, Decision Requester, script de Agent em C#) |
+| **Cena Unity utilizada** | Cena do Micro Game "Coletor de Recompensas" (Adaptive AI) montada na Semana 14 (agente, ambiente, itens positivos/negativos), agora recebendo os componentes de ML-Agents (Behavior Parameters, Decision Requester, script de Agent em C#) |
 | **Assets** | Nenhum asset de arte adicional; reaproveitamento do cenário mínimo já montado |
 | **Exemplos** | O exemplo passo a passo da trilha S1–S5 (seção 12.6) para fixar a equação de Bellman antes de ir ao computador; exemplos oficiais do ML-Agents (Walker/Crawler) como referência de curva de recompensa saudável; o exemplo do *CoastRunners* (retomado da Semana 14) caso surjam sinais de recompensa mal especificada durante o treino |
 | **Vídeos** | Não obrigatório; caso disponível, um vídeo curto mostrando uma curva de recompensa subindo ao longo do treinamento em um exemplo oficial do ML-Agents ajuda a calibrar a expectativa dos estudantes antes do laboratório |
@@ -88,7 +88,7 @@ Não é objetivo desta semana aprofundar o Deep Q-Network (DQN), *experience rep
 
 ## Micro Game
 
-**Micro Game em desenvolvimento:** Adaptive AI (Módulo 6) — **treinamento**.
+**Micro Game em desenvolvimento:** Adaptive AI (Módulo 6) — **treinamento** do Micro Game "Coletor de Recompensas" (agente que aprende a coletar itens positivos e evitar itens negativos no ambiente).
 
 **Objetivo pedagógico:** demonstrar, na prática, o ciclo completo de treinamento de um agente de Aprendizagem por Reforço com o ML-Agents — da configuração de hiperparâmetros à leitura da curva de recompensa —, consolidando que o sucesso do treinamento depende tanto das decisões conceituais da Semana 14 (estado, ações, recompensa) quanto da configuração técnica desta semana.
 
@@ -164,6 +164,7 @@ Conforme o Cronograma, a Semana 15 não possui entrega formal — o campo corres
 | Curva de recompensa estagnada ou decrescente, sem diagnóstico claro do grupo | Conduzir o grupo a revisar, em ordem, os três suspeitos mais prováveis: recompensa mal especificada (retomar o exemplo do *CoastRunners*), estado insuficiente (violação da propriedade de Markov, Semana 14) e hiperparâmetros inadequados |
 | Confundir o papel do ML-Agents (treinar) com o do Sentis (executar), tentando "rodar o jogo final" ainda nesta semana | Reforçar explicitamente a distinção conceitual da seção 12.9: ML-Agents treina, Sentis executa; a execução do modelo treinado é o foco da Semana 16 |
 | Ambiente Python do ML-Agents mal configurado, consumindo tempo de aula com problemas de instalação | Verificar a instalação antes do início do Encontro 1, conforme recomendação já feita na Semana 14; caso o problema persista para algum grupo, redirecioná-lo para uma máquina com ambiente já configurado, sem interromper o treinamento dos demais |
+| Falha ampla do ambiente Python (vários grupos sem instalação funcional, comprometendo o Laboratório do Encontro 2 como um todo) | Ter preparado, com antecedência, um treinamento de referência já registrado (curva de recompensa e, se possível, uma sessão gravada em vídeo) para demonstrar a leitura da curva mesmo sem execução ao vivo; os grupos sem ambiente funcional acompanham a demonstração e retomam o treinamento próprio assim que o ambiente for corrigido, sem perder o objetivo de aprendizagem 5 nem 6 |
 
 ---
 

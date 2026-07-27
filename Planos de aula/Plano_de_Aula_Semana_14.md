@@ -35,7 +35,7 @@ Ao final da Semana 14, o estudante deverá ser capaz de:
 
 ## Conteúdos
 
-Conteúdo previsto no Cronograma para esta semana, correspondente à **Parte VI, Capítulo 12 da Apostila — Aprendizagem por Reforço**, seções 12.1 a 12.6 (mais a introdução da seção 12.9, apenas como contextualização de ferramenta):
+Conteúdo previsto no Cronograma para esta semana, correspondente à **Parte VI, Capítulo 12 da Apostila — Aprendizagem por Reforço**, seções 12.1 a 12.5 (mais a introdução da seção 12.9, apenas como contextualização de ferramenta):
 
 - o problema: comportamentos que a equipe não consegue programar à mão; a distinção entre programação explícita e aprendizado pela interação; a diferença entre RL e aprendizado supervisionado — seção 12.1;
 - fundamentos: agente, ambiente, estado, ação, recompensa, episódio, política e o dilema exploração *versus exploitation* — seção 12.2;
@@ -54,7 +54,7 @@ Não deve ser antecipado o Q-Learning (seção 12.6) em profundidade algorítmic
 |---|---|
 | **Leitura recomendada** | Apostila — Parte VI, Capítulo 12, seções 12.1 a 12.5 (leitura obrigatória) e 12.9 (leitura de contextualização) |
 | **Materiais necessários** | Projetor/tela; computadores com Unity Hub e o projeto AI Playground de cada grupo; quadro ou slide com o vocabulário fundamental do RL para referência durante a aula; modelo de planejamento (estado/ação/recompensa) para o Micro Game Adaptive AI |
-| **Cena Unity utilizada** | Nova cena para o Micro Game Adaptive AI (Módulo 6), ainda vazia ou com um cenário mínimo (por exemplo, uma arena simples ou um pequeno percurso), sem componentes de ML-Agents configurados nesta semana |
+| **Cena Unity utilizada** | Nova cena para o Micro Game Adaptive AI (Módulo 6), ainda vazia ou com um cenário mínimo — arena simples com itens positivos e negativos a coletar (tema fixo "Coletor de Recompensas", conforme CLAUDE.md e `Incrementos_MicroGames.md`); outros cenários (alcançar um alvo, desviar de obstáculos, equilibrar-se) podem ser usados apenas como ilustração secundária durante a fundamentação teórica, sem substituir o tema fixo do Micro Game. Nenhum componente de ML-Agents é configurado nesta semana |
 | **Assets** | Nenhum asset de arte necessário; elementos primitivos simples (cubos, esferas, planos) bastam para representar agente e ambiente do Adaptive AI |
 | **Exemplos** | O diagrama do laço agente–ambiente (seção 12.2); a trilha S1–S5 usada na Apostila para ilustrar retorno e desconto (sem a regra de atualização de Bellman, reservada à Semana 15); o exemplo do jogo *CoastRunners* (reward hacking) para ilustrar recompensa mal projetada; o paralelo entre função valor e função de avaliação do Minimax (Capítulo 11) e mapa de influência (Capítulo 10), já estudados |
 | **Vídeos** | Não é obrigatório vídeo externo; caso disponível, um vídeo curto mostrando os exemplos oficiais do ML-Agents (Walker/Crawler, criaturas aprendendo a caminhar) ilustra bem o conceito de agente aprendendo pela interação, sem exigir explicação técnica do treinamento |
@@ -78,13 +78,13 @@ Não deve ser antecipado o Q-Learning (seção 12.6) em profundidade algorítmic
 
 ## Encontro 2 (1h30)
 
-**Foco:** Setup inicial do Micro Game Adaptive AI (ambiente, agente, observações e recompensas planejadas), sem treinar o agente.
+**Foco:** Setup inicial do Micro Game Adaptive AI (ambiente, agente, observações e recompensas planejadas) e escrita do esqueleto do script `Agent` em C#, sem treinar o agente.
 
 | Etapa | Duração | Objetivo | Atividade do Professor | Atividade dos Estudantes |
 |---|---|---|---|---|
 | 1. Revisão do vocabulário aplicado ao AI Playground | 10 min | Retomar os conceitos do Encontro 1 e conectá-los ao Projeto Integrador | Revisa brevemente agente, ambiente, estado, ação, recompensa e política; anuncia que a tarefa da aula é planejar — não treinar — o Micro Game Adaptive AI | Relembram, em grupo, o vocabulário e relacionam cada termo a um elemento do próprio AI Playground |
-| 2. Apresentação do ML-Agents como ferramenta (contextualização) | 15 min | Situar o ML-Agents como a ferramenta oficial da Unity para RL, sem entrar em configuração | Apresenta a seção 12.9 de forma conceitual: o ML-Agents permite que cenas da Unity sirvam de ambiente de treinamento; o desenvolvedor define observações, ações e recompensa em C#; o treinamento roda em Python; a política treinada é executada via Sentis. Reforça que nesta semana não há treinamento | Observam a demonstração (ou vídeo) dos exemplos oficiais do ML-Agents (Walker/Crawler), relacionando o que veem ao vocabulário estudado no Encontro 1 |
-| 3. Laboratório — planejamento e esqueleto do Micro Game Adaptive AI | 40 min | Definir, em grupo, estado, ações e função de recompensa do Micro Game antes de qualquer implementação de treinamento | Acompanha os grupos na definição do problema do Adaptive AI (por exemplo, um agente que deve aprender a alcançar um alvo, desviar de obstáculos ou equilibrar-se), orientando a escolha de observações que garantam a propriedade de Markov e recompensas que evitem *reward hacking* | Definem, em grupo e por escrito, o estado (observações), o espaço de ações e a função de recompensa planejada para o Adaptive AI; montam o cenário mínimo na Unity (agente, ambiente, alvo/obstáculos), sem configurar componentes de ML-Agents |
+| 2. Apresentação do ML-Agents como ferramenta (contextualização) | 10 min | Situar o ML-Agents como a ferramenta oficial da Unity para RL, sem entrar em configuração | Apresenta a seção 12.9 de forma conceitual: o ML-Agents permite que cenas da Unity sirvam de ambiente de treinamento; o desenvolvedor define observações, ações e recompensa em C#; o treinamento roda em Python; a política treinada é executada via Sentis. Reforça que nesta semana não há treinamento | Observam a demonstração (ou vídeo) dos exemplos oficiais do ML-Agents (Walker/Crawler), relacionando o que veem ao vocabulário estudado no Encontro 1 |
+| 3. Laboratório — planejamento e esqueleto do Micro Game Adaptive AI | 45 min | Definir, em grupo, estado, ações e função de recompensa do Micro Game antes de qualquer implementação de treinamento, e traduzir esse planejamento no esqueleto do script `Agent` | Acompanha os grupos na definição do problema do Adaptive AI (tema fixo "Coletor de Recompensas" — coletar itens positivos e evitar itens negativos), orientando a escolha de observações que garantam a propriedade de Markov e recompensas que evitem *reward hacking*; apoia a escrita do esqueleto do script `Agent` em C# | Definem, em grupo e por escrito, o estado (observações), o espaço de ações e a função de recompensa planejada para o Adaptive AI; montam o cenário mínimo na Unity (agente, ambiente, itens positivos/negativos); escrevem o esqueleto do script `Agent` em C# (métodos de observação, ação e recompensa, sem configurar componentes de ML-Agents) |
 | 4. Discussão técnica | 15 min | Comparar as escolhas de estado, ação e recompensa entre grupos | Conduz a discussão comparando as propostas dos grupos, apontando riscos de recompensa mal especificada e de estados não markovianos | Apresentam brevemente sua proposta de estado/ação/recompensa e recebem retorno dos colegas e do professor |
 | 5. Encerramento | 10 min | Consolidar o planejamento e preparar a Semana 15 | Recapitula a diferença entre planejar (Semana 14) e treinar (Semana 15); anuncia que a Semana 15 tratará o Q-Learning e o treinamento efetivo com ML-Agents; reforça a recomendação de instalar previamente o ambiente ML-Agents (Python e pacotes) | Registram, para uso na Semana 15, o planejamento de estado, ações e recompensa validado na discussão |
 
@@ -98,8 +98,9 @@ Não deve ser antecipado o Q-Learning (seção 12.6) em profundidade algorítmic
 
 **Funcionalidades esperadas ao final da Semana 14:**
 
-- cenário mínimo do Micro Game Adaptive AI montado na Unity (agente, ambiente, alvo ou obstáculos conforme o problema escolhido pelo grupo), sem componentes de ML-Agents configurados;
+- cenário mínimo do Micro Game Adaptive AI montado na Unity (agente, ambiente, itens positivos e negativos — tema fixo "Coletor de Recompensas"), sem componentes de ML-Agents configurados;
 - definição escrita do estado (observações), do espaço de ações e da função de recompensa planejada, validada em discussão técnica;
+- esqueleto do script `Agent` em C# escrito (métodos de coleta de observações, execução de ações e atribuição de recompensa), ainda sem configurar componentes de ML-Agents;
 - nenhum treinamento realizado nesta semana — o Micro Game permanece em fase de planejamento.
 
 **Relação com módulos anteriores:** inicia o Módulo 6 e a Unidade VI, retomando o paralelo entre função valor (RL) e função de avaliação do Minimax (Módulo 4) e mapa de influência (Módulo 3), já estudados. Prepara diretamente a Semana 15, na qual o mesmo planejamento será operacionalizado por meio do Q-Learning conceitual e do treinamento efetivo com ML-Agents.
@@ -129,7 +130,7 @@ Nenhuma ferramenta de terceiros é indicada para esta semana, uma vez que o ML-A
 
 **Etapas:**
 
-1. Escolher, em grupo, o problema que o Adaptive AI resolverá (por exemplo, alcançar um alvo, desviar de obstáculos, equilibrar-se ou manter-se em uma área).
+1. Partir do tema fixo do Micro Game Adaptive AI — **Coletor de Recompensas**: um agente que deve aprender a coletar itens positivos e evitar itens negativos no ambiente. Cada grupo detalha esse tema (por exemplo, tipos de item, disposição no cenário, movimentação do agente); variações como alcançar um alvo, desviar de obstáculos ou equilibrar-se podem ser incorporadas como elementos secundários do mesmo cenário, mas não substituem o tema fixo.
 2. Definir o **estado** (quais observações o agente terá), verificando se a informação escolhida é suficiente para respeitar a propriedade de Markov.
 3. Definir o **espaço de ações** disponível ao agente (discretas ou contínuas, conforme o problema escolhido).
 4. Definir a **função de recompensa**, evitando recompensar o meio em vez do fim e evitando sinais que favoreçam *reward hacking*.
@@ -140,6 +141,8 @@ Nenhuma ferramenta de terceiros é indicada para esta semana, uma vez que o ML-A
 **Resultado esperado:** ao final do Encontro 2, cada grupo deve ter um cenário mínimo montado na Unity, uma definição escrita e validada de estado, ações e recompensa, e o esqueleto do script de `Agent` já escrito — de modo que a Semana 15 comece direto na configuração dos componentes e no treinamento, e não na tradução do planejamento para código.
 
 > **Por que antecipar o esqueleto do script.** A Semana 15 reserva 55 minutos de laboratório para implementar o `Agent`, configurar o YAML, iniciar o treinamento, ler a curva de recompensa e diagnosticar problemas — e a Semana 16 depende do modelo `.onnx` resultante. Escrever o esqueleto aqui, enquanto o planejamento ainda está fresco, reduz substancialmente o risco de grupos chegarem à Semana 16 sem modelo próprio. A escrita do esqueleto é atividade conceitual (traduzir o planejamento em três métodos), não uso de ferramenta, e por isso não fere a sequência didática da disciplina.
+>
+> **Se o tempo não for suficiente:** a etapa 3 do Encontro 2 (45 min) foi dimensionada para cobrir planejamento, montagem de cena e esqueleto do script, mas grupos mais lentos podem concluir o esqueleto do `Agent` como tarefa antes da Semana 15, desde que a definição de estado, ações e recompensa já esteja validada na discussão técnica da etapa 4. O que não pode ficar pendente é o planejamento conceitual — o código pode ser finalizado fora da aula.
 
 ---
 

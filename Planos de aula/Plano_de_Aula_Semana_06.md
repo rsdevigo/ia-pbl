@@ -107,7 +107,7 @@ Não deve ser antecipado o conteúdo do Capítulo 9 (JPS+ e otimizações): a re
 **Funcionalidades esperadas ao final da Semana 6:**
 
 - a cena do Micro Game Navigation evoluída com um novo destino ou obstáculo, exigindo recálculo de rota pelo NavMesh Agent;
-- capacidade do grupo de explicar, célula a célula, como uma implementação simplificada de A* chegaria ao mesmo resultado que o NavMesh Agent já produz;
+- capacidade do grupo de explicar, nó a nó (polígono a polígono na NavMesh; célula a célula caso o grupo opte pela grade auxiliar opcional), como uma implementação simplificada de A* chegaria ao mesmo resultado que o NavMesh Agent já produz;
 - (opcional) uma versão mínima de A* implementada sobre uma grade lógica auxiliar, para comparação direta com a NavMesh;
 - capacidade do grupo de justificar, com critérios técnicos, quando controlar o A* diretamente compensaria em relação a usar o NavMesh Agent.
 

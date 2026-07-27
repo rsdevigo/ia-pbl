@@ -35,6 +35,8 @@ Ao final de hoje você será capaz de:
 - explicar o que o JPS+ pré-calcula e por que isso o torna mais rápido;
 - julgar quando o JPS+ é ou não apropriado.
 
+No Encontro 2: consolidar o Micro Game Navigation, aplicar o Desafio de Escolha Tecnológica do Módulo 2 e conduzir o 2º momento de Engenharia Reversa.
+
 ---
 
 ## Retomada da Semana 6
@@ -85,7 +87,7 @@ Um obstáculo **força** uma decisão que não existiria em terreno aberto.
 
 ![diagram](assets/mermaid-1.png)
 
-JPS pula direto até o próximo ponto de decisão, em vez de expandir vizinho por vizinho.
+À esquerda, terreno aberto: só o vizinho natural importa, os demais são podados. À direita, um obstáculo libera um vizinho forçado — o nó vira jump point. JPS pula direto até o próximo ponto de decisão, em vez de expandir vizinho por vizinho.
 
 ---
 
@@ -141,9 +143,35 @@ Medir antes de otimizar — otimização é resposta a um problema medido, não 
 
 <!-- _class: diagram -->
 
+## Por que o JPS é mais rápido: menos nós na lista aberta
+
+![diagram](assets/mermaid-3.png)
+
+Mesmo caminho ótimo nos dois painéis. A diferença de velocidade vem inteiramente do número de nós inseridos na lista aberta — o A* insere quase toda a fronteira; o JPS insere só os jump points.
+
+---
+
+<!-- _class: diagram -->
+
 ## Panorama de outras otimizações
 
 ![diagram](assets/mermaid-2.png)
+
+| Técnica | Problema que ataca | Custo |
+|---|---|---|
+| **Pathfinding hierárquico (HPA\*)** | Mapas enormes: planeja por regiões, depois dentro de cada uma — como planejar uma viagem por estradas e só depois por ruas | Hierarquia a construir e manter; caminho levemente subótimo |
+| **Flow fields** | Multidões: centenas de agentes com o mesmo destino — calcula-se **um** campo de direções por destino, não uma busca por agente | Só compensa quando muitos agentes compartilham destino |
+| **Suavização de caminho** | Caminho "quadriculado" do A*/JPS não parece natural — poucos jogos dispensam este passo | Pós-processamento leve; não muda a rota, só sua aparência |
+
+---
+
+<!-- _class: diagram -->
+
+## Suavização de caminho (string pulling)
+
+![diagram](assets/mermaid-4.png)
+
+O caminho bruto de A*/JPS "cola" nas quinas da grade. Se há linha de visão livre entre dois pontos, os pontos intermediários são descartados — não muda a rota, só a torna crível. Central para a ilusão de inteligência.
 
 ---
 
@@ -190,19 +218,6 @@ Entrega final do Módulo 2.
 - NavMesh e NavMesh Agent funcionais, com o destino/obstáculo da Semana 6;
 - capacidade de explicar a navegação em termos de grafo, heurística e `f = g + h`;
 - justificativa técnica: quando JPS+, pathfinding hierárquico ou flow field se aplicariam ao próprio AI Playground.
-
-<!--
-FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
-
-Objetivo didático:
-Mostrar visualmente a diferença entre a expansão de nós do A* e a poda por jump points do JPS em uma mesma grade aberta.
-Arquivo sugerido:
-assets/astar-vs-jps-grade-aberta.webp
-Descrição:
-Duas grades lado a lado: à esquerda, nós expandidos pelo A* em "leque"; à direita, a mesma busca com poda de simetria do JPS, destacando os jump points.
-Como produzir:
-Diagrama estático gerado a partir de captura de um script de comparação simplificado, com anotações de cor adicionadas no Krita.
--->
 
 ---
 
@@ -252,6 +267,12 @@ Toda afirmação exige rótulo de confiança: **[Documentado]**, **[Inferência]
 
 </div>
 
+<div class="warning">
+
+**Cuidado:** navegação individual (busca ponto a ponto, A*/JPS+) e navegação de multidões (flow field) parecem semelhantes de longe. Justifique a hipótese pela evidência observada — por exemplo, unidades fluindo na mesma direção geral perto do destino sugere flow field; rotas individuais distintas sugerem busca por unidade.
+
+</div>
+
 ---
 
 <!-- _class: summary -->
@@ -263,6 +284,7 @@ Toda afirmação exige rótulo de confiança: **[Documentado]**, **[Inferência]
 - JPS é o mesmo A*, com sucessores podados
 - JPS+ pré-calcula uma tabela de saltos; exige mapa estático
 - Não há JPS/JPS+ nativo na Unity; NavMesh Agent já suaviza caminhos
+- Pathfinding hierárquico, flow fields e suavização atacam problemas diferentes (mapas enormes, multidões, aparência do movimento)
 - Módulo 2 encerrado: quatro entregas — Navigation consolidado, AI Design Log, Desafio e Engenharia Reversa
 
 ---

@@ -61,7 +61,7 @@ Não deve ser antecipado o conteúdo da Seção 11.3.4 (construção detalhada d
 |---|---|
 | **Leitura recomendada** | Apostila — Parte V, Capítulo 11, seções 11.1 a 11.3 (incluindo 11.3.1 a 11.3.3) e a subseção do jogo da velha na seção 11.6; leitura opcional da Apresentação da Parte V para contextualizar a abertura da Unidade IV |
 | **Materiais necessários** | Projetor/tela; computadores com Unity Hub e o projeto AI Playground de cada grupo; nenhum Micro Game anterior é reaproveitado diretamente, pois o Board Game AI é um novo Micro Game |
-| **Cena Unity utilizada** | Nova cena mínima para o Micro Game Board Game AI: um tabuleiro simples de jogo da velha (grade 3×3), sem necessidade de arte elaborada — o foco é a lógica de jogo e o algoritmo, não a apresentação visual |
+| **Cena Unity utilizada** | Nova cena mínima para o Micro Game Board Game AI: um tabuleiro simples de jogo da velha (grade 3×3) para introduzir o algoritmo, sem necessidade de arte elaborada — o foco é a lógica de jogo e o algoritmo, não a apresentação visual; a mesma cena será estendida para Conecta 4 Reduzido (grade menor que o padrão) na Semana 11, exemplo fixado para o Módulo 4 |
 | **Assets** | Nenhum asset de arte adicional necessário; elementos visuais podem ser primitivos simples (quadrados, texto de X e O) |
 | **Exemplos** | Diagrama dos três tipos de ambiente — cooperativo, reativo, competitivo (seção 11.1); diagrama de anatomia da árvore de jogo, com raiz, ramos, profundidade e folhas com utilidade (seção 11.2); diagrama de propagação de valores no Minimax com o exemplo numérico de árvore de 2 *plies* (seção 11.3) |
 | **Vídeos** | Não é necessário vídeo externo nesta semana; a demonstração é conduzida com o exemplo do jogo da velha, traçado ao vivo pelo professor |
@@ -105,6 +105,8 @@ Não deve ser antecipado o conteúdo da Seção 11.3.4 (construção detalhada d
 **Micro Game em desenvolvimento:** Board Game AI (Módulo 4) — **início**.
 
 **Objetivo pedagógico:** demonstrar como um NPC pode tomar decisões ótimas contra um oponente racional, aplicando o algoritmo Minimax a um jogo de tabuleiro simples e completo o suficiente para ser explorado sem heurística nem poda, evidenciando o algoritmo em sua forma mais pura antes de qualquer otimização.
+
+O jogo da velha é usado **apenas como introdução ao algoritmo** nesta semana, exatamente como a Apostila o utiliza na seção 11.6: é pequeno o suficiente para ser resolvido por completo, tornando visível o Minimax em sua forma pura, sem heurística nem poda. O Micro Game Board Game AI, porém, converge para **Conecta 4 Reduzido** (grade menor que o padrão, na qual a IA avalia jogadas futuras), o exemplo fixado para o Módulo 4 conforme o CLAUDE.md — não para uma variante de damas ou para o próprio jogo da velha consolidado. Essa transição ocorre na Semana 11, quando a exploração completa deixa de ser viável e heurística e poda alfa-beta se tornam necessárias.
 
 **Funcionalidades esperadas ao final da Semana 10:**
 
@@ -189,6 +191,6 @@ Para a Semana 11 (Heurísticas e Poda Alfa-Beta — encerramento do Módulo 4 e 
 
 - confirmar que todos os grupos possuem, ao final da Semana 10, uma implementação funcional do Minimax aplicada ao jogo da velha no Micro Game Board Game AI, servindo de base para a evolução do módulo;
 - solicitar a leitura prévia do material indicado para a Semana 11 sobre funções heurísticas de avaliação e poda alfa-beta, conforme a Apostila;
-- preparar um cenário de jogo maior que o jogo da velha (por exemplo, uma variante simplificada de damas ou um jogo de tabuleiro com árvore maior), no qual a exploração completa da árvore deixe de ser viável, motivando a necessidade de profundidade limitada, função de avaliação e poda alfa-beta;
+- preparar o cenário de **Conecta 4 Reduzido** (grade menor que o padrão), o Micro Game fixado para o Módulo 4, no qual a exploração completa da árvore deixe de ser viável, motivando a necessidade de profundidade limitada, função de avaliação e poda alfa-beta;
 - reservar, para a Semana 11, o material do quarto momento de Engenharia Reversa, em jogo de tabuleiro ou estratégia por turnos, conforme o Cronograma;
 - anunciar aos estudantes que a Semana 11 encerra o Módulo 4 e a Unidade IV, com **quatro** entregas avaliadas: Micro Game 4 consolidado (50%), AI Design Log do Micro Game 4 (25%), Desafio de Escolha Tecnológica (15%) e o quarto momento de Engenharia Reversa (10%) — reforçando que o Micro Game é a entrega de maior peso do módulo, e não apenas um artefato de trabalho.

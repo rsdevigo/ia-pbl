@@ -19,7 +19,7 @@ footer: "IFMS • Semana 15"
 
 **Módulo 6:** Como um agente aprende?
 **Apostila:** Parte VI, Cap. 12, seção 12.6 (Q-Learning) e seção 12.9 (ML-Agents)
-**Micro Game:** Adaptive AI (treinamento efetivo)
+**Micro Game:** Adaptive AI — Coletor de Recompensas (treinamento efetivo)
 
 </div>
 
@@ -183,6 +183,8 @@ Da configuração à curva de recompensa.
 ---
 
 ## O que fazer hoje
+
+Treinar o agente do Coletor de Recompensas (coletar itens positivos, evitar itens negativos):
 
 1. Configurar o YAML com os hiperparâmetros básicos;
 2. iniciar o treinamento via linha de comando;

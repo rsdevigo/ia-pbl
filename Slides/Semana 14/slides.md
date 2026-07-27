@@ -19,7 +19,7 @@ footer: "IFMS • Semana 14"
 
 **Módulo 6:** Como um agente aprende?
 **Apostila:** Parte VI, Cap. 12 (12.1 a 12.5, e 12.9 como contextualização)
-**Micro Game:** Adaptive AI (início — planejamento e setup)
+**Micro Game:** Adaptive AI — Coletor de Recompensas (início — planejamento e setup)
 
 </div>
 
@@ -276,11 +276,29 @@ Verificar: o estado escolhido respeita a propriedade de Markov? A recompensa pre
 
 ## Cenário mínimo na Unity
 
-Montar o cenário do Adaptive AI com elementos primitivos simples (cubos, esferas, planos): agente, ambiente, alvo ou obstáculos.
+Tema fixo do Micro Game: **Coletor de Recompensas** — um agente que aprende a coletar itens positivos e evitar itens negativos.
+
+Montar o cenário com elementos primitivos simples (cubos, esferas, planos): agente, ambiente, itens positivos e negativos.
 
 <div class="warning">
 
 Nenhum componente de ML-Agents é configurado nesta semana — o cenário fica pronto para receber o treinamento na Semana 15.
+
+</div>
+
+---
+
+## Esqueleto do script `Agent` em C#
+
+Antes da Semana 15, cada grupo traduz o planejamento em código — sem configurar ML-Agents nem treinar:
+
+- método de **coleta de observações** (o estado definido);
+- método de **execução de ações** (o espaço de ações definido);
+- método de **atribuição de recompensa** (a função de recompensa definida).
+
+<div class="tip">
+
+Objetivo conceitual: tornar visível que estado, ação e recompensa viram três métodos. A Semana 15 começa direto na configuração e no treinamento.
 
 </div>
 
@@ -310,7 +328,7 @@ Esta semana é de planejamento conceitual — a configuração técnica será co
 - MDP e propriedade de Markov: um bom estado é uma escolha de projeto
 - V(s) e Q(s, a): valor ≠ recompensa imediata
 - ML-Agents apresentado como ferramenta — sem treinamento ainda
-- Micro Game Adaptive AI: planejamento de estado, ações e recompensa
+- Micro Game Adaptive AI (Coletor de Recompensas): planejamento de estado, ações e recompensa, e esqueleto do script `Agent` em C#
 
 ---
 

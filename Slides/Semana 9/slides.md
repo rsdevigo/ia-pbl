@@ -39,7 +39,7 @@ Ao final de hoje você será capaz de:
 
 ## Retomada da Semana 8
 
-**Semana 8:** árvore de decisão escolhe uma ação a partir de condições — introdução ao mapa de influência.
+**Semana 8:** árvore de decisão escolhe, entre alvos candidatos (jogador, aliados), qual deve receber a ação do NPC — introdução ao mapa de influência.
 
 **Pergunta em aberto:** "posso ir?" (NavMesh, Módulo 2) já foi respondida. Hoje: "vale a pena ir?"
 
@@ -120,6 +120,17 @@ Recalcular o campo inteiro a cada quadro é inviável.
 
 ---
 
+## Exemplos de aplicação
+
+- **Seleção de cobertura** — qual célula oferece proteção contra ameaças visíveis;
+- **Avanço de exército** — por onde concentrar forças com menor exposição;
+- **Mapa de perigo** — descida de gradiente para se afastar de regiões de risco;
+- **Controle territorial** — visualização de domínio de área (mapas de calor de RTS).
+
+**Jogos conhecidos:** *Age of Empires*, *Civilization*, *StarCraft*.
+
+---
+
 ## Vantagens e limitações
 
 | Vantagens | Limitações |
@@ -142,33 +153,59 @@ Recalcular o campo inteiro a cada quadro é inviável.
 
 <!-- _class: question -->
 
-# Da posição à ação
+# Da posição ao alvo
 
-O mapa de influência escolhe **onde ir**. E entre várias ações, qual escolher?
+O mapa de influência escolhe **onde ir**. E entre vários alvos candidatos — os mesmos da árvore de decisão da Semana 8 —, qual merece a ação do NPC?
 
 ---
 
-## Utility AI: mesma lógica, novo alvo
+## Utility AI: mesma lógica, mesmo alvo
 
-IA de Utilidade combina considerações ponderadas (saúde, distância, munição) para escolher a **ação** de maior valor.
+IA de Utilidade combina considerações ponderadas (distância, vida, ameaça) para escolher o **alvo** de maior valor — os mesmos três atributos já testados pela árvore de decisão, agora avaliados de forma contínua.
 
 <div class="tip">
 
-É a mesma lógica de combinação ponderada do mapa de influência — aplicada a ações, não a posições.
+Mesmo problema da Semana 8 (qual alvo?), mesma lógica de combinação ponderada do mapa de influência — testes sim/não viram pontuação gradual.
 
 </div>
 
 ---
 
-## Exemplo: três ações candidatas
+## Curvas de utilidade
 
-| Ação | Saúde | Distância | Munição | Utilidade |
+Cada consideração usa uma curva diferente para transformar o valor bruto em pontuação (0 a 1):
+
+| Consideração | Forma da curva | Ideia |
+|---|---|---|
+| Distância | Decrescente acentuada | Alvo próximo pontua muito mais que um pouco mais distante |
+| Vida do alvo | Linear decrescente | Quanto menor a vida, maior a pontuação (alvo mais vulnerável) |
+| Ameaça | Degrau | Ameaça ativa pontua 1,0; ausência de ameaça pontua 0,0 |
+
+<div class="tip">
+
+A forma da curva é a principal alavanca de design da IA de Utilidade.
+
+</div>
+
+---
+
+## Exemplo: três alvos candidatos
+
+Mesmos candidatos da árvore de decisão (Semana 8): Jogador, Aliado A, Aliado B.
+
+| Alvo | Distância | Vida | Ameaça | Utilidade |
 |---|---|---|---|---|
-| Atacar | baixa | alta | alta | média |
-| Recuar | alta | — | — | alta |
-| Buscar cobertura | média | média | baixa | média-alta |
+| Jogador | 8 m → 0,4 | 90% → 0,1 | Atacando → 1,0 | **0,55** |
+| Aliado A | 3 m → 0,8 | 20% (crítica) → 0,8 | Nenhuma → 0,0 | 0,48 |
+| Aliado B | 15 m → 0,1 | 100% → 0,0 | Nenhuma → 0,0 | 0,03 |
 
-A ação de maior valor combinado é escolhida.
+Pesos: distância 0,3 · vida 0,3 · ameaça 0,4 → Utilidade = Σ (peso × pontuação)
+
+<div class="tip">
+
+O Jogador vence por pouco: mesmo mais distante que o Aliado A, a ameaça ativa (peso 0,4) pesa mais. Mudar os pesos muda o alvo escolhido — é isso que o grupo deve justificar.
+
+</div>
 
 ---
 
@@ -213,9 +250,9 @@ A grade de navegação responde "posso ir?" (topológico). O mapa de influência
 ## O que implementar hoje
 
 - grade simples com ao menos uma fonte de influência, propagação e decaimento em baixa frequência; **e/ou**
-- função de utilidade ponderada para ao menos três ações candidatas;
-- integração com a árvore de decisão já implementada na Semana 8;
-- justificativa dos pesos e/ou da frequência de atualização escolhidos.
+- função de utilidade ponderada para os **mesmos alvos candidatos** da árvore de decisão da Semana 8 (jogador, aliados), usando os mesmos três atributos (distância, vida, ameaça);
+- integração com a árvore de decisão já implementada na Semana 8, comparando o alvo escolhido pelos dois métodos para a mesma configuração;
+- justificativa dos pesos, das curvas de utilidade e/ou da frequência de atualização escolhidos.
 
 <!--
 FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
@@ -284,7 +321,7 @@ Aplicar os rótulos [Documentado] / [Inferência] / [Especulação] a cada hipó
 - Decaimento pela grade navegável é preferível ao euclidiano para fidelidade tática
 - Camadas simples se combinam por soma ponderada em campos derivados
 - Atualização viável exige baixa frequência, incremental, *time-slicing* ou resolução reduzida
-- Utility AI generaliza a combinação ponderada da escolha de posições para a escolha de ações
+- Utility AI generaliza a combinação ponderada da escolha de posições para a escolha de alvos, continuando por pesos e curvas a mesma seleção de alvo (jogador, aliados) iniciada por testes sim/não na árvore de decisão da Semana 8
 - Nenhuma das duas técnicas possui solução oficial da Unity — implementação própria em C#
 - Módulo 3 e Unidade III encerrados: Micro Game, Desafio e Engenharia Reversa entregues
 

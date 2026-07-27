@@ -124,9 +124,25 @@ Uma heurística que superestima pode levar o A* a devolver um caminho não ótim
 
 ---
 
+## Por que a consistência importa
+
 <div class="tip">
 
 Consistência garante que nenhum nó fechado precise ser reprocessado — cada nó é resolvido definitivamente uma única vez.
+
+</div>
+
+---
+
+<!-- _class: exercise -->
+
+# Erro comum
+
+A heurística **não decide o caminho** — ela apenas **ordena a exploração**.
+
+<div class="objectives">
+
+Uma heurística imperfeita (mas admissível) ainda leva ao caminho ótimo — apenas explora mais ou menos nós.
 
 </div>
 
@@ -150,6 +166,20 @@ Consistência garante que nenhum nó fechado precise ser reprocessado — cada n
 
 ---
 
+<!-- _class: exercise -->
+
+# Erro comum
+
+Nós **explorados** (aberta + fechada) não são o **caminho final**.
+
+<div class="objectives">
+
+O A* costuma tocar muito mais nós do que os que aparecem na rota reconstruída. O caminho final vem apenas dos predecessores, do destino até a origem.
+
+</div>
+
+---
+
 ## Heurísticas comuns
 
 | Heurística | Conectividade |
@@ -163,6 +193,16 @@ Consistência garante que nenhum nó fechado precise ser reprocessado — cada n
 Usar Manhattan em grade-8 (ou vice-versa) distorce admissibilidade ou eficiência.
 
 </div>
+
+---
+
+<!-- _class: diagram -->
+
+## Mesma origem e destino, três medidas diferentes
+
+![diagram](assets/mermaid-3.png)
+
+Cada heurística é exata para o seu conjunto de movimentos — usar a errada torna o A* inadmissível ou ineficiente.
 
 ---
 

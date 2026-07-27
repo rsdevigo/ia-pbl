@@ -19,7 +19,7 @@ footer: "IFMS • Semana 16"
 
 **Módulo 6:** Como um agente aprende?
 **Apostila:** Parte VI, Cap. 12, seções 12.9 a 12.11
-**Micro Game:** Adaptive AI (consolidação final)
+**Micro Game:** Adaptive AI — Coletor de Recompensas (consolidação final)
 
 </div>
 
@@ -90,6 +90,12 @@ O Sentis não treina. Ele apenas executa uma política já aprendida.
 
 </div>
 
+<div class="warning">
+
+No Package Manager, o pacote pode aparecer como "Inference Engine" (`com.unity.ai.inference`) em vez de "Sentis", dependendo da versão — buscar pelo identificador.
+
+</div>
+
 ---
 
 <!-- _class: section -->
@@ -132,8 +138,8 @@ Executando o Adaptive AI de ponta a ponta.
 ## O que fazer hoje
 
 1. Importar o próprio modelo `.onnx` no Sentis;
-2. configurar a inferência na cena do Adaptive AI;
-3. executar e observar o agente decidindo sozinho;
+2. configurar a inferência na cena do Adaptive AI — Coletor de Recompensas;
+3. executar e observar o agente coletando itens positivos e evitando negativos, sozinho;
 4. comparar com o comportamento visto no treinamento (Semana 15).
 
 ---
@@ -191,6 +197,25 @@ Jogo comercial com IA adaptativa ou aprendizado perceptível pelo jogador.
 <div class="tip">
 
 Aprendizagem real (rede treinada) ou heurística adaptativa simples? Que evidências sustentam a hipótese?
+
+</div>
+
+---
+
+## Encerramento do ciclo dos seis módulos
+
+| Módulo | Pergunta | Micro Game |
+|---|---|---|
+| 1 | Como um NPC decide o que fazer? | NPC Decision — Criatura de Ambiente |
+| 2 | Como um agente encontra seu destino? | Navigation — Entregador |
+| 3 | Como um NPC escolhe sua melhor ação? | Tactical AI — Seleção de Alvo |
+| 4 | Como derrotar um adversário inteligente? | Board Game AI — Conecta 4 Reduzido |
+| 5 | Como encontrar automaticamente boas soluções? | Genetic Lab — Criaturas Evoluídas |
+| 6 | Como um agente aprende? | Adaptive AI — Coletor de Recompensas |
+
+<div class="tip">
+
+Seis perguntas, seis famílias de técnicas, um único AI Playground. Semana 17: reunir tudo.
 
 </div>
 

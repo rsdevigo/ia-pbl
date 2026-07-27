@@ -75,11 +75,11 @@ Exemplo: capturar uma peça pode parecer bom e levar a um xeque-mate logo depois
 
 ## Três tipos de ambiente
 
-| Ambiente | Característica | Técnicas já vistas |
+| Ambiente | Característica | Exemplo de jogo |
 |---|---|---|
-| Cooperativo | Elementos ajudam o agente | FSM, BT (Módulo 1) |
-| Reativo | Ambiente responde, não planeja | NavMesh, Utility AI |
-| Competitivo | Oponente planeja contra o agente | **Minimax (hoje)** |
+| Cooperativo | Elementos ajudam o agente | aliado controlado por IA (ex.: Ellie em *The Last of Us*) |
+| Reativo | Hostil, mas não planeja contra o agente | inimigo de ação que patrulha e ataque (ex.: *Halo*, *F.E.A.R.*) — Módulos 1 a 3 |
+| Competitivo | Oponente planeja contra o agente | xadrez, damas, jogo da velha — **Minimax (hoje)** |
 
 ---
 

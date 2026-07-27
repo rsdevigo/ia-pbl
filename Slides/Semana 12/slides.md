@@ -95,7 +95,7 @@ Buscar uma solução **"boa o suficiente"** em tempo aceitável — não necessa
 | Otimização evolutiva (hoje) | Aprendizagem por interação (Módulo 6) |
 |---|---|
 | Busca a melhor **configuração** em um espaço de candidatos | Ajusta um **comportamento** ao longo de episódios |
-| Avalia soluções prontas | Aprende through tentativa e recompensa |
+| Avalia soluções prontas | Aprende por tentativa e recompensa |
 
 ---
 
@@ -135,19 +135,6 @@ Seleção natural artificial: soluções mais aptas têm mais chance de gerar de
 ## Anatomia de uma população
 
 ![diagram](assets/mermaid-1.png)
-
-<!--
-FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
-
-Objetivo didático:
-Fixar visualmente a relação entre população, indivíduo, cromossomo, gene e aptidão antes de avançar para o ciclo completo do algoritmo.
-Arquivo sugerido:
-assets/anatomia-populacao-genetica.webp
-Descrição:
-Diagrama hierárquico: uma população contendo vários indivíduos; um indivíduo em destaque expandido em seu cromossomo (sequência de genes coloridos); ao lado, um rótulo indicando o valor de aptidão daquele indivíduo.
-Como produzir:
-Diagrama vetorial em Krita, com blocos retangulares para indivíduos e pequenos quadrados coloridos para genes dentro do cromossomo.
--->
 
 ---
 

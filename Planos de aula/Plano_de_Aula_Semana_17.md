@@ -78,8 +78,6 @@ Não é objetivo desta semana introduzir técnicas novas de IA nem aprofundar te
 
 **Foco:** Apresentação final do AI Playground completo e entrega do AI Design Log consolidado — encerramento do semestre.
 
-| Etapa | Duração | Objetivo | Atividade do Professor | Atividade dos Estudantes |
-|---|---|---|---|---|
 > **Formato da apresentação final — Feira do AI Playground.** Com turmas de 30 a 40 estudantes (10 a 14 grupos), apresentações seriadas dariam a cada grupo menos de cinco minutos para demonstrar seis Micro Games e defender oito critérios da Rubrica — inviável para o instrumento de maior peso do semestre. A apresentação final adota, portanto, o formato de **feira em estações**: cada grupo monta seu AI Playground na própria bancada e o mantém rodando; a turma circula livremente entre as estações; e o professor percorre as bancadas realizando, com cada grupo, uma **arguição individual de 4 a 5 minutos**, aplicando a Ficha 6 dos Formulários de Avaliação. Com 14 grupos, a arguição consome cerca de 65 dos 70 minutos previstos. O formato preserva a defesa técnica exigida pela Rubrica, garante que todos os seis Micro Games fiquem efetivamente demonstráveis (e não apenas o preferido do grupo) e produz a comparação entre soluções que a discussão técnica final buscava. Ver a nota de dimensionamento de turma na Preparação do Professor.
 
 | Etapa | Duração | Objetivo | Atividade do Professor | Atividade dos Estudantes |

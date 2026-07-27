@@ -31,6 +31,7 @@ Ao final de hoje você será capaz de:
 
 - relacionar os estudos de caso comentados da Apostila às técnicas estudadas no semestre;
 - revisar, de forma integrada, os seis momentos de Engenharia Reversa realizados;
+- reunir os seis Micro Games e o AI Design Log do semestre num AI Playground consolidado;
 - apresentar o AI Playground completo, justificando as decisões de cada Micro Game;
 - distinguir, com exemplos do próprio semestre, aprendizagem real de ilusão de inteligência.
 

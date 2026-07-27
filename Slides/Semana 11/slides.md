@@ -19,7 +19,7 @@ footer: "IFMS • Semana 11"
 
 **Módulo 4:** Como derrotar um adversário inteligente?
 **Apostila:** Parte V, Cap. 11 (11.3.4, 11.4, 11.4.1); Parte VI, Cap. 13 (13.1)
-**Micro Game:** Board Game AI (consolidação)
+**Micro Game:** Board Game AI (consolidação) — Conecta 4 Reduzido
 
 </div>
 
@@ -179,16 +179,10 @@ Analogia: comparando propostas uma a uma, você descarta uma opção assim que s
 Mesma árvore da Semana 10 — agora com α e β anotados a cada passo.
 
 <!--
-FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
-
-Objetivo didático:
-Mostrar, lado a lado, a árvore completa do Minimax e a mesma árvore com os ramos eliminados pela poda alfa-beta.
-Arquivo sugerido:
-assets/minimax-vs-alfabeta-poda.webp
-Descrição:
-Duas árvores idênticas (jogadas A, B, C; folhas 3/5, 6/2, 1/8): à esquerda, todos os nós visitados; à direita, ramos podados esmaecidos ou tracejados, com valores de α e β anotados nos nós visitados.
-Como produzir:
-Diagrama vetorial em Krita ou Blender (modo 2D), reaproveitando a estrutura da árvore da Semana 10, adicionando anotações de α/β e um estilo visual diferenciado para ramos podados.
+Nota do apresentador (não aparece no slide): a árvore reaproveita a estrutura A/B/C da Semana 10
+(folhas 3/5, 6/2, 1/8), agora anotada com os valores de alfa e beta em cada nó MIN/MAX visitado.
+A folha 8, sob o nó C, é podada (α ≥ β após visitar a folha 1) e aparece esmaecida e tracejada,
+sem valor de folha visitado — consistente com o traçado já usado na Semana 10 (raiz = 3, jogada A escolhida).
 -->
 
 ---
@@ -252,7 +246,7 @@ Reduzir a profundidade, validar o ganho de desempenho com heurística e poda, e 
 
 # Micro Game Board Game AI — consolidação
 
-Minimax (Semana 10) + função de avaliação + poda alfa-beta, em tabuleiro maior que o jogo da velha.
+Minimax (Semana 10) + função de avaliação + poda alfa-beta, aplicados ao **Conecta 4 Reduzido**.
 
 ---
 
@@ -260,7 +254,7 @@ Minimax (Semana 10) + função de avaliação + poda alfa-beta, em tabuleiro mai
 
 - de 2 a 4 características para a função de avaliação, com pesos justificados;
 - poda alfa-beta integrada ao Minimax recursivo já implementado;
-- teste em tabuleiro maior (ex.: damas simplificada ou Connect Four em grade reduzida);
+- teste no **Conecta 4 Reduzido** (grade menor que o padrão), exemplo fixado para o Módulo 4;
 - comparação do número de nós examinados e do tempo de resposta, com e sem poda.
 
 ---

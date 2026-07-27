@@ -83,6 +83,8 @@ A avaliação percorre a raiz até uma folha — sempre a mesma ação para o me
 
 | Aspecto | Árvore de decisão | Árvore de comportamento |
 |---|---|---|
+| **Nós internos representam** | Testes/condições | Controle de fluxo (sequência, seletor, paralelo) |
+| **Folhas representam** | A ação escolhida | Tarefas executáveis |
 | **Propósito** | Escolher uma ação | Orquestrar uma sequência |
 | **Estados de retorno** | Ausentes | Sucesso, falha, em execução |
 | **Noção de tempo** | Nenhuma | Central |
@@ -107,6 +109,20 @@ A ordenação afeta o **custo de avaliação** — nunca o resultado final.
 <div class="tip">
 
 Profundidade maior custa mais para avaliar e reduz a legibilidade da árvore.
+
+</div>
+
+---
+
+## Árvore autoral × árvore aprendida
+
+Nesta disciplina, a árvore de decisão é sempre **autoral** — escrita à mão pelo designer.
+
+Existe também a árvore de decisão **aprendida** (ID3/entropia): construída automaticamente a partir de dados, tema do aprendizado de máquina.
+
+<div class="tip">
+
+Mesma estrutura de dados, filosofias opostas: regras controláveis versus modelo induzido de dados. A variante aprendida reaparece na Parte VI.
 
 </div>
 
@@ -192,26 +208,26 @@ A árvore de decisão escolhe uma ação. Sequenciar é território das árvores
 
 # Micro Game Tactical AI — início
 
-Primeira árvore de decisão funcional do NPC tático.
+Primeira árvore de decisão de seleção de alvo do NPC tático.
 
 ---
 
 ## O que implementar hoje
 
-- duas ou três condições observáveis (visão do jogador, distância, vida);
-- árvore de decisão em C# ou Visual Scripting, com nós, ramos e folhas identificáveis;
-- teste de ao menos dois caminhos de avaliação distintos;
+- dois ou três alvos candidatos (jogador e um ou dois aliados simulados), cada um com distância, vida e ameaça observáveis;
+- árvore de decisão em C# ou Visual Scripting, com nós, ramos e folhas de **alvo** identificáveis;
+- teste de ao menos dois caminhos de avaliação distintos, resultando em alvos diferentes;
 - justificativa da ordenação dos testes escolhida.
 
 <!--
 FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
 
 Objetivo didático:
-Apoiar a implementação guiada, mostrando a árvore de decisão do NPC tático já desenhada antes da codificação.
+Apoiar a implementação guiada, mostrando a árvore de decisão de seleção de alvo do NPC tático já desenhada antes da codificação.
 Arquivo sugerido:
 assets/arvore-decisao-npc-tatico.webp
 Descrição:
-Diagrama de árvore com raiz "Vê o jogador?", ramificando em "Distância curta?" e folhas de ação (Patrulhar, Atacar corpo a corpo, Atirar), com anotações indicando qual teste é mais barato.
+Diagrama de árvore com raiz "Há aliado com vida crítica?", ramificando em "não" para um teste "Algum alvo representa ameaça imediata?" e daí para um teste de distância entre os alvos restantes, com folhas nomeando o alvo escolhido (Aliado ferido, Jogador, Alvo mais próximo) em vez de uma ação — reforçando que a folha desta árvore é um alvo, não uma ação.
 Como produzir:
 Diagrama vetorial produzido no Krita a partir do esboço em papel elaborado pelos grupos durante a atividade de laboratório.
 -->
@@ -252,7 +268,7 @@ O checkpoint corresponde a 10% da nota final do semestre.
 - Diferente da árvore de comportamento: sem tempo, sem sequenciamento
 - Ordenação de testes afeta custo, não resultado
 - Mapa de influência: nova pergunta ("onde ir?"), introdução apenas
-- Micro Game Tactical AI iniciado; checkpoint do AI Playground arguido em rodízio
+- Micro Game Tactical AI iniciado — seleção de alvo por árvore de decisão; checkpoint do AI Playground arguido em rodízio
 
 ---
 
@@ -260,7 +276,7 @@ O checkpoint corresponde a 10% da nota final do semestre.
 
 **Tema:** Mapas de Influência (aprofundamento) e Utility AI — encerramento do Módulo 3 e da Unidade III
 
-- Confirmar árvore de decisão funcional em todos os grupos
+- Confirmar árvore de decisão de seleção de alvo funcional em todos os grupos
 - Revisar o conceito de campo escalar apresentado hoje
 
 <div class="tip">

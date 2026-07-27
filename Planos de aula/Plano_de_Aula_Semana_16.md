@@ -50,8 +50,8 @@ Não é objetivo desta semana retomar o treinamento em si (Q-Learning, hiperpar�
 | Item | Detalhamento |
 |---|---|
 | **Leitura recomendada** | Apostila — Parte VI, Capítulo 12, seção 12.9 completa (foco na parte de inferência com Sentis), seção 12.10 (Vantagens e Limitações) e seção 12.11 (Estudos de Caso Comentados); **Encerramento da Parte VI**, que só agora pode ser lido por completo (Capítulos 12 e 13 vistos), com destaque para a *Tabela Comparativa — Q-Learning × Deep RL × Algoritmos Genéticos*, que fecha a comparação "otimizar × aprender a agir" aberta na Semana 13; **Apêndice C.1** e **C.2** como apoio ao Desafio |
-| **Materiais necessários** | Projetor/tela; computadores com Unity Hub e o pacote Sentis importado; modelo `.onnx` e curva de recompensa preservados por cada grupo na Semana 15; formulário ou roteiro do Desafio de Escolha Tecnológica já utilizado nos módulos anteriores |
-| **Cena Unity utilizada** | Cena do Micro Game Adaptive AI já treinada na Semana 15, agora recebendo o componente de inferência do Sentis em substituição ao vínculo com o ML-Agents/Python |
+| **Materiais necessários** | Projetor/tela; computadores com Unity Hub e o pacote Sentis importado; modelo `.onnx` e curva de recompensa preservados por cada grupo na Semana 15; formulário ou roteiro do Desafio de Escolha Tecnológica já utilizado nos módulos anteriores. **Atenção:** o pacote pode aparecer no Package Manager sob o identificador `com.unity.ai.inference` e o nome de exibição "Inference Engine" em vez de "Sentis", conforme a versão instalada — buscar pelo identificador, não pelo nome (ver Manual do Professor) |
+| **Cena Unity utilizada** | Cena do Micro Game Adaptive AI — Coletor de Recompensas — já treinada na Semana 15, agora recebendo o componente de inferência do Sentis em substituição ao vínculo com o ML-Agents/Python |
 | **Assets** | Nenhum asset de arte adicional; reaproveitamento do cenário já montado |
 | **Exemplos** | Comparação lado a lado do comportamento do agente durante o treinamento (Semana 15, decisões via política em treino) e após a inferência (Semana 16, decisões via modelo `.onnx` executado pelo Sentis); estudos de caso comentados da seção 12.11 como referência de aplicação em jogos comerciais |
 | **Vídeos** | Não obrigatório; caso disponível, vídeo curto demonstrando um NPC com comportamento adaptativo perceptível em um jogo comercial, para apoiar a Engenharia Reversa |
@@ -88,7 +88,7 @@ Não é objetivo desta semana retomar o treinamento em si (Q-Learning, hiperpar�
 
 ## Micro Game
 
-**Micro Game em desenvolvimento:** Adaptive AI (Módulo 6) — **consolidação final**.
+**Micro Game em desenvolvimento:** Adaptive AI — Coletor de Recompensas (Módulo 6) — **consolidação final**.
 
 **Objetivo pedagógico:** demonstrar a etapa de inferência do ciclo de Aprendizagem por Reforço, evidenciando que um modelo treinado pode ser executado dentro da própria Unity, via Sentis, sem depender do ambiente de treinamento — encerrando o Módulo 6 com o Micro Game funcional de ponta a ponta.
 
@@ -117,7 +117,7 @@ Não é objetivo desta semana retomar o treinamento em si (Q-Learning, hiperpar�
 
 | Ferramenta | Uso nesta semana |
 |---|---|
-| **Unity Sentis** | Uso efetivo e central: importação do modelo `.onnx` treinado na Semana 15 e configuração do componente de inferência que executa o agente do Adaptive AI de forma autônoma |
+| **Unity Sentis** | Uso efetivo e central: importação do modelo `.onnx` treinado na Semana 15 e configuração do componente de inferência que executa o agente do Adaptive AI de forma autônoma. Verificar previamente o identificador do pacote instalado (`com.unity.ai.inference`, exibido como "Inference Engine" em versões mais recentes) para evitar confusão na busca pelo Package Manager |
 | **Unity ML-Agents** | Apenas como referência retrospectiva — o modelo já treinado (Semana 15) é o insumo desta semana; não há novo treinamento |
 
 Nenhuma ferramenta de terceiros é indicada para esta semana, uma vez que o Sentis é a solução oficial e única prevista pelo Cronograma para a inferência do Módulo 6.

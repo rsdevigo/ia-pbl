@@ -59,7 +59,13 @@ Parte 2 — convergência, aplicações, ferramentas e limites.
 
 ## Um problema mais expressivo
 
-Hoje: ajustar um pequeno conjunto de parâmetros de uma IA de jogo, em vez de aproximar uma string ou maximizar uma soma.
+Hoje: evoluir forma/parâmetros de uma criatura simples para melhorar sua locomoção (tema fixo do Genetic Lab) — em vez de aproximar uma string ou maximizar uma soma.
+
+<div class="tip">
+
+Outros exemplos de problema mais expressivo (ajuste de parâmetros de uma IA de jogo, geração de layout) podem ilustrar a discussão, mas o Micro Game consolidado deve evoluir a criatura.
+
+</div>
 
 <div class="tip">
 
@@ -113,18 +119,19 @@ Ajustes possíveis:
 - reduzir a pressão seletiva (ex.: torneio menor);
 - reduzir o grau de elitismo.
 
-<!--
-FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
+---
 
-Objetivo didático:
-Mostrar visualmente a diferença entre uma população diversa (exploração ativa) e uma população convergida prematuramente (pouca diversidade), lado a lado com suas curvas de aptidão correspondentes.
-Arquivo sugerido:
-assets/convergencia-prematura-vs-diversidade.webp
-Descrição:
-Dois painéis: à esquerda, uma nuvem de pontos dispersa representando indivíduos variados, com uma curva de aptidão em salto; à direita, uma nuvem de pontos concentrada representando indivíduos semelhantes, com uma curva de aptidão em platô longo.
-Como produzir:
-Diagrama vetorial em Krita, com dispersão de pontos coloridos para representar indivíduos e um pequeno gráfico de linha anexado a cada painel.
--->
+<!-- _class: diagram -->
+
+## Diversidade populacional × convergência prematura
+
+![diagram](assets/mermaid-2.png)
+
+<div class="tip">
+
+População diversa sustenta saltos na curva de aptidão; população convergida (pouca diversidade) produz o platô longo do slide anterior.
+
+</div>
 
 ---
 
@@ -244,10 +251,10 @@ Fato documentado × inferência plausível.
 
 ## O que se sabe e o que se infere
 
-- PCG baseada em busca: bem documentada na pesquisa acadêmica;
-- competições de IA de jogos por evolução, incluindo NEAT;
-- balanceamento e ajuste de parâmetros na indústria: inferência cautelosa;
-- neuroevolução em jogos experimentais (ex.: NERO).
+- **[Documentado]** PCG baseada em busca: bem documentada na pesquisa acadêmica;
+- **[Documentado]** competições de IA de jogos por evolução, incluindo NEAT;
+- **[Inferência]** balanceamento e ajuste de parâmetros na indústria: raramente documentado pelos estúdios, tratado como inferência cautelosa;
+- **[Documentado]** neuroevolução em jogos experimentais (ex.: NERO).
 
 <div class="warning">
 
