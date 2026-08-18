@@ -13,12 +13,12 @@ footer: "IFMS • Semana 03"
 
 # Inteligência Artificial e Ilusão de Inteligência
 
-## Semana 3 — Máquinas de Estado Hierárquicas
+## Semana 3 — Aprofundamento da FSM: o padrão State em C#
 
 <div class="meta">
 
 **Módulo 1:** Como um NPC decide o que fazer?
-**Apostila:** Parte II, Cap. 4
+**Apostila:** Parte II, Cap. 3 (aprofundamento)
 **Micro Game:** NPC Decision
 
 </div>
@@ -29,160 +29,137 @@ footer: "IFMS • Semana 03"
 
 Ao final de hoje você será capaz de:
 
-- explicar o problema resolvido pela HFSM;
-- definir superestado, subestado e configuração ativa;
-- explicar a herança de transições por avaliação em cascata;
-- diferenciar histórico raso de histórico profundo;
-- reestruturar a FSM da Semana 2 em uma HFSM.
+- explicar o problema de um `switch` de FSM que cresce demais;
+- descrever a estrutura do padrão de projeto State (GoF);
+- mapear estado, transição, evento e ação para o padrão State;
+- refatorar a FSM da Semana 2 para o padrão State em C#;
+- reconhecer o que essa refatoração resolve e o que ela não resolve.
+
+---
+
+## Antes de começar: mudança de rota
+
+<div class="warning">
+
+Esta turma **não vai estudar Máquinas de Estado Hierárquicas** (Capítulo 4) neste semestre. O Micro Game segue direto de FSM para Árvore de Comportamento, na Semana 4.
+
+</div>
+
+Hoje o assunto não é "como organizar hierarquicamente" — é "como organizar o **código**" da FSM que você já tem.
 
 ---
 
 ## Retomada da Semana 2
 
-Uma FSM plana organiza a decisão do NPC em estados, transições, eventos e ações.
+Você já tem uma FSM funcional: estados, transições, eventos e ações, implementados por `enum`/`switch` (ou já pelo padrão State, para quem escolheu esse caminho).
 
-Mas o que acontece quando o número de estados cresce?
+O que acontece com esse código quando o número de estados cresce?
 
 ---
 
 <!-- _class: question -->
 
-# Como organizar decisões cada vez mais complexas de um NPC?
+# Como estruturar o código da FSM para que ela cresça sem virar um emaranhado de condicionais?
 
-O guarda agora tem cinco estados de combate. Todos precisam da regra "vida < 20% → Fugir". E agora?
+O guarda tem cinco estados. Cada um com sua própria lógica de update. E tudo mora no mesmo `switch`.
 
 ---
 
-## O problema: redundância de regras comuns
+## O problema: um método que cresce demais
 
-Não é só o número de transições — é a **mesma regra repetida** em cada estado de combate.
+Não é a quantidade de estados — é que **toda a lógica de todos os estados convive no mesmo lugar**.
 
 <div class="warning">
 
-Cinco estados de combate, cinco cópias da regra "vida < 20% → Fugir". Mudar a regra significa editar cinco lugares.
+Um `switch` com cinco `case`, cada um com dezenas de linhas, é difícil de ler, difícil de testar isoladamente e fácil de quebrar ao editar um caso vizinho.
 
 </div>
 
 ---
 
-## A resposta: Máquina de Estados Hierárquica
+## A resposta: o padrão de projeto State
 
-Estados podem conter **submáquinas** — uma hierarquia de superestados e subestados.
+Cada estado vira uma **classe própria**, que implementa uma interface comum.
 
-- A regra comum sobe para a borda do superestado
-- Passa a valer para todos os subestados internos
-
----
-
-## Os conceitos elementares da HFSM
-
-| Conceito | O que representa |
-|---|---|
-| **Superestado** | Agrupa subestados relacionados (ex.: Combate) |
-| **Subestado** | Estado interno de um superestado (ex.: Atirar) |
-| **Configuração ativa** | Pilha de estados ativos (ex.: Combate → Atirar) |
-| **Estado inicial** | Subestado padrão ao entrar em cada nível |
+- Uma interface `IState` com `Enter`, `Update`, `Exit`
+- Uma classe concreta por estado (`PatrulharState`, `AtacarState`...)
+- Um **contexto** — a FSM — que mantém o estado ativo e delega as chamadas
 
 ---
 
 <!-- _class: diagram -->
 
-## Exemplo: dois superestados
-
-![diagram](assets/mermaid-1.png)
-
----
-
-## Herança de transições
-
-A avaliação ocorre **em cascata**: primeiro o superestado, depois o subestado ativo.
-
-<div class="tip">
-
-Se a regra do superestado dispara, o subestado interno nem chega a ser avaliado — por isso ela vale para todos.
-
-</div>
-
----
-
-## Ordem correta de enter/exit
-
-Transições que cruzam níveis disparam enter/exit em **cada nível atravessado**.
-
-<div class="warning">
-
-Erro comum: sair de "Atirar" direto para "Fugir" sem disparar o *exit* do superestado Combate — inicializações ficam pendentes.
-
-</div>
-
----
-
-## Estado de histórico
-
-Ao reentrar em um superestado, retomar o subestado onde parou ou reiniciar pelo inicial?
-
-| Tipo | Comportamento |
-|---|---|
-| **Histórico raso** | Retoma o subestado do nível imediato |
-| **Histórico profundo** | Retoma toda a configuração ativa aninhada |
-
----
-
-## Quando usar histórico?
-
-| Usar histórico | Reiniciar pelo inicial |
-|---|---|
-| Reentrar em "Combate" após "Fugir" — retomar "Recarregando" de onde parou | Reentrar em "Patrulhar" — recomeçar a rota do início, não do meio |
-| Interrupções curtas que não mudam o contexto do subestado | Ciclos com início e fim bem definidos, onde retomar no meio confunde o comportamento |
-
-<div class="tip">
-
-Um guarda interrompido em "Recarregando" deve retomar dali — não reiniciar do zero ao voltar ao combate.
-
-</div>
-
-<div class="warning">
-
-Histórico aplicado sem critério produz comportamento "grudento" onde reiniciar seria mais natural.
-
-</div>
-
----
-
-## HFSM no Unity: sub-state machines
-
-O Animator materializa a hierarquia diretamente.
-
-| Conceito teórico | Elemento no Animator |
-|---|---|
-| Superestado | Sub-state machine |
-| Subestado | Estado interno da sub-state machine |
-| Transição herdada | Seta que sai da borda da sub-state machine |
+## Estrutura do padrão State
 
 <!--
 FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
 
 Objetivo didático:
-Mostrar a correspondência entre superestado/subestado e a sub-state machine do Animator.
+Mostrar a estrutura do padrão State: interface IState, classes concretas de estado e o contexto (FSM) que mantém a referência ao estado ativo.
 Arquivo sugerido:
-assets/animator-hfsm-guarda.webp
+assets/mermaid-1.png (substituir o diagrama atual, que ilustra os superestados da antiga Semana 3 — não usado mais nesta oferta)
 Descrição:
-Captura de tela do Animator Controller com uma sub-state machine "Combate" contendo os estados "Atirar" e "Recarregar", e uma transição saindo da borda da sub-state machine para "Fugir".
+Diagrama com uma interface IState no topo, três classes concretas apontando para ela (PatrulharState, AtacarState, FugirState) e uma classe FsmContext com uma seta para o estado ativo, indicando a delegação de Enter/Update/Exit.
 Como produzir:
-Screenshot direto do editor Unity durante a demonstração ao vivo, com anotações simples adicionadas no Krita.
+Gerar via Mermaid (classDiagram) e exportar como PNG, seguindo o padrão dos demais diagramas do curso.
 -->
 
 ---
 
-## O que a HFSM não resolve
+## Mapeando a Semana 2 para o padrão State
 
-<div class="warning">
+| Conceito (Semana 2) | Elemento no padrão State |
+|---|---|
+| **Estado** | Classe que implementa `IState` |
+| **Ciclo enter/update/exit** | Métodos da interface `IState` |
+| **Transição** | Chamada explícita de troca de estado no contexto |
+| **Evento/guarda** | Condição avaliada dentro do `Update` do estado ativo |
 
-A hierarquia organiza a complexidade, mas o acoplamento entre estados e a rigidez estrutural da família FSM permanecem.
+---
+
+## Exemplo: do `switch` à classe
+
+```csharp
+// Antes: um case dentro de um switch gigante
+case EstadoGuarda.Atacar:
+    if (vida < 0.2f) TrocarPara(EstadoGuarda.Fugir);
+    AtacarJogador();
+    break;
+```
+
+```csharp
+// Depois: uma classe isolada
+public class AtacarState : IState
+{
+    public void Enter(Guarda g) { }
+    public void Update(Guarda g)
+    {
+        if (g.Vida < 0.2f) g.TrocarPara(new FugirState());
+        g.AtacarJogador();
+    }
+    public void Exit(Guarda g) { }
+}
+```
+
+---
+
+## O que o padrão State melhora
+
+- **Isolamento:** a lógica de "Atacar" só existe em `AtacarState`
+- **Legibilidade:** cada arquivo tem uma responsabilidade só
+- **Testabilidade:** dá para testar um estado sem montar a FSM inteira
+
+---
+
+<!-- _class: exercise -->
+
+# O que o padrão State **não** resolve
+
+<div class="objectives">
+
+O número de regras de transição continua o mesmo — só está mais organizado. A explosão de transições, identificada na Semana 2, segue de pé.
 
 </div>
-
-Comportamento sequenciado e reordenável ainda é difícil — problema em aberto para a Semana 4.
 
 ---
 
@@ -190,29 +167,25 @@ Comportamento sequenciado e reordenável ainda é difícil — problema em abert
 
 # Implementação guiada
 
-Reestruturando a FSM da Semana 2 em HFSM.
+Refatorando a FSM da Semana 2 para o padrão State.
 
 ---
 
 ## Passo a passo
 
-1. Revisar a FSM da Semana 2 e listar estados que compartilham transições de saída;
-2. Definir ao menos dois superestados coerentes;
-3. Migrar as transições comuns para a borda de cada superestado;
-4. Decidir, superestado por superestado, o uso de histórico.
+1. Revisar como sua FSM foi implementada (Animator, `switch` ou já padrão State);
+2. Definir a interface `IState` (ou equivalente) com Enter/Update/Exit;
+3. Criar uma classe concreta para cada estado já existente;
+4. Implementar o contexto (a FSM), que troca entre estados;
+5. Testar: o comportamento deve ser **idêntico** ao de antes.
 
 ---
 
-## Implementação no Unity
-
-Duas abordagens possíveis, conforme a implementação da Semana 2:
-
-- **Sub-state machines do Animator** — mais visual
-- **Extensão do padrão *State* em C#** — estados que contêm submáquinas
+## O contexto: quem manda na troca
 
 <div class="tip">
 
-O comportamento observável não muda — o ganho é de organização.
+O estado decide **quando** pedir a troca (dentro do seu `Update`). O contexto (a FSM) é quem de fato **realiza** a troca, guardando a referência ao estado ativo.
 
 </div>
 
@@ -222,23 +195,23 @@ O comportamento observável não muda — o ganho é de organização.
 
 # Erro comum
 
-Escolher superestados de forma arbitrária, sem que os estados agrupados compartilhem transições.
+Colocar toda a lógica de transição dentro de cada classe de estado, sem um contexto central que controle qual estado está ativo.
 
 <div class="objectives">
 
-Pergunta-chave: "há um conjunto de estados que compartilha as mesmas transições de saída?" Se não, reconsidere o agrupamento.
+Pergunta-chave: "quem guarda a referência ao estado ativo?" Se a resposta não for "o contexto", reveja o desenho.
 
 </div>
 
 ---
 
-## Discussão técnica: FSM plana versus HFSM
+## Discussão técnica: `switch` versus padrão State
 
-Compare o número de transições escritas antes e depois da reestruturação.
+Compare a legibilidade e a testabilidade do código antes e depois da refatoração.
 
 <div class="warning">
 
-O que ainda seria trabalhoso reordenar ou reutilizar nesta HFSM? Essa pergunta abre caminho para a Semana 4.
+A quantidade de transições escritas mudou? Não. O que ainda falta resolver é a mesma coisa de sempre: reordenar prioridades e reutilizar comportamento continuam trabalhosos — gancho para a Semana 4.
 
 </div>
 
@@ -248,11 +221,11 @@ O que ainda seria trabalhoso reordenar ou reutilizar nesta HFSM? Essa pergunta a
 
 ## Resumo da semana
 
-- HFSM resolve a redundância de regras repetidas na FSM plana
-- Superestado, subestado e configuração ativa organizam a hierarquia
-- Transições herdadas surgem da avaliação em cascata
-- Histórico raso e profundo decidem se o NPC retoma ou reinicia
-- Acoplamento e rigidez estrutural permanecem sem solução
+- O `switch` de FSM cresce mal quando o número de estados aumenta
+- O padrão State isola cada estado em sua própria classe
+- Estado, transição, evento e ação mapeiam diretamente para a estrutura do padrão
+- O contexto (a FSM) mantém o estado ativo e delega as chamadas
+- A explosão de transições **continua sem solução** — não é isso que o padrão State resolve
 
 ---
 
@@ -261,10 +234,10 @@ O que ainda seria trabalhoso reordenar ou reutilizar nesta HFSM? Essa pergunta a
 **Tema:** Árvores de Comportamento, Blackboard e Engenharia Reversa
 
 - Ler o Capítulo 6 da Apostila (Árvores de Comportamento) e o Capítulo 14 (Engenharia Reversa)
-- Trazer a HFSM funcional implementada hoje, no Micro Game NPC Decision
+- Trazer a FSM (padrão State) funcional implementada hoje, no Micro Game NPC Decision
 
 <div class="tip">
 
-Pergunta que abre a Semana 4: como tornar a decisão do NPC modular e escalável, sem os limites da HFSM?
+Pergunta que abre a Semana 4: como tornar a decisão do NPC modular e escalável, migrando direto da FSM para uma Árvore de Comportamento?
 
 </div>

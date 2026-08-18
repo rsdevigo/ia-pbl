@@ -98,16 +98,17 @@ Como cada módulo depende do anterior — o Micro Game evolui em cadeia — e tr
 ---
 
 ### Semana 3 🔵
-**Tema:** Máquinas de Estado Hierárquicas
+**Tema:** Aprofundamento da FSM — o padrão de projeto State em C#
 
 | Campo | Conteúdo |
 |---|---|
-| **Pergunta Norteadora** | Como organizar decisões cada vez mais complexas de um NPC? |
-| **Apostila** | Parte II, Cap. 4 — Máquinas de Estado Hierárquicas (HFSM) |
-| **Encontro 1** | Fundamentação de HFSM como resposta ao crescimento descontrolado de estados e transições da FSM plana. Demonstração de reestruturação hierárquica. |
-| **Encontro 2** | Evolução do NPC Decision de FSM para HFSM, reaproveitando a implementação da Semana 2. Discussão técnica comparando as duas abordagens. |
-| **Ferramentas** | Scripting C# (HFSM) |
+| **Pergunta Norteadora** | Como estruturar o código de uma FSM para que ela cresça sem virar um emaranhado de condicionais? |
+| **Apostila** | Parte II, Cap. 3 — Máquinas de Estado Finitas (aprofundamento das seções 3.2, 3.3.2 e 3.7, com foco na materialização via padrão de projeto State) |
+| **Encontro 1** | Fundamentação do padrão de projeto State (GoF) como alternativa de implementação à FSM por enum/switch: cada estado como classe própria, contexto delegando Enter/Update/Exit. Mapeamento dos conceitos de estado, transição, evento e ação da Semana 2 para a estrutura do padrão. |
+| **Encontro 2** | Refatoração guiada do NPC Decision, migrando a implementação da Semana 2 para uma FSM organizada pelo padrão State. Discussão técnica: o que essa refatoração melhora e o que ainda não resolve. |
+| **Ferramentas** | Scripting C# (padrão de projeto State) |
 | **Entrega** | — |
+| **Observação** | A Máquina de Estados Hierárquica (Cap. 4 da Apostila) não é trabalhada nesta oferta da disciplina — exclusão deliberada, análoga à do GOAP no Módulo 1 (ver Manual do Professor). O capítulo permanece disponível como leitura de aprofundamento voluntário. O Micro Game segue diretamente de FSM (Semanas 2–3) para Árvore de Comportamento (Semana 4), sem etapa hierárquica intermediária. |
 
 ---
 
@@ -118,7 +119,7 @@ Como cada módulo depende do anterior — o Micro Game evolui em cadeia — e tr
 |---|---|
 | **Pergunta Norteadora** | Como tornar a decisão do NPC modular e escalável? |
 | **Apostila** | Parte II, Cap. 6 — Árvores de Comportamento (Behavior Trees) e Blackboard; Parte VII, Cap. 14 — Metodologia de Engenharia Reversa de IA |
-| **Encontro 1** | Fundamentação de Behavior Trees e Blackboard. Demonstração no Unity Behavior, com comparação pontual a soluções de terceiros (NodeCanvas, Behavior Designer). Apresentação formal da metodologia de Engenharia Reversa, que passa a ser reutilizada nos módulos seguintes. |
+| **Encontro 1** | Fundamentação de Behavior Trees e Blackboard como resposta direta ao acoplamento, à rigidez e à explosão de transições já identificados na FSM (Semanas 2–3). Demonstração no Unity Behavior, com comparação pontual a soluções de terceiros (NodeCanvas, Behavior Designer). Apresentação formal da metodologia de Engenharia Reversa, que passa a ser reutilizada nos módulos seguintes. |
 | **Encontro 2** | Consolidação do Micro Game NPC Decision com BT + Blackboard. Desafio de Escolha Tecnológica do Módulo 1. Primeiro momento de Engenharia Reversa, aplicando a metodologia a um jogo comercial com IA de decisão visível. |
 | **Ferramentas** | Unity Behavior, Blackboard; comparação com NodeCanvas / Behavior Designer |
 | **Entrega** | **Micro Game 1 — NPC Decision consolidado (50%)**; AI Design Log — Micro Game 1 (25%); Desafio de Escolha Tecnológica M1 (15%); 1º momento de Engenharia Reversa (10%) |

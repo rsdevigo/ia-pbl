@@ -46,7 +46,7 @@ Conteúdo previsto no Cronograma para esta semana, correspondente à **Parte II,
 - aplicações em jogos comerciais (3.6);
 - materialização da FSM no Animator Controller e, brevemente, no Visual Scripting da Unity (3.7) — este último apenas citado como alternativa visual equivalente, sem prática dedicada nesta semana.
 
-Não devem ser antecipados conteúdos de máquinas de estado hierárquicas (Capítulo 4) nem de árvores de comportamento (Capítulo 6): a explosão de transições deve ser apresentada como um problema em aberto, sem apresentar ainda sua solução.
+Não devem ser antecipados conteúdos de árvores de comportamento (Capítulo 6): a explosão de transições deve ser apresentada como um problema em aberto, sem apresentar ainda sua solução. **Observação sobre o Cronograma desta oferta da disciplina:** o Capítulo 4 (Máquinas de Estado Hierárquicas) não é trabalhado nesta oferta — a Semana 3 dá continuidade à FSM aprofundando sua implementação em código (padrão de projeto State), e a explosão de transições só é de fato resolvida na Semana 4, com a Árvore de Comportamento.
 
 ---
 
@@ -91,7 +91,7 @@ Não devem ser antecipados conteúdos de máquinas de estado hierárquicas (Cap�
 | 3. Implementação guiada | 40 min | Implementar a primeira versão funcional da FSM no Unity | Acompanha os grupos na implementação (via Animator, script com `enum`/`switch`, ou padrão *State* em C#, conforme o nível de cada grupo), reforçando o ciclo enter/update/exit | Implementam os estados definidos e testam as transições no Micro Game |
 | 4. Testes e ajustes | 10 min | Verificar se o comportamento implementado corresponde ao esperado | Circula entre os grupos, questionando "por que o NPC está fazendo isso agora?" para verificar depurabilidade | Testam a FSM implementada e corrigem transições incorretas ou ausentes |
 | 5. Discussão técnica: limites da FSM plana | 10 min | Introduzir, a partir da prática, a explosão de transições | Pergunta aos grupos o que aconteceria se fossem adicionados mais estados (por exemplo, "esconder-se", "chamar reforços"); conduz a leitura conjunta da seção 3.5.1 | Estimam quantas transições seriam necessárias e percebem o crescimento quadrático |
-| 6. Encerramento | 5 min | Fechar a semana e indicar o caminho da próxima | Recapitula o que foi implementado e anuncia o tema da Semana 3 (Máquinas de Estado Hierárquicas), como resposta à explosão de transições | Registram pendências e dúvidas para o próximo encontro |
+| 6. Encerramento | 5 min | Fechar a semana e indicar o caminho da próxima | Recapitula o que foi implementado e anuncia o tema da Semana 3 (aprofundamento da FSM com o padrão de projeto State), deixando claro que a explosão de transições ainda não será resolvida — isso só acontece na Semana 4, com a Árvore de Comportamento | Registram pendências e dúvidas para o próximo encontro |
 
 ---
 
@@ -108,7 +108,7 @@ Não devem ser antecipados conteúdos de máquinas de estado hierárquicas (Cap�
 - ações de entrada, permanência e saída implementadas para cada estado (ciclo enter/update/exit);
 - comportamento observável e testável em tempo de execução no Unity.
 
-**Relação com módulos anteriores:** dá continuidade direta ao esboço conceitual produzido na Semana 1, sendo a primeira implementação efetiva do Micro Game 1. Servirá de base para a evolução prevista na Semana 3, quando a mesma FSM será reestruturada em uma HFSM.
+**Relação com módulos anteriores:** dá continuidade direta ao esboço conceitual produzido na Semana 1, sendo a primeira implementação efetiva do Micro Game 1. Servirá de base para a evolução prevista na Semana 3, quando a mesma FSM será refatorada para o padrão de projeto State em C#.
 
 ---
 
@@ -165,7 +165,7 @@ Nenhuma nota é atribuída nesta semana, conforme os Critérios de Notas da disc
 
 Não há entrega formal prevista para a Semana 2, conforme o Cronograma.
 
-A primeira versão implementada da FSM do Micro Game NPC Decision permanece com os grupos, para evolução na Semana 3 (transição para HFSM) e consolidação na Semana 4, quando passa a compor o Micro Game entregável, o AI Design Log e o Desafio de Escolha Tecnológica do Módulo 1.
+A primeira versão implementada da FSM do Micro Game NPC Decision permanece com os grupos, para refatoração na Semana 3 (padrão de projeto State) e consolidação na Semana 4, quando passa a compor o Micro Game entregável, o AI Design Log e o Desafio de Escolha Tecnológica do Módulo 1.
 
 ---
 
@@ -182,9 +182,9 @@ A primeira versão implementada da FSM do Micro Game NPC Decision permanece com 
 
 ## Preparação para a Próxima Semana
 
-Para a Semana 3 (Máquinas de Estado Hierárquicas), o professor deve:
+Para a Semana 3 (aprofundamento da FSM — padrão de projeto State em C#), o professor deve:
 
-- solicitar a leitura prévia do Capítulo 4 da Apostila (Máquinas de Estado Hierárquicas);
+- não é necessária leitura prévia de um novo capítulo: a Semana 3 aprofunda o próprio Capítulo 3 já lido para esta semana, com foco em código; se desejar, o professor pode indicar material complementar sobre o padrão de projeto State (GoF);
 - garantir que todos os grupos tenham, de fato, uma FSM funcional implementada no Micro Game NPC Decision ao final da Semana 2;
 - revisar rapidamente a FSM de cada grupo antes do próximo encontro, identificando quais já apresentam sinais de explosão de transições, para usá-los como exemplos concretos na fundamentação da Semana 3;
 - não é necessária nenhuma instalação ou configuração adicional de ferramentas: a Semana 3 dá continuidade ao uso de Scripting C# já iniciado nesta semana.

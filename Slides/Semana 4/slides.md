@@ -33,15 +33,15 @@ Ao final de hoje você será capaz de:
 - diferenciar sequência, seletor e paralelo;
 - explicar decoradores, folhas e Blackboard;
 - aplicar o roteiro de seis etapas da Engenharia Reversa de IA;
-- migrar a HFSM da Semana 3 para uma BT no Unity Behavior.
+- migrar a FSM (padrão State) da Semana 3 para uma BT no Unity Behavior.
 
 ---
 
 ## Retomada da Semana 3
 
-A HFSM organiza estados em hierarquia e elimina a redundância de regras repetidas.
+O padrão State organiza o código da FSM em classes isoladas por estado.
 
-Mas o acoplamento entre estados e a rigidez de reordenação continuam lá.
+Mas o acoplamento entre estados, a rigidez de reordenação e a explosão de transições continuam lá — o padrão State não resolveu isso, só reorganizou o código.
 
 ---
 
@@ -49,19 +49,19 @@ Mas o acoplamento entre estados e a rigidez de reordenação continuam lá.
 
 # Como tornar a decisão do NPC modular e escalável?
 
-O guarda precisa reordenar prioridades e reutilizar comportamentos sem reescrever transições inteiras. A HFSM ainda não resolve isso.
+O guarda precisa reordenar prioridades e reutilizar comportamentos sem reescrever transições inteiras. Nem a FSM por `switch`, nem a FSM com padrão State resolvem isso.
 
 ---
 
 ## O problema consolidado
 
-Dois problemas vêm de FSM/HFSM: **acoplamento** e **rigidez de reordenação**.
+Da FSM (Semanas 2–3) vêm **acoplamento**, **rigidez de reordenação** e **redundância de regras repetidas**.
 
-Dois problemas vêm da árvore de decisão: ausência de **tempo/sequência** e fraca **reutilização**.
+Da árvore de decisão vêm a ausência de **tempo/sequência** e a fraca **reutilização**.
 
 <div class="warning">
 
-Reordenar prioridades em uma FSM/HFSM significa reescrever transições. Reutilizar um trecho de comportamento significa copiar e colar.
+Reordenar prioridades em uma FSM significa reescrever transições, mesmo quando o código está organizado pelo padrão State. Reutilizar um trecho de comportamento significa copiar e colar.
 
 </div>
 
@@ -172,7 +172,7 @@ Screenshot direto do editor Unity durante a demonstração ao vivo, com anotaç�
 
 ## Exemplo da Apostila: o guarda completo
 
-Seletor-raiz de prioridades com quatro subárvores (seção 6.4) — **exemplo da Apostila**, distinto dos superestados do Micro Game da turma (Pacífico/Combate, Semana 3):
+Seletor-raiz de prioridades com quatro subárvores (seção 6.4) — **exemplo da Apostila**, distinto dos estados do Micro Game da turma (agrupados por afinidade em Combate/Pacífico nesta mesma semana):
 
 | Prioridade | Subárvore | Condição de entrada |
 |---|---|---|
@@ -183,7 +183,7 @@ Seletor-raiz de prioridades com quatro subárvores (seção 6.4) — **exemplo d
 
 <div class="tip">
 
-Mesmo comportamento, três arquiteturas: na FSM (Cap. 3) a prioridade vivia em transições espalhadas; na HFSM (Cap. 4), em hierarquia; na BT, é simplesmente a **posição** do filho no seletor-raiz.
+Mesmo comportamento, arquiteturas diferentes: na FSM (Cap. 3), mesmo organizada pelo padrão State, a prioridade vivia em transições espalhadas; na BT, é simplesmente a **posição** do filho no seletor-raiz.
 
 </div>
 
@@ -278,13 +278,13 @@ O sinal de retomada aponta diretamente para Blackboard e reavaliação em cascat
 
 # Implementação guiada
 
-Migrando a HFSM da Semana 3 para Árvore de Comportamento.
+Migrando a FSM (padrão State) da Semana 3 para Árvore de Comportamento.
 
 ---
 
 ## Passo a passo
 
-1. Mapear superestados da Semana 3 para subárvores;
+1. Agrupar os estados da FSM (Semanas 2–3) por afinidade comportamental, definindo subárvores;
 2. Definir a ordem de prioridade no seletor-raiz;
 3. Construir sequências, condições e ao menos um decorador;
 4. Documentar as chaves do Blackboard e quem as lê/escreve;
@@ -310,7 +310,7 @@ Antes de implementar: liste nome, tipo e quais nós leem/escrevem cada chave.
 
 Cenário: um NPC de suporte que alterna entre curar, seguir e revidar.
 
-Compare ao menos duas soluções (FSM / HFSM / BT) e justifique por escrito a escolhida.
+Compare ao menos duas soluções (FSM / BT) e justifique por escrito a escolhida.
 
 ---
 
@@ -328,7 +328,7 @@ O que a BT ainda não resolve bem? Escolher a melhor ação entre várias possí
 
 ## Resumo da semana
 
-- BT resolve acoplamento e rigidez herdados de FSM/HFSM
+- BT resolve acoplamento, rigidez e redundância herdados da FSM
 - Sequência, seletor e paralelo estruturam o fluxo de decisão
 - Decoradores, folhas e Blackboard compõem a árvore
 - Tick e estados de retorno dão noção de duração
