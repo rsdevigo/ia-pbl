@@ -12,10 +12,12 @@ Legenda de colunas: **Semana/Encontro** (2º Encontro = "Desenvolvimento do Micr
 |---|---|---|---|
 | S01 – 2º Encontro | Setup do projeto Unity "AI Playground" (estrutura de pastas por Micro Game). Nenhuma lógica de IA ainda. | Unity (template 3D/2D) | Nenhum. Esboço textual do cenário/NPC/comportamentos esperados. |
 | S02 – 2º Encontro | FSM inicial do NPC: 3–5 estados (ex.: Patrulhar, Perseguir, Atacar), transições com guardas e prioridade, enter/update/exit por estado. Implementação via Animator, `enum`/`switch` ou padrão *State* em C#. | Animator Controller (oficial) e/ou Scripting C# | Cena de demonstração com 1 NPC (cápsula/modelo provisório) e ponto de referência do jogador. |
-| S03 – 2º Encontro | Reestruturação em HFSM: ao menos 2 superestados (ex.: "Pacífico", "Combate") agrupando os subestados da S02; transição herdada válida por superestado; estado inicial por nível; decisão sobre estado de histórico. | Sub-state machines do Animator e/ou extensão do padrão *State* em C# | Mesma cena da S02, reaproveitada. |
-| S04 – 2º Encontro | Migração da HFSM para Behavior Tree: seletor-raiz com subárvores por superestado, ≥1 sequência, ≥1 seletor interno, ≥1 decorador justificado; definição das chaves do Blackboard (tipo, nós que leem/escrevem). Comportamento observável deve ser equivalente ao da HFSM. | **Unity Behavior** (oficial) + Blackboard | Mesma cena das S02/S03. |
+| S03 – 2º Encontro | Refatoração da FSM da S02 para o padrão de projeto *State* em C# por **herança**: classe base abstrata `State` (campo `_fsm`, métodos virtuais Enter/Update/Exit/FixedUpdate); uma subclasse concreta por estado já existente (3–5), sobrescrevendo só o necessário; contexto `FSM` mantendo `currentState` e trocando via `SetCurrentState`. Implementação de referência: `State.cs`/`FSM.cs` (corrigir a classe base para `abstract`, ausente no original). Comportamento observável idêntico ao da S02 — sem hierarquia, sem novos estados. | Scripting C# (padrão de projeto *State* por herança) | Mesma cena da S02, reaproveitada. |
+| S04 – 2º Encontro | Migração direta da FSM (padrão State, S03) para Behavior Tree: agrupamento dos estados existentes em subárvores por afinidade comportamental (ex.: "Pacífico", "Combate" — definido nesta semana, sem superestado prévio); seletor-raiz com essas subárvores, ≥1 sequência, ≥1 seletor interno, ≥1 decorador justificado; definição das chaves do Blackboard (tipo, nós que leem/escrevem). Comportamento observável deve ser equivalente ao da FSM da S03. | **Unity Behavior** (oficial) + Blackboard | Mesma cena das S02/S03. |
 
-**Estado final do Micro Game 1:** BT com Blackboard funcional, equivalente à HFSM anterior, documentada no AI Design Log.
+**Estado final do Micro Game 1:** BT com Blackboard funcional, equivalente à FSM (padrão State) anterior, documentada no AI Design Log.
+
+**Nota:** esta oferta da disciplina não trabalha a Máquina de Estados Hierárquica (Cap. 4 da Apostila) — exclusão deliberada, análoga à do GOAP. O Micro Game 1 evolui em dois incrementos de FSM (S02: `enum`/`switch` ou padrão *State*; S03: padrão *State* consolidado) antes de migrar direto para Behavior Tree na S04.
 
 ---
 

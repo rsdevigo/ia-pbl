@@ -13,7 +13,7 @@ footer: "IFMS • Semana 03"
 
 # Inteligência Artificial e Ilusão de Inteligência
 
-## Semana 3 — Aprofundamento da FSM: o padrão State em C#
+## Semana 3 — Aprofundamento da FSM: State por herança em C#
 
 <div class="meta">
 
@@ -30,10 +30,10 @@ footer: "IFMS • Semana 03"
 Ao final de hoje você será capaz de:
 
 - explicar o problema de um `switch` de FSM que cresce demais;
-- descrever a estrutura do padrão de projeto State (GoF);
-- mapear estado, transição, evento e ação para o padrão State;
-- refatorar a FSM da Semana 2 para o padrão State em C#;
-- reconhecer o que essa refatoração resolve e o que ela não resolve.
+- descrever a estrutura do padrão State por herança (classe base + métodos virtuais);
+- justificar por que herança se encaixa melhor aqui do que interface;
+- mapear estado, transição, evento e ação para essa estrutura;
+- refatorar a FSM da Semana 2 usando uma classe base `State`.
 
 ---
 
@@ -51,7 +51,7 @@ Hoje o assunto não é "como organizar hierarquicamente" — é "como organizar 
 
 ## Retomada da Semana 2
 
-Você já tem uma FSM funcional: estados, transições, eventos e ações, implementados por `enum`/`switch` (ou já pelo padrão State, para quem escolheu esse caminho).
+Você já tem uma FSM funcional: estados, transições, eventos e ações, implementados por `enum`/`switch` (ou já orientada a objetos, para quem escolheu esse caminho).
 
 O que acontece com esse código quando o número de estados cresce?
 
@@ -77,47 +77,110 @@ Um `switch` com cinco `case`, cada um com dezenas de linhas, é difícil de ler,
 
 ---
 
-## A resposta: o padrão de projeto State
+## A resposta: o padrão State — por herança
 
-Cada estado vira uma **classe própria**, que implementa uma interface comum.
+Cada estado vira uma **classe própria**, que **herda** de uma classe base comum.
 
-- Uma interface `IState` com `Enter`, `Update`, `Exit`
-- Uma classe concreta por estado (`PatrulharState`, `AtacarState`...)
-- Um **contexto** — a FSM — que mantém o estado ativo e delega as chamadas
+- Uma classe base `State`, com métodos **virtuais** (`Enter`, `Update`, `Exit`, `FixedUpdate`)
+- Uma subclasse por estado (`PatrulharState`, `AtacarState`...), sobrescrevendo só o que precisa
+- Um **contexto** — a `FSM` — que mantém o estado ativo e delega as chamadas
+
+---
+
+## Código real: `State.cs`
+
+```csharp
+public class State
+{
+  protected FSM _fsm;
+  public State(FSM fsm) { _fsm = fsm; }
+
+  public virtual void Enter() { }
+  public virtual void Exit() { }
+  public virtual void Update() { }
+  public virtual void FixedUpdate() { }
+}
+```
+
+<div class="tip">
+
+Métodos `virtual` com corpo vazio: cada subclasse sobrescreve só o que precisa.
+
+</div>
+
+---
+
+## Código real: `FSM.cs`
+
+```csharp
+public class FSM
+{
+  public State currentState;
+  Dictionary<int, State> _states = new Dictionary<int, State>();
+
+  public void SetCurrentState(State state)
+  {
+    currentState?.Exit();
+    currentState = state;
+    currentState?.Enter();
+  }
+
+  public void Update() => currentState?.Update();
+}
+```
 
 ---
 
 <!-- _class: diagram -->
 
-## Estrutura do padrão State
+## Estrutura do padrão State por herança
 
-<!--
-FIGURA A PRODUZIR (nota do apresentador — não aparece no slide)
-
-Objetivo didático:
-Mostrar a estrutura do padrão State: interface IState, classes concretas de estado e o contexto (FSM) que mantém a referência ao estado ativo.
-Arquivo sugerido:
-assets/mermaid-1.png (substituir o diagrama atual, que ilustra os superestados da antiga Semana 3 — não usado mais nesta oferta)
-Descrição:
-Diagrama com uma interface IState no topo, três classes concretas apontando para ela (PatrulharState, AtacarState, FugirState) e uma classe FsmContext com uma seta para o estado ativo, indicando a delegação de Enter/Update/Exit.
-Como produzir:
-Gerar via Mermaid (classDiagram) e exportar como PNG, seguindo o padrão dos demais diagramas do curso.
--->
+![diagram](assets/mermaid-1.png)
 
 ---
 
-## Mapeando a Semana 2 para o padrão State
+## Por que herança, e não interface?
 
-| Conceito (Semana 2) | Elemento no padrão State |
+| Herança (`State` base) | Interface (`IState`) |
 |---|---|
-| **Estado** | Classe que implementa `IState` |
-| **Ciclo enter/update/exit** | Métodos da interface `IState` |
-| **Transição** | Chamada explícita de troca de estado no contexto |
-| **Evento/guarda** | Condição avaliada dentro do `Update` do estado ativo |
+| Compartilha o campo `_fsm` pronto para todo estado | Cada classe reimplementaria seu próprio campo de contexto |
+| Métodos virtuais: sobrescreve só o que precisa | Obriga implementar os quatro métodos, mesmo vazios |
+| Estado não pode herdar de outra classe além de `State` | Uma classe pode implementar várias interfaces |
+
+<div class="tip">
+
+Aqui os estados são objetos simples (não `MonoBehaviour`), então a limitação de herança única não pesa — a herança compensa pelo campo e pelos métodos compartilhados.
+
+</div>
 
 ---
 
-## Exemplo: do `switch` à classe
+<!-- _class: exercise -->
+
+# Erro de projeto no código real
+
+`State` não é `abstract`. Nada impede `new State(fsm)` — um "estado genérico" sem comportamento algum.
+
+<div class="objectives">
+
+Pergunta-chave: um estado sem lógica faz sentido existir? Se não, a classe deveria ser `public abstract class State`.
+
+</div>
+
+---
+
+## Mapeando a Semana 2 para a classe `State`
+
+| Conceito (Semana 2) | Elemento na classe `State`/`FSM` |
+|---|---|
+| **Estado** | Subclasse de `State` |
+| **Ciclo enter/update/exit** | Métodos virtuais sobrescritos (+ `FixedUpdate`, para física) |
+| **Transição** | Chamada a `fsm.SetCurrentState(novoEstado)` |
+| **Evento/guarda** | Condição avaliada dentro do `Update`/`FixedUpdate` do estado ativo |
+
+---
+
+## Exemplo: do `switch` à subclasse
 
 ```csharp
 // Antes: um case dentro de um switch gigante
@@ -128,32 +191,32 @@ case EstadoGuarda.Atacar:
 ```
 
 ```csharp
-// Depois: uma classe isolada
-public class AtacarState : IState
+// Depois: uma subclasse isolada
+public class AtacarState : State
 {
-    public void Enter(Guarda g) { }
-    public void Update(Guarda g)
+    public AtacarState(FSM fsm) : base(fsm) { }
+    public override void Update()
     {
-        if (g.Vida < 0.2f) g.TrocarPara(new FugirState());
-        g.AtacarJogador();
+        if (guarda.Vida < 0.2f) _fsm.SetCurrentState(new FugirState(_fsm));
+        guarda.AtacarJogador();
     }
-    public void Exit(Guarda g) { }
 }
 ```
 
 ---
 
-## O que o padrão State melhora
+## O que a refatoração melhora
 
 - **Isolamento:** a lógica de "Atacar" só existe em `AtacarState`
 - **Legibilidade:** cada arquivo tem uma responsabilidade só
 - **Testabilidade:** dá para testar um estado sem montar a FSM inteira
+- **Menos boilerplate:** só sobrescreve o que o estado realmente usa
 
 ---
 
 <!-- _class: exercise -->
 
-# O que o padrão State **não** resolve
+# O que a refatoração **não** resolve
 
 <div class="objectives">
 
@@ -167,16 +230,16 @@ O número de regras de transição continua o mesmo — só está mais organizad
 
 # Implementação guiada
 
-Refatorando a FSM da Semana 2 para o padrão State.
+Refatorando a FSM da Semana 2 para herança de `State`.
 
 ---
 
 ## Passo a passo
 
-1. Revisar como sua FSM foi implementada (Animator, `switch` ou já padrão State);
-2. Definir a interface `IState` (ou equivalente) com Enter/Update/Exit;
-3. Criar uma classe concreta para cada estado já existente;
-4. Implementar o contexto (a FSM), que troca entre estados;
+1. Revisar como sua FSM foi implementada (Animator, `switch` ou já orientada a objetos);
+2. Definir a classe base `State` (**abstrata**), com `_fsm` e os métodos virtuais;
+3. Criar uma subclasse para cada estado já existente;
+4. Implementar o contexto `FSM`, que troca entre estados via `SetCurrentState`;
 5. Testar: o comportamento deve ser **idêntico** ao de antes.
 
 ---
@@ -185,7 +248,7 @@ Refatorando a FSM da Semana 2 para o padrão State.
 
 <div class="tip">
 
-O estado decide **quando** pedir a troca (dentro do seu `Update`). O contexto (a FSM) é quem de fato **realiza** a troca, guardando a referência ao estado ativo.
+O estado decide **quando** pedir a troca (chamando `_fsm.SetCurrentState(...)` dentro do seu `Update`). O contexto (`FSM`) é quem de fato **realiza** a troca — disparando `Exit` do antigo e `Enter` do novo — e guarda a referência ao estado ativo.
 
 </div>
 
@@ -195,17 +258,17 @@ O estado decide **quando** pedir a troca (dentro do seu `Update`). O contexto (a
 
 # Erro comum
 
-Colocar toda a lógica de transição dentro de cada classe de estado, sem um contexto central que controle qual estado está ativo.
+Colocar toda a lógica de transição dentro de cada subclasse de estado, sem consultar o contexto central que controla qual estado está ativo.
 
 <div class="objectives">
 
-Pergunta-chave: "quem guarda a referência ao estado ativo?" Se a resposta não for "o contexto", reveja o desenho.
+Pergunta-chave: "quem guarda a referência ao estado ativo?" Se a resposta não for "o contexto (`FSM`)", reveja o desenho.
 
 </div>
 
 ---
 
-## Discussão técnica: `switch` versus padrão State
+## Discussão técnica: `switch` versus herança de `State`
 
 Compare a legibilidade e a testabilidade do código antes e depois da refatoração.
 
@@ -222,10 +285,10 @@ A quantidade de transições escritas mudou? Não. O que ainda falta resolver é
 ## Resumo da semana
 
 - O `switch` de FSM cresce mal quando o número de estados aumenta
-- O padrão State isola cada estado em sua própria classe
-- Estado, transição, evento e ação mapeiam diretamente para a estrutura do padrão
-- O contexto (a FSM) mantém o estado ativo e delega as chamadas
-- A explosão de transições **continua sem solução** — não é isso que o padrão State resolve
+- O padrão State por herança isola cada estado em uma subclasse, com métodos virtuais sobrescritos sob demanda
+- Herança compartilha o campo de contexto e evita boilerplate — a troca por interface exigiria implementar tudo em cada classe
+- Estado, transição, evento e ação mapeiam diretamente para `State`/`FSM`
+- A explosão de transições **continua sem solução** — não é isso que a refatoração resolve
 
 ---
 
@@ -234,7 +297,7 @@ A quantidade de transições escritas mudou? Não. O que ainda falta resolver é
 **Tema:** Árvores de Comportamento, Blackboard e Engenharia Reversa
 
 - Ler o Capítulo 6 da Apostila (Árvores de Comportamento) e o Capítulo 14 (Engenharia Reversa)
-- Trazer a FSM (padrão State) funcional implementada hoje, no Micro Game NPC Decision
+- Trazer a FSM (herança de `State`) funcional implementada hoje, no Micro Game NPC Decision
 
 <div class="tip">
 

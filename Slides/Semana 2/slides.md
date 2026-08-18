@@ -277,13 +277,13 @@ O número de transições possíveis cresce de forma quadrática com o número d
 
 ## Preparação para a Semana 3
 
-**Tema:** Máquinas de Estado Hierárquicas
+**Tema:** Aprofundamento da FSM — o padrão de projeto State em C#
 
-- Ler o Capítulo 4 da Apostila
+- Não há capítulo novo: revisar as seções 3.2, 3.3.2 e 3.7 da Apostila (já lidas para hoje)
 - Trazer a FSM implementada hoje, funcionando no Micro Game
 
 <div class="tip">
 
-Pergunta que abre a Semana 3: como organizar uma FSM que já apresenta sinais de explosão de transições?
+Pergunta que abre a Semana 3: não é "como organizar hierarquicamente" — é "como estruturar o **código** de uma FSM que já apresenta sinais de explosão de transições?"
 
 </div>
